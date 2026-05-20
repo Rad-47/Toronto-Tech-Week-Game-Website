@@ -40,9 +40,9 @@ export const ROSTER: RosterPlayer[] = [
   },
   {
     index: "03",
-    name: "Outfielder · #14",
+    name: "Kieran Cutler",
     sport: "Baseball",
-    team: "McCook · NCAA",
+    team: "McCook · #14 · NCAA",
     photo: "/players/player-03.jpg",
   },
   {

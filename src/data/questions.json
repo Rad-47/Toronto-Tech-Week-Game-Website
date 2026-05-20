@@ -408,10 +408,24 @@
         "id": "ba-img-1",
         "type": "player",
         "image": "/players/player-03.jpg",
-        "prompt": "Read the jersey. Which college program is this batter from?",
+        "prompt": "Read the jersey. Which college program is Kieran Cutler batting for?",
         "options": ["Iowa Western", "McCook", "Northern Iowa", "Cisco College"],
         "answer": 1,
-        "explain": "The McCook lettering across the chest gives it away — a Nebraska community college power."
+        "explain": "Kieran Cutler — McCook (Nebraska community college power), wearing #14."
+      },
+      {
+        "id": "ba-img-4",
+        "type": "player",
+        "image": "/players/player-03.jpg",
+        "prompt": "Name this McCook batter wearing #14.",
+        "options": [
+          "Cole Patterson",
+          "Kieran Cutler",
+          "Jake Hennigan",
+          "Ryan Mitchell"
+        ],
+        "answer": 1,
+        "explain": "Kieran Cutler — McCook #14, on the FanLinc roster tonight."
       },
       {
         "id": "ba-img-2",
@@ -609,10 +623,10 @@
         "id": "mx-img-2",
         "type": "player",
         "image": "/players/player-03.jpg",
-        "prompt": "FanLinc roster spotlight — what sport does this McCook athlete compete in?",
+        "prompt": "FanLinc roster spotlight — what sport does Kieran Cutler compete in?",
         "options": ["Cricket", "Softball", "Baseball", "Football"],
         "answer": 2,
-        "explain": "Baseball — batter's stance, helmet, McCook jersey across the chest."
+        "explain": "Kieran Cutler — Baseball. McCook #14, on the FanLinc roster."
       },
       {
         "id": "mx-img-3",
