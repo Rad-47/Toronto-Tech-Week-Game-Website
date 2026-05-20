@@ -75,7 +75,17 @@ export default function Home() {
 
             {/* Headline */}
             <FadeUp delay={0.2}>
-              <div className="eyebrow eyebrow-accent">FanLinc presents</div>
+              <div className="flex items-center gap-2.5">
+                <Image
+                  src="/brand/fanlinc-logo.png"
+                  alt="FanLinc"
+                  width={28}
+                  height={28}
+                  priority
+                  className="object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
+                />
+                <span className="eyebrow eyebrow-accent">FanLinc presents</span>
+              </div>
               <h1 className="display text-[88px] sm:text-[160px] leading-[0.84] mt-3 sm:mt-4 text-[var(--foreground)]">
                 Game
                 <br />

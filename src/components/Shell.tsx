@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Wordmark } from "./Brand";
+import { BrandMark, Wordmark } from "./Brand";
 import { MarginalArt } from "./MarginalArt";
 
 export function PageShell({
@@ -38,7 +38,10 @@ export function PageShell({
       </main>
       <footer className="relative z-20 px-5 sm:px-10 pt-6 pb-5 border-t border-[var(--border)] bg-[var(--background)]">
         <div className="max-w-md sm:max-w-2xl mx-auto flex items-center justify-between text-[10px] uppercase tracking-[0.22em] text-[var(--muted)] font-medium">
-          <span>FanLinc · GameDay IQ</span>
+          <span className="flex items-center gap-2">
+            <BrandMark size={20} />
+            <span>FanLinc · GameDay IQ</span>
+          </span>
           <span className="hidden sm:block">Toronto Tech Week · May 2026</span>
           <span className="digit">© 26</span>
         </div>
