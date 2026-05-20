@@ -185,6 +185,74 @@
         ],
         "answer": 0,
         "explain": "A screener sets a pick then rolls (cuts) to the basket."
+      },
+      {
+        "id": "bb-19",
+        "type": "team",
+        "prompt": "The Brampton Honey Badgers — our hosts tonight — play in which league?",
+        "options": [
+          "NBA G League",
+          "Canadian Elite Basketball League (CEBL)",
+          "Basketball Africa League",
+          "Big3"
+        ],
+        "answer": 1,
+        "explain": "The Honey Badgers are a CEBL franchise based in Brampton, ON."
+      },
+      {
+        "id": "bb-20",
+        "type": "team",
+        "prompt": "The Brampton Honey Badgers won their first CEBL championship in which year?",
+        "options": ["2021", "2022", "2023", "2024"],
+        "answer": 2,
+        "explain": "The Honey Badgers captured the CEBL title in 2023 at Edmonton's Championship Weekend."
+      },
+      {
+        "id": "bb-21",
+        "type": "fan",
+        "prompt": "The Honey Badgers play their home games in Brampton at which venue?",
+        "options": [
+          "Coca-Cola Coliseum",
+          "CAA Centre",
+          "Scotiabank Arena",
+          "Brampton Civic Centre"
+        ],
+        "answer": 1,
+        "explain": "CAA Centre (formerly Powerade Centre / Paramount Fine Foods Centre) — also home to the OHL Brampton Steelheads."
+      },
+      {
+        "id": "bb-22",
+        "type": "team",
+        "prompt": "How many teams compete in the Canadian Elite Basketball League (CEBL) as of the 2024 season?",
+        "options": ["6", "8", "10", "12"],
+        "answer": 2,
+        "explain": "Ten teams from coast-to-coast — Vancouver Bandits, Calgary Surge, Saskatchewan Rattlers, Winnipeg Sea Bears, Brampton Honey Badgers, Niagara River Lions, Scarborough Shooting Stars, Ottawa BlackJacks, Montreal Alliance, and Halifax-based MTL... (lineup evolves yearly)."
+      },
+      {
+        "id": "bb-23",
+        "type": "fan",
+        "prompt": "The CEBL plays its season during which months — making it the perfect summer hoops league?",
+        "options": [
+          "October to April",
+          "January to May",
+          "May to August",
+          "September to December"
+        ],
+        "answer": 2,
+        "explain": "Summer ball — the CEBL fills the May-August window when the NBA is off, giving Canadian pros a home stage."
+      },
+      {
+        "id": "bb-24",
+        "type": "team",
+        "prompt": "The CEBL uses a unique end-of-game rule called the Elam Ending. What happens?",
+        "options": [
+          "Two-minute overtime if tied",
+          "Game clock is turned off and a target score is set",
+          "Free-throw shootout",
+          "Sudden-death three-pointer contest"
+        ],
+        "answer": 1,
+        "explain": "Target Score Time — the game clock goes off in the final media stoppage and the first team to reach a target (leading score + 9) wins. The CEBL was the first pro league to adopt it league-wide."
       }
     ],
 
@@ -401,6 +469,71 @@
         ],
         "answer": 1,
         "explain": "The top corner of the net — a snipe."
+      },
+      {
+        "id": "ohl-18",
+        "type": "player",
+        "prompt": "John Tavares played his junior career with which OHL team?",
+        "options": [
+          "Oshawa Generals",
+          "London Knights",
+          "Mississauga IceDogs",
+          "Brampton Battalion"
+        ],
+        "answer": 2,
+        "explain": "Tavares starred with the Mississauga IceDogs and later the Oshawa Generals; he was granted exceptional status to enter the OHL a year early in 2005."
+      },
+      {
+        "id": "ohl-19",
+        "type": "player",
+        "prompt": "Steven Stamkos was drafted #1 overall by Tampa Bay out of which OHL team?",
+        "options": [
+          "Sarnia Sting",
+          "London Knights",
+          "Mississauga IceDogs",
+          "Kitchener Rangers"
+        ],
+        "answer": 0,
+        "explain": "Stamkos played for the Sarnia Sting before going #1 overall in 2008."
+      },
+      {
+        "id": "ohl-20",
+        "type": "team",
+        "prompt": "Which OHL team has won the most Memorial Cups in CHL history?",
+        "options": [
+          "Oshawa Generals",
+          "London Knights",
+          "Kitchener Rangers",
+          "Toronto Marlboros"
+        ],
+        "answer": 3,
+        "explain": "The Toronto Marlboros (an OHL franchise until 1989) won seven Memorial Cups — more than any other team in the league."
+      },
+      {
+        "id": "ohl-21",
+        "type": "player",
+        "prompt": "Mitch Marner spent his OHL career with which franchise?",
+        "options": [
+          "London Knights",
+          "Erie Otters",
+          "Sarnia Sting",
+          "Ottawa 67's"
+        ],
+        "answer": 0,
+        "explain": "Marner played three seasons with the London Knights, winning a Memorial Cup in 2016."
+      },
+      {
+        "id": "ohl-22",
+        "type": "fan",
+        "prompt": "The OHL's Eastern Conference includes which famous Ottawa franchise?",
+        "options": [
+          "Ottawa Senators",
+          "Ottawa 67's",
+          "Ottawa Renegades",
+          "Ottawa Champions"
+        ],
+        "answer": 1,
+        "explain": "Ottawa 67's — named for the city's 1967 centennial."
       }
     ],
     "baseball": [
@@ -431,16 +564,21 @@
         "id": "ba-img-2",
         "type": "player",
         "image": "/players/player-04.jpg",
-        "prompt": "Look at the jersey crest. Which Canadian summer-league team is Weston Thompson repping?",
-        "options": ["Toronto Maple Leafs Baseball", "Niagara", "Hamilton Cardinals", "London Majors"],
+        "prompt": "Look at the jersey. Which team is Weston Thompson repping?",
+        "options": [
+          "Toronto Maple Leafs Baseball",
+          "Niagara IronBacks",
+          "Hamilton Cardinals",
+          "London Majors"
+        ],
         "answer": 1,
-        "explain": "Weston Thompson — Niagara outfielder, on the FanLinc roster."
+        "explain": "Weston Thompson — Niagara IronBacks, on the FanLinc roster."
       },
       {
         "id": "ba-img-3",
         "type": "player",
         "image": "/players/player-04.jpg",
-        "prompt": "Name this Niagara outfielder.",
+        "prompt": "Name this Niagara IronBacks outfielder.",
         "options": [
           "Cole Patterson",
           "Jake Hennigan",
@@ -448,7 +586,7 @@
           "Ryan Mitchell"
         ],
         "answer": 2,
-        "explain": "Weston Thompson — on the FanLinc roster tonight."
+        "explain": "Weston Thompson — Niagara IronBacks, on the FanLinc roster tonight."
       },
       {
         "id": "ba-1",
@@ -607,6 +745,71 @@
         "options": ["A balk", "Catcher's interference", "Hit by pitch or walk", "An infield error"],
         "answer": 2,
         "explain": "Four balls (a walk) or being hit by a pitch sends the batter to first."
+      },
+      {
+        "id": "ba-17",
+        "type": "team",
+        "prompt": "Niagara IronBacks players spend their summer competing in which baseball league?",
+        "options": [
+          "Intercounty Baseball League (IBL)",
+          "American Association",
+          "Atlantic League",
+          "Frontier League"
+        ],
+        "answer": 0,
+        "explain": "The Intercounty Baseball League is Ontario's premier summer baseball circuit — Weston Thompson plays out of Niagara."
+      },
+      {
+        "id": "ba-18",
+        "type": "team",
+        "prompt": "Which Ontario city does NOT currently host an Intercounty Baseball League team?",
+        "options": [
+          "Hamilton",
+          "London",
+          "Sudbury",
+          "Toronto"
+        ],
+        "answer": 2,
+        "explain": "Sudbury isn't on the IBL map. Hamilton (Cardinals), London (Majors), and Toronto (Maple Leafs Baseball) all field IBL clubs."
+      },
+      {
+        "id": "ba-19",
+        "type": "fan",
+        "prompt": "The Welland Jackfish, Brantford Red Sox, and Niagara IronBacks all compete in which kind of league?",
+        "options": [
+          "Major League Baseball",
+          "Canadian summer collegiate / amateur baseball",
+          "Independent professional baseball",
+          "NCAA Division I"
+        ],
+        "answer": 1,
+        "explain": "Canadian summer baseball — a development pathway that brings together college, junior, and amateur talent in Ontario."
+      },
+      {
+        "id": "ba-20",
+        "type": "player",
+        "prompt": "Which former Blue Jays slugger holds the MLB single-season record for grand slams (6)?",
+        "options": [
+          "Don Mattingly",
+          "Travis Hafner",
+          "Albert Pujols",
+          "Joe Carter"
+        ],
+        "answer": 0,
+        "explain": "Don Mattingly hit six grand slams in 1987 — still the record."
+      },
+      {
+        "id": "ba-21",
+        "type": "team",
+        "prompt": "Which McCook program is Kieran Cutler tied to — and what's their nickname?",
+        "options": [
+          "McCook Community College Indians",
+          "McCook Vikings",
+          "McCook Roughriders",
+          "McCook Bisons"
+        ],
+        "answer": 0,
+        "explain": "McCook Community College Indians — a Nebraska JUCO power that produces D1 and pro talent."
       }
     ],
     "fanlinc-mix": [
@@ -804,6 +1007,40 @@
         ],
         "answer": 1,
         "explain": "Belonging — the heart of FanLinc."
+      },
+      {
+        "id": "mx-17",
+        "type": "fan",
+        "prompt": "Brampton hosts a CEBL team AND an OHL team. Name the OHL franchise.",
+        "options": [
+          "Brampton Battalion",
+          "Brampton Steelheads",
+          "Brampton Beast",
+          "Brampton Excelsiors"
+        ],
+        "answer": 1,
+        "explain": "Brampton Steelheads — the OHL franchise that rebranded from the Mississauga Steelheads in 2024 and now shares CAA Centre with the Honey Badgers."
+      },
+      {
+        "id": "mx-18",
+        "type": "trivia",
+        "prompt": "Tonight's roster brings together hockey AND baseball talent. Name the brothers on the FanLinc roster.",
+        "options": [
+          "Conor and Kieron Walton",
+          "Weston and Kieran Cutler",
+          "Conor Walton and Kieran Cutler",
+          "Kieron Walton and Weston Thompson"
+        ],
+        "answer": 0,
+        "explain": "Conor (OHL Spitfires) and Kieron Walton (junior #76) — both on tonight's roster."
+      },
+      {
+        "id": "mx-19",
+        "type": "team",
+        "prompt": "Across the FanLinc roster tonight, players come from how many different sports?",
+        "options": ["1", "2", "3", "4"],
+        "answer": 1,
+        "explain": "Two — hockey (Conor + Kieron Walton) and baseball (Kieran Cutler + Weston Thompson)."
       }
     ]
   }

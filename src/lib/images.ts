@@ -49,7 +49,7 @@ export const ROSTER: RosterPlayer[] = [
     index: "04",
     name: "Weston Thompson",
     sport: "Baseball",
-    team: "Niagara · Summer League",
+    team: "Niagara IronBacks",
     photo: "/players/player-04.jpg",
   },
 ];
