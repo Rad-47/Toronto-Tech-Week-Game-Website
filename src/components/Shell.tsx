@@ -42,7 +42,7 @@ export function PageShell({
             <BrandMark size={20} />
             <span>FanLinc · GameDay IQ</span>
           </span>
-          <span className="hidden sm:block">Toronto Tech Week · May 2026</span>
+          <span className="hidden sm:block">Toronto Tech Week · 25 May 2026</span>
           <span className="digit">© 26</span>
         </div>
       </footer>

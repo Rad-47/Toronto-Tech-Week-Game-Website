@@ -65,7 +65,7 @@ export default function Home() {
               <div className="eyebrow text-right">
                 <div>Brampton</div>
                 <div className="digit text-[var(--foreground)] text-xs font-medium tracking-tight mt-0.5">
-                  20 / 05 / 26
+                  25 / 05 / 26
                 </div>
               </div>
             </div>
