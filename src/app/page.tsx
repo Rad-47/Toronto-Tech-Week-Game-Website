@@ -15,91 +15,152 @@ export default function Home() {
   const heroRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start start", "end start"],
+    offset: ["start start", "end end"],
   });
-  // Subtle parallax — image drifts UP slightly as you scroll past
-  // (proper "image lags behind page" direction), and clipped to its
-  // own container so it never crosses into the stat row below.
-  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
-  const imgScale = useTransform(scrollYProgress, [0, 1], [1.04, 1.1]);
+  // Scroll-driven hero reveal:
+  //   Image 1 (arena + GAME DAY) slides UP and out of view over the
+  //   first 60% of the scroll range. Image 2 (action shot) sits
+  //   beneath at z-0 and stays put — revealed as image 1 leaves.
+  const layer1Y = useTransform(scrollYProgress, [0, 0.6], ["0%", "-100%"]);
+  const layer1Opacity = useTransform(scrollYProgress, [0.45, 0.6], [1, 0]);
+  const layer2Scale = useTransform(scrollYProgress, [0, 1], [1.08, 1.02]);
+  const layer2Y = useTransform(scrollYProgress, [0, 1], ["8%", "0%"]);
+  const layer2HeadlineOpacity = useTransform(
+    scrollYProgress,
+    [0.55, 0.75],
+    [0, 1]
+  );
+  const scrollHintOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   const categories = getCategories();
 
   return (
     <PageShell>
-      {/* ============== HERO ============== */}
+      {/* ============== HERO — scroll-driven reveal ============== */}
       <section
         ref={heroRef}
-        className="relative -mx-5 sm:-mx-6 mt-2 overflow-hidden border-y border-[var(--border)]"
+        className="relative -mx-5 sm:-mx-6 mt-2 h-[180vh] border-y border-[var(--border)]"
       >
-        <div className="relative aspect-[4/5] sm:aspect-[16/9] overflow-hidden">
+        {/* Sticky pinned viewport — stays full-bleed while user scrolls
+            through the 180vh section. The slide-up reveal happens here. */}
+        <div className="sticky top-0 h-screen overflow-hidden">
+          {/* LAYER 2 — sits beneath, revealed when layer 1 slides off.
+              Subtle parallax of its own so it doesn't feel static. */}
           <motion.div
-            style={{ y: imgY, scale: imgScale }}
-            className="absolute inset-0"
+            style={{ y: layer2Y, scale: layer2Scale }}
+            className="absolute inset-0 z-0"
+          >
+            <Image
+              src={IMAGES.basketballAction}
+              alt="Tonight's game action"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 1024px"
+              className="object-cover"
+            />
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(7,7,8,0.35) 0%, rgba(7,7,8,0.1) 30%, rgba(7,7,8,0.5) 75%, rgba(7,7,8,0.95) 100%)",
+              }}
+            />
+            {/* Secondary headline that lives on layer 2 — only legible
+                once layer 1 has cleared, fades in as scroll progresses. */}
+            <motion.div
+              style={{ opacity: layer2HeadlineOpacity }}
+              className="absolute inset-0 p-5 sm:p-10 flex flex-col justify-end"
+            >
+              <div className="eyebrow eyebrow-accent">On the floor tonight</div>
+              <div className="display text-[56px] sm:text-[112px] leading-[0.9] mt-3 max-w-[14ch] text-white">
+                Play.
+                <br />
+                Win.
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* LAYER 1 — arena image with the GAME DAY headline.
+              Slides up and fades out as user scrolls. */}
+          <motion.div
+            style={{ y: layer1Y, opacity: layer1Opacity }}
+            className="absolute inset-0 z-10"
           >
             <Image
               src={IMAGES.heroArena}
               alt="Game night arena"
               fill
               priority
-              sizes="(max-width: 768px) 100vw, 768px"
+              sizes="(max-width: 768px) 100vw, 1024px"
               className="object-cover"
             />
-          </motion.div>
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(7,7,8,0.25) 0%, rgba(7,7,8,0.05) 30%, rgba(7,7,8,0.6) 75%, rgba(7,7,8,1) 100%)",
+              }}
+              aria-hidden
+            />
 
-          {/* Natural colour — only a dark gradient at the bottom so the
-              headline reads, no green cast on the image. */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(7,7,8,0.25) 0%, rgba(7,7,8,0.05) 30%, rgba(7,7,8,0.6) 75%, rgba(7,7,8,1) 100%)",
-            }}
-            aria-hidden
-          />
-
-          {/* Editorial overlay */}
-          <div className="absolute inset-0 p-5 sm:p-10 flex flex-col">
-            {/* Top stamp */}
-            <div className="flex items-start justify-between">
-              <div className="inline-flex items-center gap-2 eyebrow">
-                <span className="relative inline-block w-1.5 h-1.5 rounded-full bg-[var(--primary)] pulse-ring" />
-                Live tonight
-              </div>
-              <div className="eyebrow text-right">
-                <div>Brampton</div>
-                <div className="digit text-[var(--foreground)] text-xs font-medium tracking-tight mt-0.5">
-                  25 / 05 / 26
+            {/* Editorial overlay — slides up with layer 1 */}
+            <div className="absolute inset-0 p-5 sm:p-10 flex flex-col">
+              {/* Top stamp */}
+              <div className="flex items-start justify-between">
+                <div className="inline-flex items-center gap-2 eyebrow">
+                  <span className="relative inline-block w-1.5 h-1.5 rounded-full bg-[var(--primary)] pulse-ring" />
+                  Live tonight
+                </div>
+                <div className="eyebrow text-right">
+                  <div>Brampton</div>
+                  <div className="digit text-[var(--foreground)] text-xs font-medium tracking-tight mt-0.5">
+                    25 / 05 / 26
+                  </div>
                 </div>
               </div>
+
+              <div className="flex-1" />
+
+              <FadeUp delay={0.2}>
+                <div className="flex items-center gap-2.5">
+                  <Image
+                    src="/brand/fanlinc-logo.png"
+                    alt="FanLinc"
+                    width={28}
+                    height={28}
+                    priority
+                    className="object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
+                  />
+                  <span className="eyebrow eyebrow-accent">FanLinc presents</span>
+                </div>
+                <h1 className="display text-[88px] sm:text-[160px] leading-[0.84] mt-3 sm:mt-4 text-[var(--foreground)]">
+                  Game
+                  <br />
+                  Day.
+                </h1>
+              </FadeUp>
             </div>
+          </motion.div>
 
-            {/* Spacer */}
-            <div className="flex-1" />
-
-            {/* Headline */}
-            <FadeUp delay={0.2}>
-              <div className="flex items-center gap-2.5">
-                <Image
-                  src="/brand/fanlinc-logo.png"
-                  alt="FanLinc"
-                  width={28}
-                  height={28}
-                  priority
-                  className="object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
-                />
-                <span className="eyebrow eyebrow-accent">FanLinc presents</span>
-              </div>
-              <h1 className="display text-[88px] sm:text-[160px] leading-[0.84] mt-3 sm:mt-4 text-[var(--foreground)]">
-                Game
-                <br />
-                Day.
-              </h1>
-            </FadeUp>
-          </div>
+          {/* Scroll-hint chevron — fades out as scroll begins */}
+          <motion.div
+            style={{ opacity: scrollHintOpacity }}
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 eyebrow text-white/70 flex flex-col items-center gap-1.5"
+          >
+            <span>Scroll</span>
+            <svg width="14" height="20" viewBox="0 0 14 20" fill="none">
+              <path
+                d="M7 2v14M2 11l5 5 5-5"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
+            </svg>
+          </motion.div>
         </div>
 
-        {/* Hero meta row */}
-        <div className="border-t border-[var(--border)] grid grid-cols-3 text-center">
+        {/* Stat row — anchored at the very bottom of the 180vh section,
+            so the user lands on it after the reveal completes. */}
+        <div className="absolute bottom-0 inset-x-0 border-t border-[var(--border)] grid grid-cols-3 text-center bg-[var(--background)]">
           <div className="px-3 py-4 border-r border-[var(--border)]">
             <div className="display-tight text-2xl">5</div>
             <div className="eyebrow mt-1">Questions</div>
