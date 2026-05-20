@@ -120,9 +120,20 @@ export function MarginalArt() {
   void SIDE_GALLERY;
 
   return (
-    <div className="hidden xl:block pointer-events-none select-none">
-      {/* LEFT — bottom → top */}
-      <div className="fixed top-0 left-0 w-[18rem] 2xl:w-[22rem] h-screen z-0">
+    <div className="pointer-events-none select-none">
+      {/* LEFT — bottom → top.
+          On mobile the column overlays content at the very edge but a
+          horizontal mask fades it to transparent before reaching the
+          readable area. On xl+ it sits in the open gutter at z-0. */}
+      <div
+        className="fixed top-0 left-0 h-screen z-[15] xl:z-0 w-16 sm:w-24 md:w-32 lg:w-40 xl:w-[18rem] 2xl:w-[22rem]"
+        style={{
+          maskImage:
+            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage:
+            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+        }}
+      >
         <MarqueeColumn
           images={leftDeck}
           direction="up"
@@ -132,7 +143,15 @@ export function MarginalArt() {
       </div>
 
       {/* RIGHT — top → bottom */}
-      <div className="fixed top-0 right-0 w-[18rem] 2xl:w-[22rem] h-screen z-0">
+      <div
+        className="fixed top-0 right-0 h-screen z-[15] xl:z-0 w-16 sm:w-24 md:w-32 lg:w-40 xl:w-[18rem] 2xl:w-[22rem]"
+        style={{
+          maskImage:
+            "linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage:
+            "linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)",
+        }}
+      >
         <MarqueeColumn
           images={rightDeck}
           direction="down"

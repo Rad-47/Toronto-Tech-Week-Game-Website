@@ -14,7 +14,7 @@ export function PageShell({
       <div className="grain" aria-hidden />
       <MarginalArt />
       {!hideNav && (
-        <header className="relative z-20 flex items-center justify-between px-5 pt-5 pb-3 sm:px-10">
+        <header className="relative z-20 flex items-center justify-between px-5 pt-5 pb-3 sm:px-10 bg-[var(--background)] border-b border-[var(--border)]">
           <Wordmark />
           <nav className="flex items-center gap-1 text-xs">
             <Link
