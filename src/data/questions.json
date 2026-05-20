@@ -1,0 +1,689 @@
+{
+  "categories": [
+    {
+      "id": "basketball",
+      "name": "Basketball",
+      "emoji": "🏀",
+      "tagline": "Hoops trivia, players, plays."
+    },
+    {
+      "id": "ohl-hockey",
+      "name": "OHL Hockey",
+      "emoji": "🏒",
+      "tagline": "Junior hockey, Honey Badgers nation."
+    },
+    {
+      "id": "baseball",
+      "name": "Baseball",
+      "emoji": "⚾",
+      "tagline": "Diamonds, dingers, and stats."
+    },
+    {
+      "id": "fanlinc-mix",
+      "name": "FanLinc / Sports Mix",
+      "emoji": "🎯",
+      "tagline": "Cross-sport trivia for true fans."
+    }
+  ],
+  "questions": {
+    "basketball": [
+      {
+        "id": "bb-1",
+        "type": "trivia",
+        "prompt": "How many players from one team are on the court at once in a standard basketball game?",
+        "options": ["4", "5", "6", "7"],
+        "answer": 1,
+        "explain": "Five players per team take the court at any one time."
+      },
+      {
+        "id": "bb-2",
+        "type": "player",
+        "prompt": "Which player is widely nicknamed 'The Greek Freak'?",
+        "options": ["Luka Doncic", "Giannis Antetokounmpo", "Joel Embiid", "Nikola Jokic"],
+        "answer": 1,
+        "explain": "Giannis Antetokounmpo earned the nickname for his Greek heritage and freakish athleticism."
+      },
+      {
+        "id": "bb-3",
+        "type": "team",
+        "prompt": "The Toronto Raptors won their first NBA Championship in which year?",
+        "options": ["2017", "2018", "2019", "2020"],
+        "answer": 2,
+        "explain": "The Raptors beat the Warriors 4-2 in 2019."
+      },
+      {
+        "id": "bb-4",
+        "type": "rules",
+        "prompt": "What is the shot clock length in the NBA?",
+        "options": ["20 seconds", "24 seconds", "30 seconds", "35 seconds"],
+        "answer": 1,
+        "explain": "NBA shot clock is 24 seconds."
+      },
+      {
+        "id": "bb-5",
+        "type": "term",
+        "prompt": "What does 'and-one' mean in basketball?",
+        "options": [
+          "A foul on a missed shot",
+          "Making the shot while being fouled",
+          "An offensive rebound",
+          "A two-point play"
+        ],
+        "answer": 1,
+        "explain": "When a player scores while being fouled and earns one free throw."
+      },
+      {
+        "id": "bb-6",
+        "type": "player",
+        "prompt": "Who holds the NBA all-time scoring record?",
+        "options": ["Kareem Abdul-Jabbar", "LeBron James", "Michael Jordan", "Karl Malone"],
+        "answer": 1,
+        "explain": "LeBron James surpassed Kareem Abdul-Jabbar in 2023."
+      },
+      {
+        "id": "bb-7",
+        "type": "team",
+        "prompt": "Which Canadian city is home to the Raptors 905 G League team?",
+        "options": ["Toronto", "Mississauga", "Hamilton", "Vaughan"],
+        "answer": 1,
+        "explain": "Raptors 905 play out of Mississauga's Paramount Fine Foods Centre."
+      },
+      {
+        "id": "bb-8",
+        "type": "trivia",
+        "prompt": "How many points is a free throw worth?",
+        "options": ["1", "2", "3", "It varies"],
+        "answer": 0,
+        "explain": "Free throws are always one point."
+      },
+      {
+        "id": "bb-9",
+        "type": "term",
+        "prompt": "What is a 'triple-double'?",
+        "options": [
+          "Three free throws in a row",
+          "Double digits in 3 statistical categories",
+          "Three three-pointers in one possession",
+          "A triple overtime game"
+        ],
+        "answer": 1,
+        "explain": "Double-digit totals in three of: points, rebounds, assists, steals, blocks."
+      },
+      {
+        "id": "bb-10",
+        "type": "player",
+        "prompt": "Which player is known as 'Steph' and revolutionized 3-point shooting?",
+        "options": ["Stephon Marbury", "Stephen Curry", "Klay Thompson", "Damian Lillard"],
+        "answer": 1,
+        "explain": "Stephen Curry of the Golden State Warriors."
+      },
+      {
+        "id": "bb-11",
+        "type": "team",
+        "prompt": "Which Canadian team plays in the NBA?",
+        "options": ["Toronto Raptors", "Montreal Mounties", "Vancouver Grizzlies", "Calgary Stampede"],
+        "answer": 0,
+        "explain": "The Raptors are the only Canadian NBA team."
+      },
+      {
+        "id": "bb-12",
+        "type": "rules",
+        "prompt": "How long is one NBA quarter?",
+        "options": ["10 minutes", "12 minutes", "15 minutes", "20 minutes"],
+        "answer": 1,
+        "explain": "NBA quarters are 12 minutes; FIBA and college are different."
+      },
+      {
+        "id": "bb-13",
+        "type": "fan",
+        "prompt": "What is the name of the Raptors' mascot?",
+        "options": ["The Raptor", "Carlton", "Spinneret", "Rex"],
+        "answer": 0,
+        "explain": "Simply 'The Raptor'."
+      },
+      {
+        "id": "bb-14",
+        "type": "trivia",
+        "prompt": "From how far back is an NBA 3-point shot, at the corner?",
+        "options": ["21'9\"", "22'0\"", "23'9\"", "24'0\""],
+        "answer": 1,
+        "explain": "Corner 3 is 22 feet; the top of the arc is 23'9\"."
+      },
+      {
+        "id": "bb-15",
+        "type": "player",
+        "prompt": "Who was named the NBA MVP for the 2022-23 season?",
+        "options": ["Nikola Jokic", "Joel Embiid", "Giannis Antetokounmpo", "Jayson Tatum"],
+        "answer": 1,
+        "explain": "Joel Embiid took home the 2022-23 MVP."
+      },
+      {
+        "id": "bb-16",
+        "type": "fan",
+        "prompt": "What's the standard nickname for a basketball net?",
+        "options": ["The Hoop", "The Twine", "The Ring", "The Cylinder"],
+        "answer": 1,
+        "explain": "'Nothing but twine' is a common phrase for a clean swish."
+      },
+      {
+        "id": "bb-17",
+        "type": "rules",
+        "prompt": "How many personal fouls force an NBA player to foul out?",
+        "options": ["4", "5", "6", "7"],
+        "answer": 2,
+        "explain": "Six fouls and you're out in the NBA."
+      },
+      {
+        "id": "bb-18",
+        "type": "term",
+        "prompt": "A 'pick and roll' involves two offensive actions. What are they?",
+        "options": [
+          "Screen and cut to the basket",
+          "Dribble and pass",
+          "Box out and rebound",
+          "Drive and kick"
+        ],
+        "answer": 0,
+        "explain": "A screener sets a pick then rolls (cuts) to the basket."
+      }
+    ],
+    "ohl-hockey": [
+      {
+        "id": "ohl-1",
+        "type": "team",
+        "prompt": "The OHL is one of three major junior leagues that make up which Canadian organization?",
+        "options": ["NHL", "AHL", "CHL", "ECHL"],
+        "answer": 2,
+        "explain": "The CHL (Canadian Hockey League) includes the OHL, WHL, and QMJHL."
+      },
+      {
+        "id": "ohl-2",
+        "type": "trivia",
+        "prompt": "Which trophy is awarded to the OHL playoff champion?",
+        "options": ["Stanley Cup", "J. Ross Robertson Cup", "Memorial Cup", "President's Cup"],
+        "answer": 1,
+        "explain": "The J. Ross Robertson Cup is the OHL playoff championship trophy."
+      },
+      {
+        "id": "ohl-3",
+        "type": "trivia",
+        "prompt": "The Memorial Cup is awarded to which level of championship?",
+        "options": [
+          "OHL playoff winner",
+          "WHL playoff winner",
+          "Canadian Hockey League (CHL) champion",
+          "NHL development champion"
+        ],
+        "answer": 2,
+        "explain": "The Memorial Cup is the national CHL championship between OHL/WHL/QMJHL champs and a host."
+      },
+      {
+        "id": "ohl-4",
+        "type": "team",
+        "prompt": "The Brantford Bulldogs play home games in which city?",
+        "options": ["Hamilton", "Brantford", "Kitchener", "Guelph"],
+        "answer": 1,
+        "explain": "The franchise relocated to Brantford ahead of the 2023-24 season."
+      },
+      {
+        "id": "ohl-5",
+        "type": "rules",
+        "prompt": "How long is a standard OHL regular-season game (regulation)?",
+        "options": ["50 minutes", "60 minutes", "65 minutes", "75 minutes"],
+        "answer": 1,
+        "explain": "Three 20-minute periods, just like the NHL."
+      },
+      {
+        "id": "ohl-6",
+        "type": "player",
+        "prompt": "Who is widely regarded as the greatest junior player of all time, having played in the OHL for the Sault Ste. Marie Greyhounds?",
+        "options": ["Mario Lemieux", "Wayne Gretzky", "Sidney Crosby", "Connor McDavid"],
+        "answer": 1,
+        "explain": "Wayne Gretzky played his junior season with the Soo Greyhounds (1977-78)."
+      },
+      {
+        "id": "ohl-7",
+        "type": "team",
+        "prompt": "Connor McDavid played his OHL career with which team?",
+        "options": [
+          "Erie Otters",
+          "London Knights",
+          "Mississauga Steelheads",
+          "Ottawa 67's"
+        ],
+        "answer": 0,
+        "explain": "McDavid played three seasons with the Erie Otters."
+      },
+      {
+        "id": "ohl-8",
+        "type": "term",
+        "prompt": "What does an 'overage' player mean in the OHL?",
+        "options": [
+          "A 16-year-old rookie",
+          "A 20-year-old player allowed by special exemption",
+          "A player older than the league cutoff",
+          "A 19-year-old captain"
+        ],
+        "answer": 2,
+        "explain": "OHL teams are limited in the number of overage (20-year-old) players on the roster."
+      },
+      {
+        "id": "ohl-9",
+        "type": "fan",
+        "prompt": "Which OHL team plays out of the Hershey Centre / Paramount Fine Foods Centre?",
+        "options": [
+          "Mississauga Steelheads",
+          "Brampton Steelheads",
+          "Oshawa Generals",
+          "Niagara IceDogs"
+        ],
+        "answer": 1,
+        "explain": "The franchise rebranded as the Brampton Steelheads in 2024."
+      },
+      {
+        "id": "ohl-10",
+        "type": "team",
+        "prompt": "How many teams are in the Ontario Hockey League?",
+        "options": ["16", "18", "20", "22"],
+        "answer": 2,
+        "explain": "The OHL currently has 20 franchises."
+      },
+      {
+        "id": "ohl-11",
+        "type": "player",
+        "prompt": "Which OHL alum was drafted #1 overall by the Edmonton Oilers in 2015?",
+        "options": ["Auston Matthews", "Connor McDavid", "Jack Eichel", "Mitch Marner"],
+        "answer": 1,
+        "explain": "McDavid went #1 overall after his run with the Erie Otters."
+      },
+      {
+        "id": "ohl-12",
+        "type": "rules",
+        "prompt": "What's the standard penalty time for a 'minor' infraction?",
+        "options": ["1 minute", "2 minutes", "4 minutes", "5 minutes"],
+        "answer": 1,
+        "explain": "A minor penalty is two minutes in the box."
+      },
+      {
+        "id": "ohl-13",
+        "type": "team",
+        "prompt": "The London Knights, Kitchener Rangers, and Windsor Spitfires play in which OHL conference?",
+        "options": ["Eastern", "Western", "Central", "Atlantic"],
+        "answer": 1,
+        "explain": "All three are in the OHL's Western Conference."
+      },
+      {
+        "id": "ohl-14",
+        "type": "fan",
+        "prompt": "What is the name of the trophy awarded to the OHL's regular-season points leader?",
+        "options": [
+          "Hamilton Spectator Trophy",
+          "Eddie Powers Memorial Trophy",
+          "Red Tilson Trophy",
+          "Bobby Smith Trophy"
+        ],
+        "answer": 0,
+        "explain": "The Hamilton Spectator Trophy goes to the OHL's regular-season champion."
+      },
+      {
+        "id": "ohl-15",
+        "type": "trivia",
+        "prompt": "Honey Badgers is a name commonly associated with which Canadian pro basketball franchise, also tied to community events that bring junior hockey fans together?",
+        "options": [
+          "Edmonton Stingers",
+          "Brampton Honey Badgers",
+          "Niagara River Lions",
+          "Scarborough Shooting Stars"
+        ],
+        "answer": 1,
+        "explain": "The Brampton Honey Badgers play in the Canadian Elite Basketball League — and that's why we're here tonight."
+      },
+      {
+        "id": "ohl-16",
+        "type": "player",
+        "prompt": "Bobby Orr played his junior career with which OHL/OHA team?",
+        "options": ["Oshawa Generals", "Peterborough Petes", "Niagara Falls Flyers", "Sudbury Wolves"],
+        "answer": 0,
+        "explain": "Bobby Orr starred for the Oshawa Generals in the 1960s."
+      },
+      {
+        "id": "ohl-17",
+        "type": "term",
+        "prompt": "What does 'top shelf, where Mama hides the cookies' refer to?",
+        "options": [
+          "A penalty kill formation",
+          "The high inside corner of the net",
+          "A defenseman pinching down low",
+          "A faceoff in the offensive zone"
+        ],
+        "answer": 1,
+        "explain": "The top corner of the net — a snipe."
+      }
+    ],
+    "baseball": [
+      {
+        "id": "ba-1",
+        "type": "rules",
+        "prompt": "How many strikes make an out in baseball?",
+        "options": ["2", "3", "4", "5"],
+        "answer": 1,
+        "explain": "Three strikes and you're out."
+      },
+      {
+        "id": "ba-2",
+        "type": "team",
+        "prompt": "Which Canadian city is home to MLB's only current Canadian franchise?",
+        "options": ["Montreal", "Vancouver", "Toronto", "Calgary"],
+        "answer": 2,
+        "explain": "The Toronto Blue Jays are MLB's only Canadian team since the Expos left in 2004."
+      },
+      {
+        "id": "ba-3",
+        "type": "player",
+        "prompt": "Who hit the famous walk-off home run that won the 1993 World Series for the Toronto Blue Jays?",
+        "options": ["Joe Carter", "Roberto Alomar", "Paul Molitor", "John Olerud"],
+        "answer": 0,
+        "explain": "'Touch 'em all, Joe!' — Joe Carter's walk-off in Game 6 vs. Philadelphia."
+      },
+      {
+        "id": "ba-4",
+        "type": "term",
+        "prompt": "What is a 'no-hitter'?",
+        "options": [
+          "A game where no team scores",
+          "A pitcher allows zero hits across a complete game",
+          "A pitcher walks every batter",
+          "A scoreless inning"
+        ],
+        "answer": 1,
+        "explain": "Pitcher (or team) doesn't allow any hits through the entire game."
+      },
+      {
+        "id": "ba-5",
+        "type": "rules",
+        "prompt": "How many innings are in a standard MLB game?",
+        "options": ["7", "8", "9", "10"],
+        "answer": 2,
+        "explain": "Nine innings, unless tied (extras) or shortened by weather."
+      },
+      {
+        "id": "ba-6",
+        "type": "player",
+        "prompt": "Which two-way superstar plays for the Los Angeles Dodgers as of 2024?",
+        "options": ["Mike Trout", "Shohei Ohtani", "Ronald Acuna Jr.", "Aaron Judge"],
+        "answer": 1,
+        "explain": "Shohei Ohtani signed a record contract with the Dodgers in December 2023."
+      },
+      {
+        "id": "ba-7",
+        "type": "team",
+        "prompt": "What is the name of the Blue Jays' home ballpark?",
+        "options": ["SkyDome", "Rogers Centre", "Centre Field", "Maple Park"],
+        "answer": 1,
+        "explain": "Officially Rogers Centre since 2005 (the venue was originally SkyDome)."
+      },
+      {
+        "id": "ba-8",
+        "type": "term",
+        "prompt": "What does 'RBI' stand for?",
+        "options": [
+          "Runner Brought In",
+          "Run Batted In",
+          "Run-Bringing Inning",
+          "Reaching Base Independently"
+        ],
+        "answer": 1,
+        "explain": "Run Batted In — a batter's credit for driving in a run."
+      },
+      {
+        "id": "ba-9",
+        "type": "rules",
+        "prompt": "How many bases must a runner touch to score a run?",
+        "options": ["2", "3", "4", "5"],
+        "answer": 2,
+        "explain": "First, second, third, and home — four bases total."
+      },
+      {
+        "id": "ba-10",
+        "type": "fan",
+        "prompt": "What is the traditional 7th-inning stretch song?",
+        "options": [
+          "Sweet Caroline",
+          "Take Me Out to the Ball Game",
+          "Centerfield",
+          "Glory Days"
+        ],
+        "answer": 1,
+        "explain": "'Take Me Out to the Ball Game' is the classic 7th-inning sing-along."
+      },
+      {
+        "id": "ba-11",
+        "type": "player",
+        "prompt": "Which Blue Jays slugger is nicknamed 'Vladdy Jr.'?",
+        "options": [
+          "Bo Bichette",
+          "Vladimir Guerrero Jr.",
+          "George Springer",
+          "Cavan Biggio"
+        ],
+        "answer": 1,
+        "explain": "Vladimir Guerrero Jr., son of the Hall of Famer."
+      },
+      {
+        "id": "ba-12",
+        "type": "term",
+        "prompt": "What is an 'ERA' for a pitcher?",
+        "options": [
+          "Effective Run Average",
+          "Earned Run Average",
+          "Estimated Runs Allowed",
+          "End-game Rating Adjustment"
+        ],
+        "answer": 1,
+        "explain": "Earned Run Average — average earned runs allowed per 9 innings."
+      },
+      {
+        "id": "ba-13",
+        "type": "trivia",
+        "prompt": "Which player holds MLB's single-season home run record (since 2001)?",
+        "options": ["Barry Bonds", "Aaron Judge", "Mark McGwire", "Sammy Sosa"],
+        "answer": 0,
+        "explain": "Barry Bonds hit 73 home runs in 2001."
+      },
+      {
+        "id": "ba-14",
+        "type": "rules",
+        "prompt": "What is a 'balk'?",
+        "options": [
+          "A batter steps out of the box",
+          "An illegal motion by the pitcher with runners on base",
+          "A foul tip into the catcher's mitt",
+          "An intentional walk"
+        ],
+        "answer": 1,
+        "explain": "A balk is an illegal pitching motion; runners advance one base."
+      },
+      {
+        "id": "ba-15",
+        "type": "player",
+        "prompt": "Who broke MLB's color barrier in 1947?",
+        "options": ["Jackie Robinson", "Hank Aaron", "Willie Mays", "Larry Doby"],
+        "answer": 0,
+        "explain": "Jackie Robinson debuted with the Brooklyn Dodgers on April 15, 1947."
+      },
+      {
+        "id": "ba-16",
+        "type": "fan",
+        "prompt": "What's the most common reason a batter is awarded first base without swinging?",
+        "options": ["A balk", "Catcher's interference", "Hit by pitch or walk", "An infield error"],
+        "answer": 2,
+        "explain": "Four balls (a walk) or being hit by a pitch sends the batter to first."
+      }
+    ],
+    "fanlinc-mix": [
+      {
+        "id": "mx-1",
+        "type": "fan",
+        "prompt": "What's the best part of being a sports fan, according to most polls?",
+        "options": [
+          "Bragging rights",
+          "Community and shared experience",
+          "Buying gear",
+          "Highlights"
+        ],
+        "answer": 1,
+        "explain": "Most fan surveys land on community as the #1 reason — and that's exactly what FanLinc is built for."
+      },
+      {
+        "id": "mx-2",
+        "type": "trivia",
+        "prompt": "Which city is hosting the FIFA World Cup matches in Canada in 2026?",
+        "options": ["Vancouver and Toronto", "Montreal and Toronto", "Vancouver only", "Toronto only"],
+        "answer": 0,
+        "explain": "Vancouver and Toronto are Canada's 2026 World Cup host cities."
+      },
+      {
+        "id": "mx-3",
+        "type": "term",
+        "prompt": "In any sport, what does 'GOAT' stand for?",
+        "options": [
+          "Greatest On A Team",
+          "Greatest Of All Time",
+          "Game-Over Athletic Talent",
+          "Glory On And Through"
+        ],
+        "answer": 1,
+        "explain": "Greatest Of All Time."
+      },
+      {
+        "id": "mx-4",
+        "type": "team",
+        "prompt": "The Brampton Honey Badgers play in which league?",
+        "options": ["NBA G League", "Canadian Elite Basketball League (CEBL)", "Basketball Africa League", "Big3"],
+        "answer": 1,
+        "explain": "The Honey Badgers are a CEBL franchise — and the reason we're all here tonight."
+      },
+      {
+        "id": "mx-5",
+        "type": "trivia",
+        "prompt": "Which Canadian sprinter won 100m Olympic gold at the 1996 Atlanta Games?",
+        "options": ["Andre De Grasse", "Donovan Bailey", "Bruny Surin", "Damian Warner"],
+        "answer": 1,
+        "explain": "Donovan Bailey won 100m gold in 1996, then led Canada's 4x100m relay to gold."
+      },
+      {
+        "id": "mx-6",
+        "type": "fan",
+        "prompt": "What's the most common shape of a sports championship trophy?",
+        "options": ["Cube", "Cup / chalice", "Star", "Plate"],
+        "answer": 1,
+        "explain": "From the Stanley Cup to the NBA Finals trophy, the cup shape is iconic."
+      },
+      {
+        "id": "mx-7",
+        "type": "term",
+        "prompt": "In sports betting and analytics, what does 'over/under' refer to?",
+        "options": [
+          "Player height comparison",
+          "Total combined points in a game",
+          "Time remaining in a quarter",
+          "Players over a salary cap"
+        ],
+        "answer": 1,
+        "explain": "The total combined score line — bettors take the over or the under."
+      },
+      {
+        "id": "mx-8",
+        "type": "trivia",
+        "prompt": "Which sport uses a 'hat trick' as a term for three goals or scores by one player?",
+        "options": [
+          "Only hockey",
+          "Only soccer",
+          "Hockey, soccer, and cricket all use it",
+          "Basketball only"
+        ],
+        "answer": 2,
+        "explain": "Hat trick originated in cricket and is used across hockey, soccer, and more."
+      },
+      {
+        "id": "mx-9",
+        "type": "fan",
+        "prompt": "What does FanLinc do for fans?",
+        "options": [
+          "Sells tickets at a discount",
+          "Connects fans through games, communities, and shared experiences",
+          "Streams highlights only",
+          "Manages fantasy leagues"
+        ],
+        "answer": 1,
+        "explain": "FanLinc connects fans through games, communities, and shared experiences — like tonight."
+      },
+      {
+        "id": "mx-10",
+        "type": "trivia",
+        "prompt": "Toronto is home to teams in which of these leagues?",
+        "options": [
+          "NBA only",
+          "MLB only",
+          "NHL, NBA, MLB, MLS, CFL — and more",
+          "Just the NHL"
+        ],
+        "answer": 2,
+        "explain": "Maple Leafs, Raptors, Blue Jays, Toronto FC, Argonauts — Toronto is stacked."
+      },
+      {
+        "id": "mx-11",
+        "type": "team",
+        "prompt": "Which league did the Toronto Argonauts play in to win the 2022 Grey Cup?",
+        "options": ["NFL", "CFL", "XFL", "USFL"],
+        "answer": 1,
+        "explain": "The Argos are a CFL (Canadian Football League) team — won the Grey Cup in 2022."
+      },
+      {
+        "id": "mx-12",
+        "type": "rules",
+        "prompt": "Which sport features 'sudden death' as a tiebreaker concept across multiple leagues?",
+        "options": ["Cricket", "Hockey, soccer, golf, NFL playoffs — many sports", "Only golf", "Only hockey"],
+        "answer": 1,
+        "explain": "Sudden death is used in many sports to break ties — first score wins."
+      },
+      {
+        "id": "mx-13",
+        "type": "fan",
+        "prompt": "What's the term for a fan watching every game of their favourite team?",
+        "options": ["Day-one fan", "Diehard / superfan", "Casual", "Bandwagoner"],
+        "answer": 1,
+        "explain": "Diehard or superfan — and FanLinc has a badge for that."
+      },
+      {
+        "id": "mx-14",
+        "type": "trivia",
+        "prompt": "The Toronto Maple Leafs have won how many Stanley Cups in franchise history?",
+        "options": ["7", "9", "11", "13"],
+        "answer": 3,
+        "explain": "Thirteen Cups (most recently in 1967)."
+      },
+      {
+        "id": "mx-15",
+        "type": "player",
+        "prompt": "Which Canadian-raised NBA superstar was a back-to-back NBA MVP (2005 and 2006)?",
+        "options": ["Jamal Murray", "Tristan Thompson", "Andrew Wiggins", "Steve Nash"],
+        "answer": 3,
+        "explain": "Steve Nash — raised in Victoria, BC — won MVP in 2005 and 2006."
+      },
+      {
+        "id": "mx-16",
+        "type": "fan",
+        "prompt": "What's the most valuable thing a sports community gives a fan?",
+        "options": [
+          "Free swag",
+          "Belonging and connection",
+          "Insider news",
+          "Discount codes"
+        ],
+        "answer": 1,
+        "explain": "Belonging — the heart of FanLinc."
+      }
+    ]
+  }
+}
