@@ -8,7 +8,7 @@ import { PageShell } from "@/components/Shell";
 import { Magnetic } from "@/components/Magnetic";
 import { FadeUp } from "@/components/SplitText";
 import { CategoryIcon } from "@/components/SportIcons";
-import { IMAGES, CATEGORY_IMAGES } from "@/lib/images";
+import { IMAGES, CATEGORY_IMAGES, ROSTER } from "@/lib/images";
 import { getCategories } from "@/lib/questions";
 
 export default function Home() {
@@ -292,11 +292,86 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ============== INDEX 03 — PRIZE ============== */}
+      {/* ============== INDEX 03 — ROSTER ============== */}
       <section className="mt-20 sm:mt-32">
         <FadeUp>
           <div className="flex items-baseline justify-between">
             <div className="eyebrow eyebrow-accent">Index 03</div>
+            <div className="eyebrow">On the floor</div>
+          </div>
+          <div className="divider mt-3" />
+          <h2 className="display text-[44px] sm:text-[80px] leading-[0.9] mt-6">
+            The
+            <br />
+            roster.
+          </h2>
+          <p className="mt-5 text-[14px] sm:text-[15px] text-[var(--muted)] max-w-md leading-relaxed">
+            Real athletes working with FanLinc on tonight&apos;s event.
+            Hockey, baseball — all on the floor.
+          </p>
+        </FadeUp>
+
+        <motion.div
+          className="mt-10 grid grid-cols-2 gap-3 sm:gap-4"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            show: { transition: { staggerChildren: 0.1 } },
+          }}
+        >
+          {ROSTER.map((p) => (
+            <motion.div
+              key={p.index}
+              variants={{
+                hidden: { opacity: 0, y: 24 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+              }}
+              className="group relative aspect-[3/4] overflow-hidden border border-[var(--border)]"
+            >
+              <Image
+                src={p.photo}
+                alt={`${p.sport} player — ${p.team}`}
+                fill
+                sizes="(max-width: 640px) 50vw, 320px"
+                className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+              />
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(7,7,8,0.15) 0%, rgba(7,7,8,0.05) 40%, rgba(7,7,8,0.85) 88%, rgba(7,7,8,0.98) 100%)",
+                }}
+              />
+              <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-between">
+                <div className="flex items-start justify-between">
+                  <div className="eyebrow text-white/80">
+                    <span className="digit text-[var(--primary)] mr-2">
+                      {p.index}
+                    </span>
+                    {p.sport}
+                  </div>
+                </div>
+                <div>
+                  <div className="display text-[20px] sm:text-[28px] leading-[1.0] text-white">
+                    {p.name}
+                  </div>
+                  <div className="text-[11px] sm:text-[12px] text-white/65 mt-1.5 leading-snug">
+                    {p.team}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
+
+      {/* ============== INDEX 04 — PRIZE ============== */}
+      <section className="mt-20 sm:mt-32">
+        <FadeUp>
+          <div className="flex items-baseline justify-between">
+            <div className="eyebrow eyebrow-accent">Index 04</div>
             <div className="eyebrow">Tonight only</div>
           </div>
           <div className="divider mt-3" />

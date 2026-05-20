@@ -10,6 +10,50 @@ export const IMAGES = {
   basketballAction: UNSPLASH("1577471488278-16eec37ffcc2", 900, 75),
 } as const;
 
+/* ============================================================
+ * ROSTER — real athletes working with FanLinc on the event.
+ * Photos live in /public/players/. Names + chips below are
+ * placeholders the event team can update before showtime.
+ * ============================================================ */
+export interface RosterPlayer {
+  index: string;
+  name: string;
+  sport: string;
+  team: string;
+  photo: string;
+}
+
+export const ROSTER: RosterPlayer[] = [
+  {
+    index: "01",
+    name: "Forward",
+    sport: "Hockey",
+    team: "Windsor Spitfires · OHL",
+    photo: "/players/player-01.jpg",
+  },
+  {
+    index: "02",
+    name: "Forward · #76",
+    sport: "Hockey",
+    team: "Junior · CHL",
+    photo: "/players/player-02.jpg",
+  },
+  {
+    index: "03",
+    name: "Outfielder · #14",
+    sport: "Baseball",
+    team: "McCook · NCAA",
+    photo: "/players/player-03.jpg",
+  },
+  {
+    index: "04",
+    name: "Outfielder",
+    sport: "Baseball",
+    team: "Niagara · Summer League",
+    photo: "/players/player-04.jpg",
+  },
+];
+
 export const CATEGORY_IMAGES: Record<CategoryId, string> = {
   basketball: UNSPLASH("1577471488278-16eec37ffcc2", 900, 75),
   "ohl-hockey": UNSPLASH("1504450758481-7338eba7524a", 900, 75),
