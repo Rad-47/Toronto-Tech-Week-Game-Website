@@ -16,6 +16,9 @@ export interface Question {
   options: string[];
   answer: number;
   explain?: string;
+  /** Optional image rendered above the prompt — used for
+   *  "who is this player / which team?" style questions. */
+  image?: string;
 }
 
 export interface QuestionBank {

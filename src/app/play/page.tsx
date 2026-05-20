@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
@@ -246,7 +247,19 @@ export default function PlayPage() {
             </span>
             {q.type}
           </div>
-          <h2 className="display-tight text-[28px] sm:text-[36px] leading-[1.05] mt-3 max-w-[22ch]">
+          {q.image && (
+            <div className="relative w-full aspect-[4/5] sm:aspect-[4/3] mt-4 overflow-hidden border border-[var(--border)] rounded-lg">
+              <Image
+                src={q.image}
+                alt="Identify the player"
+                fill
+                priority
+                sizes="(max-width: 640px) 100vw, 480px"
+                className="object-cover"
+              />
+            </div>
+          )}
+          <h2 className="display-tight text-[24px] sm:text-[32px] leading-[1.1] mt-4 max-w-[22ch]">
             {q.prompt}
           </h2>
 

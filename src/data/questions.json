@@ -187,7 +187,31 @@
         "explain": "A screener sets a pick then rolls (cuts) to the basket."
       }
     ],
+
     "ohl-hockey": [
+      {
+        "id": "ohl-img-1",
+        "type": "player",
+        "image": "/players/player-01.jpg",
+        "prompt": "Look at the jersey crest. Which OHL team does this player suit up for?",
+        "options": [
+          "London Knights",
+          "Windsor Spitfires",
+          "Sault Ste. Marie Greyhounds",
+          "Erie Otters"
+        ],
+        "answer": 1,
+        "explain": "The Spitfires logo is the giveaway — Windsor's OHL club."
+      },
+      {
+        "id": "ohl-img-2",
+        "type": "player",
+        "image": "/players/player-02.jpg",
+        "prompt": "What jersey number is this junior hockey player wearing?",
+        "options": ["17", "46", "76", "96"],
+        "answer": 2,
+        "explain": "Number 76, visible on the shoulder and back of the jersey."
+      },
       {
         "id": "ohl-1",
         "type": "team",
@@ -362,6 +386,24 @@
     ],
     "baseball": [
       {
+        "id": "ba-img-1",
+        "type": "player",
+        "image": "/players/player-03.jpg",
+        "prompt": "Read the jersey. Which college program is this batter from?",
+        "options": ["Iowa Western", "McCook", "Northern Iowa", "Cisco College"],
+        "answer": 1,
+        "explain": "The McCook lettering across the chest gives it away — a Nebraska community college power."
+      },
+      {
+        "id": "ba-img-2",
+        "type": "player",
+        "image": "/players/player-04.jpg",
+        "prompt": "Look at the jersey crest. Which Canadian summer-league team is this outfielder repping?",
+        "options": ["Toronto Maple Leafs Baseball", "Niagara", "Hamilton Cardinals", "London Majors"],
+        "answer": 1,
+        "explain": "Niagara — visible on the chest, with the Canadian maple-leaf detail."
+      },
+      {
         "id": "ba-1",
         "type": "rules",
         "prompt": "How many strikes make an out in baseball?",
@@ -521,6 +563,24 @@
       }
     ],
     "fanlinc-mix": [
+      {
+        "id": "mx-img-1",
+        "type": "player",
+        "image": "/players/player-01.jpg",
+        "prompt": "FanLinc roster spotlight — what sport does this player compete in?",
+        "options": ["Hockey", "Lacrosse", "Baseball", "Basketball"],
+        "answer": 0,
+        "explain": "Hockey — jersey, stick, gloves all give it away. He's on the FanLinc roster as an OHL forward (Windsor Spitfires)."
+      },
+      {
+        "id": "mx-img-2",
+        "type": "player",
+        "image": "/players/player-03.jpg",
+        "prompt": "FanLinc roster spotlight — what sport does this player compete in?",
+        "options": ["Cricket", "Softball", "Baseball", "Football"],
+        "answer": 2,
+        "explain": "Baseball — batter's stance, helmet, the McCook jersey. He's on the FanLinc roster."
+      },
       {
         "id": "mx-1",
         "type": "fan",
