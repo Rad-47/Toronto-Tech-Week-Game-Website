@@ -17,8 +17,11 @@ export default function Home() {
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-  const imgScale = useTransform(scrollYProgress, [0, 1], [1.02, 1.12]);
+  // Subtle parallax — image drifts UP slightly as you scroll past
+  // (proper "image lags behind page" direction), and clipped to its
+  // own container so it never crosses into the stat row below.
+  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
+  const imgScale = useTransform(scrollYProgress, [0, 1], [1.04, 1.1]);
   const categories = getCategories();
 
   return (
@@ -28,7 +31,7 @@ export default function Home() {
         ref={heroRef}
         className="relative -mx-5 sm:-mx-6 mt-2 overflow-hidden border-y border-[var(--border)]"
       >
-        <div className="relative aspect-[4/5] sm:aspect-[16/9]">
+        <div className="relative aspect-[4/5] sm:aspect-[16/9] overflow-hidden">
           <motion.div
             style={{ y: imgY, scale: imgScale }}
             className="absolute inset-0"
