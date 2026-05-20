@@ -26,16 +26,16 @@ export interface RosterPlayer {
 export const ROSTER: RosterPlayer[] = [
   {
     index: "01",
-    name: "Forward",
+    name: "Conor Walton",
     sport: "Hockey",
     team: "Windsor Spitfires · OHL",
     photo: "/players/player-01.jpg",
   },
   {
     index: "02",
-    name: "Forward · #76",
+    name: "Kieron Walton",
     sport: "Hockey",
-    team: "Junior · CHL",
+    team: "Junior · #76",
     photo: "/players/player-02.jpg",
   },
   {
@@ -47,7 +47,7 @@ export const ROSTER: RosterPlayer[] = [
   },
   {
     index: "04",
-    name: "Outfielder",
+    name: "Weston Thompson",
     sport: "Baseball",
     team: "Niagara · Summer League",
     photo: "/players/player-04.jpg",

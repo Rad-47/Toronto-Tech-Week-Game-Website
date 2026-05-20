@@ -193,7 +193,7 @@
         "id": "ohl-img-1",
         "type": "player",
         "image": "/players/player-01.jpg",
-        "prompt": "Look at the jersey crest. Which OHL team does this player suit up for?",
+        "prompt": "Look at the jersey crest. Which OHL team does Conor Walton suit up for?",
         "options": [
           "London Knights",
           "Windsor Spitfires",
@@ -201,16 +201,35 @@
           "Erie Otters"
         ],
         "answer": 1,
-        "explain": "The Spitfires logo is the giveaway — Windsor's OHL club."
+        "explain": "Conor Walton — Windsor Spitfires, OHL. Brother of Kieron Walton, also on the FanLinc roster."
       },
       {
         "id": "ohl-img-2",
         "type": "player",
         "image": "/players/player-02.jpg",
-        "prompt": "What jersey number is this junior hockey player wearing?",
-        "options": ["17", "46", "76", "96"],
+        "prompt": "Who is this junior hockey forward wearing #76?",
+        "options": [
+          "Cole Brown",
+          "Tyler Anderson",
+          "Kieron Walton",
+          "Riley Coxhead"
+        ],
         "answer": 2,
-        "explain": "Number 76, visible on the shoulder and back of the jersey."
+        "explain": "Kieron Walton — younger brother of Conor Walton (Windsor Spitfires). Both are on the FanLinc roster."
+      },
+      {
+        "id": "ohl-img-3",
+        "type": "player",
+        "image": "/players/player-01.jpg",
+        "prompt": "Name the Windsor Spitfires forward.",
+        "options": [
+          "Liam Greentree",
+          "Conor Walton",
+          "Owen Lewis",
+          "Ryan Mitchell"
+        ],
+        "answer": 1,
+        "explain": "Conor Walton — Spitfires forward, on the FanLinc roster tonight."
       },
       {
         "id": "ohl-1",
@@ -398,10 +417,24 @@
         "id": "ba-img-2",
         "type": "player",
         "image": "/players/player-04.jpg",
-        "prompt": "Look at the jersey crest. Which Canadian summer-league team is this outfielder repping?",
+        "prompt": "Look at the jersey crest. Which Canadian summer-league team is Weston Thompson repping?",
         "options": ["Toronto Maple Leafs Baseball", "Niagara", "Hamilton Cardinals", "London Majors"],
         "answer": 1,
-        "explain": "Niagara — visible on the chest, with the Canadian maple-leaf detail."
+        "explain": "Weston Thompson — Niagara outfielder, on the FanLinc roster."
+      },
+      {
+        "id": "ba-img-3",
+        "type": "player",
+        "image": "/players/player-04.jpg",
+        "prompt": "Name this Niagara outfielder.",
+        "options": [
+          "Cole Patterson",
+          "Jake Hennigan",
+          "Weston Thompson",
+          "Ryan Mitchell"
+        ],
+        "answer": 2,
+        "explain": "Weston Thompson — on the FanLinc roster tonight."
       },
       {
         "id": "ba-1",
@@ -567,19 +600,33 @@
         "id": "mx-img-1",
         "type": "player",
         "image": "/players/player-01.jpg",
-        "prompt": "FanLinc roster spotlight — what sport does this player compete in?",
+        "prompt": "FanLinc roster spotlight — Conor Walton suits up in which sport?",
         "options": ["Hockey", "Lacrosse", "Baseball", "Basketball"],
         "answer": 0,
-        "explain": "Hockey — jersey, stick, gloves all give it away. He's on the FanLinc roster as an OHL forward (Windsor Spitfires)."
+        "explain": "Conor Walton — Hockey. OHL forward with the Windsor Spitfires."
       },
       {
         "id": "mx-img-2",
         "type": "player",
         "image": "/players/player-03.jpg",
-        "prompt": "FanLinc roster spotlight — what sport does this player compete in?",
+        "prompt": "FanLinc roster spotlight — what sport does this McCook athlete compete in?",
         "options": ["Cricket", "Softball", "Baseball", "Football"],
         "answer": 2,
-        "explain": "Baseball — batter's stance, helmet, the McCook jersey. He's on the FanLinc roster."
+        "explain": "Baseball — batter's stance, helmet, McCook jersey across the chest."
+      },
+      {
+        "id": "mx-img-3",
+        "type": "player",
+        "image": "/players/player-02.jpg",
+        "prompt": "FanLinc roster spotlight — Kieron Walton is the younger brother of which other roster player?",
+        "options": [
+          "Conor Walton",
+          "Weston Thompson",
+          "Liam Greentree",
+          "Owen Lewis"
+        ],
+        "answer": 0,
+        "explain": "Conor and Kieron Walton — both Walton brothers are on the FanLinc roster tonight."
       },
       {
         "id": "mx-1",
