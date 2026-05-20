@@ -85,7 +85,7 @@ export default function AdminPage() {
             setAdminAuth(false);
             setAuthed(false);
           }}
-          className="text-xs text-[var(--muted)] hover:text-white"
+          className="h-9 px-3 text-xs text-[var(--muted)] hover:text-white cursor-pointer"
         >
           Sign out
         </button>
@@ -96,7 +96,7 @@ export default function AdminPage() {
           <button
             key={t}
             onClick={() => setTab(t)}
-            className={`px-3 py-1.5 rounded-full border font-semibold capitalize ${
+            className={`h-10 px-4 rounded-full border font-medium capitalize text-xs cursor-pointer ${
               tab === t
                 ? "bg-[var(--primary)] text-black border-[var(--primary)]"
                 : "border-[var(--border-strong)] text-white hover:bg-white/5"
@@ -157,7 +157,7 @@ function SignupsTab() {
           type="button"
           onClick={exportCsv}
           disabled={list.length === 0}
-          className="btn-ghost h-9 px-3 rounded-xl text-xs disabled:opacity-40"
+          className="btn-ghost h-10 px-4 rounded-full text-xs disabled:opacity-40 disabled:cursor-not-allowed"
         >
           Export CSV
         </button>
@@ -263,7 +263,7 @@ function QuestionsTab() {
           <button
             key={c.id}
             onClick={() => setActive(c.id)}
-            className={`px-3 py-1.5 rounded-full border text-xs font-semibold ${
+            className={`h-10 px-4 rounded-full border text-xs font-medium cursor-pointer flex items-center gap-2 ${
               active === c.id
                 ? "bg-[var(--primary)] text-black border-[var(--primary)]"
                 : "border-[var(--border-strong)] hover:bg-white/5"
@@ -279,12 +279,15 @@ function QuestionsTab() {
       </div>
 
       <div className="flex items-center justify-between mb-3">
-        <button onClick={startAdd} className="btn-primary h-9 px-3 rounded-xl text-xs">
+        <button
+          onClick={startAdd}
+          className="btn-primary h-10 px-4 rounded-full text-xs"
+        >
           + Add question
         </button>
         <button
           onClick={resetCategory}
-          className="text-[11px] text-[var(--muted)] hover:text-[var(--danger)]"
+          className="text-[11px] text-[var(--muted)] hover:text-[var(--danger)] h-10 px-2 cursor-pointer"
         >
           Reset category to defaults
         </button>
@@ -316,16 +319,16 @@ function QuestionsTab() {
                   ))}
                 </ul>
               </div>
-              <div className="flex flex-col gap-1.5 flex-shrink-0">
+              <div className="flex flex-col gap-2 flex-shrink-0">
                 <button
                   onClick={() => setEditing(q)}
-                  className="text-xs px-2.5 py-1 rounded-lg border border-[var(--border-strong)] hover:bg-white/5"
+                  className="text-xs font-medium h-9 px-3.5 rounded-lg border border-[var(--border-strong)] hover:bg-white/5 cursor-pointer"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => remove(q.id)}
-                  className="text-xs px-2.5 py-1 rounded-lg border border-[rgba(255,77,109,0.4)] text-[var(--danger)] hover:bg-[rgba(255,77,109,0.08)]"
+                  className="text-xs font-medium h-9 px-3.5 rounded-lg border border-[rgba(255,85,119,0.4)] text-[var(--danger)] hover:bg-[rgba(255,85,119,0.08)] cursor-pointer"
                 >
                   Delete
                 </button>
@@ -487,7 +490,7 @@ function LeaderboardTab() {
         <button
           onClick={reset}
           disabled={list.length === 0}
-          className="text-xs px-3 py-1.5 rounded-xl border border-[rgba(255,77,109,0.4)] text-[var(--danger)] hover:bg-[rgba(255,77,109,0.08)] disabled:opacity-40"
+          className="text-xs font-medium h-10 px-4 rounded-full border border-[rgba(255,85,119,0.4)] text-[var(--danger)] hover:bg-[rgba(255,85,119,0.08)] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
         >
           Reset leaderboard
         </button>

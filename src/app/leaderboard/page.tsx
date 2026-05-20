@@ -160,7 +160,7 @@ function FilterChip({
     <button
       type="button"
       onClick={onClick}
-      className={`px-3 py-1.5 rounded-full text-[11px] font-medium whitespace-nowrap border transition-all uppercase tracking-[0.15em] flex items-center cursor-pointer ${
+      className={`h-9 px-4 rounded-full text-[11px] font-medium whitespace-nowrap border transition-all uppercase tracking-[0.15em] flex items-center cursor-pointer ${
         active
           ? "bg-[var(--primary)] text-black border-[var(--primary)]"
           : "border-[var(--border-strong)] text-white/70 hover:text-white hover:bg-white/5"

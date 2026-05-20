@@ -20,13 +20,13 @@ export function PageShell({
             <Link
               href="/leaderboard"
               prefetch
-              className="px-3 py-1.5 rounded-full text-[var(--foreground)] hover:bg-white/5 transition-colors font-medium"
+              className="h-9 px-3.5 inline-flex items-center rounded-full text-[var(--foreground)] hover:bg-white/5 transition-colors font-medium"
             >
               Leaderboard
             </Link>
             <Link
               href="/admin"
-              className="px-3 py-1.5 rounded-full text-[var(--muted)] hover:text-white transition-colors font-medium"
+              className="h-9 px-3.5 inline-flex items-center rounded-full text-[var(--muted)] hover:text-white transition-colors font-medium"
             >
               Admin
             </Link>
