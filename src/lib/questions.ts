@@ -12,15 +12,29 @@ export function getCategoryName(id: CategoryId): string {
   return typedBank.categories.find((c) => c.id === id)?.name ?? id;
 }
 
-export function getAllQuestions(categoryId: CategoryId): Question[] {
-  // Client may have admin overrides; on server use only the JSON.
+/**
+ * Sync default-only access. Used in admin UI before overrides are loaded
+ * and as a fallback. Does NOT hit Supabase.
+ */
+export function getDefaultQuestions(categoryId: CategoryId): Question[] {
+  return typedBank.questions[categoryId] ?? [];
+}
+
+/**
+ * Returns the active question set for a category — checks Supabase
+ * (or localStorage in demo mode) for an admin override first, then
+ * falls back to the bundled JSON bank.
+ */
+export async function getAllQuestions(
+  categoryId: CategoryId
+): Promise<Question[]> {
   if (typeof window !== "undefined") {
-    const overrides = getQuestionsOverride();
+    const overrides = await getQuestionsOverride();
     if (overrides[categoryId] && overrides[categoryId]!.length > 0) {
       return overrides[categoryId]!;
     }
   }
-  return typedBank.questions[categoryId] ?? [];
+  return getDefaultQuestions(categoryId);
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -37,8 +51,11 @@ export interface RoundQuestion extends Question {
   shuffledAnswer: number;
 }
 
-export function pickRound(categoryId: CategoryId, count = 5): RoundQuestion[] {
-  const pool = getAllQuestions(categoryId);
+export async function pickRound(
+  categoryId: CategoryId,
+  count = 5
+): Promise<RoundQuestion[]> {
+  const pool = await getAllQuestions(categoryId);
   const picked = shuffle(pool).slice(0, Math.min(count, pool.length));
   return picked.map((q) => {
     const indexed = q.options.map((opt, idx) => ({ opt, idx }));

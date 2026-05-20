@@ -10,6 +10,7 @@ export function BrandMark({ size = 32 }: { size?: number }) {
       height={size}
       priority
       className="object-contain"
+      style={{ width: size, height: "auto" }}
     />
   );
 }

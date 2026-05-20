@@ -29,13 +29,17 @@ export default function ResultsPage() {
       return;
     }
     setEntry(e);
-    const board = [...getLeaderboard()].sort((a, b) => b.score - a.score);
-    const r = board.findIndex((x) => x.id === e.id) + 1;
-    setRank(r > 0 ? r : board.length + 1);
     const controls = animate(count, e.score, {
       duration: 1.2,
       ease: [0.2, 0.7, 0.3, 1],
     });
+    // Rank is best-effort — fetch from Supabase but don't block the UI
+    (async () => {
+      const data = await getLeaderboard();
+      const board = [...data].sort((a, b) => b.score - a.score);
+      const r = board.findIndex((x) => x.id === e.id) + 1;
+      setRank(r > 0 ? r : board.length + 1);
+    })();
     return () => controls.stop();
   }, [router, count]);
 

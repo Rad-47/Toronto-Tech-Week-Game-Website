@@ -13,7 +13,7 @@ import {
   setQuestionsOverride,
 } from "@/lib/store";
 import { fireConfetti } from "@/components/Confetti";
-import { getAllQuestions, getCategories } from "@/lib/questions";
+import { getAllQuestions, getDefaultQuestions, getCategories } from "@/lib/questions";
 import type { CategoryId, LeaderboardEntry, Question, Signup } from "@/lib/types";
 
 type Tab = "signups" | "questions" | "leaderboard" | "winner";
@@ -120,7 +120,16 @@ export default function AdminPage() {
 /* ============ Signups Tab ============ */
 function SignupsTab() {
   const [list, setList] = useState<Signup[]>([]);
-  useEffect(() => setList(getSignups()), []);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const data = await getSignups();
+      if (!cancelled) setList(data);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   function exportCsv() {
     const rows = [
@@ -209,20 +218,30 @@ function QuestionsTab() {
   const [active, setActive] = useState<CategoryId>(categories[0].id);
   const [list, setList] = useState<Question[]>([]);
   const [editing, setEditing] = useState<Question | null>(null);
+  // Counts per category for the tab pills (overrides + defaults)
+  const [counts, setCounts] = useState<Record<string, number>>({});
 
-  function refresh() {
-    setList(getAllQuestions(active));
+  async function refresh() {
+    const next = await getAllQuestions(active);
+    setList(next);
+    // Refresh tab counts too
+    const c: Record<string, number> = {};
+    for (const cat of categories) {
+      c[cat.id] = (await getAllQuestions(cat.id)).length;
+    }
+    setCounts(c);
   }
   useEffect(() => {
     refresh();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active]);
 
-  function saveList(next: Question[]) {
-    const overrides = getQuestionsOverride();
+  async function saveList(next: Question[]) {
+    const overrides = await getQuestionsOverride();
     overrides[active] = next;
-    setQuestionsOverride(overrides);
+    await setQuestionsOverride(overrides);
     setList(next);
+    setCounts((prev) => ({ ...prev, [active]: next.length }));
   }
 
   function startAdd() {
@@ -236,23 +255,23 @@ function QuestionsTab() {
     });
   }
 
-  function commit(q: Question) {
+  async function commit(q: Question) {
     const exists = list.some((x) => x.id === q.id);
     const next = exists ? list.map((x) => (x.id === q.id ? q : x)) : [...list, q];
-    saveList(next);
+    await saveList(next);
     setEditing(null);
   }
 
-  function remove(id: string) {
+  async function remove(id: string) {
     if (!confirm("Delete this question?")) return;
-    saveList(list.filter((x) => x.id !== id));
+    await saveList(list.filter((x) => x.id !== id));
   }
 
-  function resetCategory() {
+  async function resetCategory() {
     if (!confirm("Reset this category's questions to the JSON defaults?")) return;
-    const overrides = getQuestionsOverride();
+    const overrides = await getQuestionsOverride();
     delete overrides[active];
-    setQuestionsOverride(overrides);
+    await setQuestionsOverride(overrides);
     refresh();
   }
 
@@ -272,7 +291,7 @@ function QuestionsTab() {
             <span className="mr-1">{c.emoji}</span>
             {c.name}
             <span className="ml-1 text-[10px] opacity-70">
-              {getAllQuestions(c.id).length}
+              {counts[c.id] ?? getDefaultQuestions(c.id).length}
             </span>
           </button>
         ))}
@@ -472,11 +491,20 @@ function QuestionEditor({
 /* ============ Leaderboard Tab ============ */
 function LeaderboardTab() {
   const [list, setList] = useState<LeaderboardEntry[]>([]);
-  useEffect(() => setList(getLeaderboard()), []);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const data = await getLeaderboard();
+      if (!cancelled) setList(data);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
-  function reset() {
+  async function reset() {
     if (!confirm("Reset the entire leaderboard? This cannot be undone.")) return;
-    resetLeaderboard();
+    await resetLeaderboard();
     setList([]);
   }
 
@@ -543,7 +571,16 @@ function WinnerTab() {
   const [rolling, setRolling] = useState(false);
   const [scrollName, setScrollName] = useState<string>("");
 
-  useEffect(() => setPool(getSignups().filter((s) => s.consent)), []);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const data = await getSignups();
+      if (!cancelled) setPool(data.filter((s) => s.consent));
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   function spin() {
     if (pool.length === 0) return;

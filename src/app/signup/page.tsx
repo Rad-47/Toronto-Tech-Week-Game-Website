@@ -19,8 +19,9 @@ export default function SignupPage() {
   const [role, setRole] = useState<Role>("Fan");
   const [consent, setConsent] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
     if (!name.trim()) return setError("Please enter your name.");
@@ -35,9 +36,16 @@ export default function SignupPage() {
       consent,
       createdAt: Date.now(),
     };
-    saveSignup(signup);
-    setCurrentSignup(signup);
-    router.push("/category");
+    setSubmitting(true);
+    try {
+      await saveSignup(signup);
+      setCurrentSignup(signup);
+      router.push("/category");
+    } catch (err) {
+      console.error(err);
+      setError("Couldn't save your signup. Please try again.");
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -155,18 +163,21 @@ export default function SignupPage() {
           <FieldAnim>
             <button
               type="submit"
-              className="btn-primary w-full h-14 rounded-full text-[15px] flex items-center justify-center gap-2.5 mt-4"
+              disabled={submitting}
+              className="btn-primary w-full h-14 rounded-full text-[15px] flex items-center justify-center gap-2.5 mt-4 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Pick my sport
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path
-                  d="M5 12h14M13 6l6 6-6 6"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              {submitting ? "Saving…" : "Pick my sport"}
+              {!submitting && (
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              )}
             </button>
           </FieldAnim>
         </motion.form>

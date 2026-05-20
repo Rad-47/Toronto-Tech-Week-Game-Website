@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import { PageShell } from "@/components/Shell";
 import { FadeUp } from "@/components/SplitText";
 import { CategoryIcon } from "@/components/SportIcons";
-import { getLeaderboard } from "@/lib/store";
+import { getLeaderboard, subscribeLeaderboard } from "@/lib/store";
 import { getCategories } from "@/lib/questions";
 import type { CategoryId, LeaderboardEntry } from "@/lib/types";
 
@@ -19,8 +19,24 @@ export default function LeaderboardPage() {
   const categories = getCategories();
 
   useEffect(() => {
-    setBoard(getLeaderboard());
-    setHydrated(true);
+    let cancelled = false;
+    (async () => {
+      const data = await getLeaderboard();
+      if (cancelled) return;
+      setBoard(data);
+      setHydrated(true);
+    })();
+    // Live updates — when a new play lands, prepend it to the local list
+    const unsub = subscribeLeaderboard((entry) => {
+      setBoard((prev) => {
+        if (prev.some((e) => e.id === entry.id)) return prev;
+        return [...prev, entry];
+      });
+    });
+    return () => {
+      cancelled = true;
+      unsub();
+    };
   }, []);
 
   const filtered = useMemo(() => {

@@ -54,13 +54,20 @@ export default function PlayPage() {
       router.replace("/category");
       return;
     }
-    const round = pickRound(cat, 5);
-    if (round.length === 0) {
-      router.replace("/category");
-      return;
-    }
-    setQuestions(round);
-    setHydrated(true);
+    let cancelled = false;
+    (async () => {
+      const round = await pickRound(cat, 5);
+      if (cancelled) return;
+      if (round.length === 0) {
+        router.replace("/category");
+        return;
+      }
+      setQuestions(round);
+      setHydrated(true);
+    })();
+    return () => {
+      cancelled = true;
+    };
   }, [router]);
 
   useEffect(() => {
@@ -129,7 +136,7 @@ export default function PlayPage() {
     setIdx((i) => i + 1);
   }
 
-  function finish() {
+  async function finish() {
     const signup = getCurrentSignup();
     const cat = getCurrentCategory();
     if (!signup || !cat) {
@@ -150,8 +157,11 @@ export default function PlayPage() {
       durationMs,
       createdAt: Date.now(),
     };
-    addLeaderboardEntry(entry);
     setLastResult(entry);
+    // Fire-and-forget the Supabase write — UX shouldn't wait on network
+    addLeaderboardEntry(entry).catch((err) =>
+      console.warn("[play] couldn't persist score, kept locally", err)
+    );
     router.replace("/results");
   }
 
