@@ -66,9 +66,6 @@ export default function AdminPage() {
             <button type="submit" className="btn-primary w-full h-12 rounded-2xl">
               Enter
             </button>
-            <p className="text-[11px] text-[var(--muted)] text-center">
-              Hint for demo: <span className="font-mono text-white">fanlinc2026</span>
-            </p>
           </form>
         </div>
       </PageShell>
