@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FanLinc — GameDay IQ Challenge
 
-## Getting Started
+> Website for visitors to **Toronto Tech Week**, played live at the **Brampton Honey Badgers** night. Five questions. One sport. A shot at signed merch.
 
-First, run the development server:
+Built with Next.js 16, TypeScript, Tailwind v4, and Motion (Framer Motion).
+
+## What it does
+
+Players scan a QR code, sign in (name + email + role at the event), pick a sport — Basketball, OHL Hockey, Baseball, or the FanLinc Sports Mix — and race the clock through five random questions. Speed and streaks earn bonus points. Top scorers climb a live leaderboard and are entered into the signed-merch draw at the end of the night.
+
+A separate admin console (code-gated) lets the team browse signups, export emails as CSV, edit the question bank, reset the leaderboard, and run an animated winner draw.
+
+## Stack
+
+- **Next.js 16** App Router · static export of every route
+- **TypeScript** end-to-end
+- **Tailwind v4** with custom CSS variables for the editorial palette
+- **Motion** for choreographed page transitions, split-text reveals, spring-popped badges, count-up score, and the continuous-flow gutter marquee
+- **canvas-confetti** for the results burst
+- **localStorage** for demo persistence — isolated in `src/lib/store.ts` so Firebase / Supabase can drop in without touching the rest of the app
+
+## Design language
+
+Editorial sports premium. Near-black canvas, single lime accent, one typeface (Geist) doing all the work via weight + tracking. Section indexes ("Index 01 / 02 / 03") give the page magazine-style architecture. On desktop (≥1280px) the gutters fill with two vertical marquee columns of curated sports photography — left flows bottom-to-top, right flows top-to-bottom, slightly different durations so they never beat in sync.
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
+npm run build        # static production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Admin code (demo): `fanlinc2026`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project layout
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/
+    page.tsx            # editorial hero + sport picker + steps + prize + closer
+    signup/             # roster check (name, email, fave, role, consent)
+    category/           # sport selection — full-bleed image cards
+    play/               # 5-question round, timer ring, score / streak tiles
+    results/            # final score count-up, badge unlock, prize draw card
+    leaderboard/        # ranked table with sport filters
+    admin/              # signups + CSV + questions + reset + winner draw
+  components/
+    Shell.tsx           # PageShell — nav, footer, marquee gutters
+    MarginalArt.tsx     # continuous vertical sports-photo flow
+    SplitText.tsx       # animated headline primitives
+    Magnetic.tsx        # pointer-aware CTA wrapper
+    Tilt.tsx            # 3D card tilt
+    TimerRing.tsx       # circular SVG round timer
+    SportIcons.tsx      # custom SVG sport glyphs
+    Confetti.tsx        # canvas-confetti helpers
+    StepBar.tsx         # 4-step progress indicator
+    Brand.tsx           # wordmark
+  data/
+    questions.json      # 67 questions across 4 categories
+  lib/
+    images.ts           # curated Unsplash IDs + gallery helpers
+    questions.ts        # randomised round picker
+    scoring.ts          # base / speed / streak / badge logic
+    store.ts            # localStorage adapter (swap for backend)
+    types.ts            # shared types
+```
 
-## Learn More
+## Adding more questions before the event
 
-To learn more about Next.js, take a look at the following resources:
+Open `src/data/questions.json` and append to the relevant category array. Each entry follows:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```json
+{
+  "id": "bb-99",
+  "type": "player",
+  "prompt": "Who is widely nicknamed 'The Greek Freak'?",
+  "options": ["Luka Doncic", "Giannis Antetokounmpo", "Joel Embiid", "Nikola Jokic"],
+  "answer": 1,
+  "explain": "Giannis Antetokounmpo earned the nickname for his Greek heritage and freakish athleticism."
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Or use the admin UI's Questions tab — edits there are stored as overrides in localStorage so the live event team can iterate without redeploying.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© FanLinc · GameDay IQ · Toronto Tech Week 2026
