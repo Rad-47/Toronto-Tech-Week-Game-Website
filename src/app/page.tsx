@@ -218,9 +218,6 @@ export default function Home() {
                     <div className="display text-[28px] sm:text-[36px] text-white">
                       {c.name}
                     </div>
-                    <div className="text-[12px] text-white/65 mt-2 leading-snug max-w-[16em]">
-                      {c.tagline}
-                    </div>
                     <div className="mt-4 inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] text-white/75 font-medium">
                       Play
                       <svg
