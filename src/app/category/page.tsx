@@ -158,10 +158,16 @@ export default function CategoryPage() {
               type="button"
               onClick={start}
               disabled={!selected}
-              className="btn-primary w-full h-14 rounded-full text-[15px] flex items-center justify-center gap-2.5 disabled:opacity-30 disabled:cursor-not-allowed disabled:saturate-0"
+              className="btn-primary group relative w-full h-14 rounded-full text-[15px] tracking-tight flex items-center justify-between pl-7 pr-2 disabled:opacity-30 disabled:cursor-not-allowed disabled:saturate-0"
             >
-              {selected ? "Start the round" : "Pick a category"}
-              {selected && (
+              <span className="flex-1 text-left font-semibold">
+                {selected ? "Start the round" : "Pick a category"}
+              </span>
+              <span
+                className={`flex items-center justify-center w-10 h-10 rounded-full bg-black/90 text-[var(--primary)] transition-transform duration-300 ${
+                  selected ? "group-hover:translate-x-1" : ""
+                }`}
+              >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
                   <path
                     d="M5 12h14M13 6l6 6-6 6"
@@ -171,7 +177,7 @@ export default function CategoryPage() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              )}
+              </span>
             </button>
           </Magnetic>
         </FadeUp>
