@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { PageShell } from "@/components/Shell";
@@ -16,7 +16,7 @@ import { getCategoryName, pickRound, RoundQuestion } from "@/lib/questions";
 import { QUESTION_SECONDS, assignBadge, scoreAnswer } from "@/lib/scoring";
 import type { LeaderboardEntry } from "@/lib/types";
 
-type AnswerState = "idle" | "answered" | "timeout";
+type AnswerState = "idle" | "answered";
 
 export default function PlayPage() {
   const router = useRouter();
@@ -28,7 +28,6 @@ export default function PlayPage() {
   const [correct, setCorrect] = useState(0);
   const [chosen, setChosen] = useState<number | null>(null);
   const [state, setState] = useState<AnswerState>("idle");
-  const [timeLeftMs, setTimeLeftMs] = useState(QUESTION_SECONDS * 1000);
   const [lastDelta, setLastDelta] = useState<{
     total: number;
     speed: number;
@@ -36,9 +35,7 @@ export default function PlayPage() {
     correct: boolean;
   } | null>(null);
   const [floater, setFloater] = useState<string | null>(null);
-  const startedAtRef = useRef<number>(0);
   const roundStartRef = useRef<number>(Date.now());
-  const tickerRef = useRef<number | null>(null);
   const advanceRef = useRef<number | null>(null);
 
   const total = questions.length;
@@ -73,26 +70,12 @@ export default function PlayPage() {
 
   useEffect(() => {
     if (!q) return;
-    startedAtRef.current = Date.now();
-    setTimeLeftMs(QUESTION_SECONDS * 1000);
     setChosen(null);
     setState("idle");
     setLastDelta(null);
     setFloater(null);
 
-    if (tickerRef.current) window.clearInterval(tickerRef.current);
-    tickerRef.current = window.setInterval(() => {
-      const elapsed = Date.now() - startedAtRef.current;
-      const left = Math.max(0, QUESTION_SECONDS * 1000 - elapsed);
-      setTimeLeftMs(left);
-      if (left <= 0) {
-        if (tickerRef.current) window.clearInterval(tickerRef.current);
-        handleTimeout();
-      }
-    }, 80);
-
     return () => {
-      if (tickerRef.current) window.clearInterval(tickerRef.current);
       if (advanceRef.current) window.clearTimeout(advanceRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -100,9 +83,8 @@ export default function PlayPage() {
 
   function handleChoose(i: number) {
     if (state !== "idle" || !q) return;
-    if (tickerRef.current) window.clearInterval(tickerRef.current);
     const isCorrect = i === q.shuffledAnswer;
-    const result = scoreAnswer(isCorrect, timeLeftMs, streak);
+    const result = scoreAnswer(isCorrect, QUESTION_SECONDS * 1000, streak);
     setChosen(i);
     setState("answered");
     setScore((s) => s + result.total);
@@ -117,15 +99,6 @@ export default function PlayPage() {
       streak: result.streakBonus,
       correct: isCorrect,
     });
-    advanceRef.current = window.setTimeout(next, 1700);
-  }
-
-  function handleTimeout() {
-    if (!q) return;
-    setChosen(null);
-    setState("timeout");
-    setStreak(0);
-    setLastDelta({ total: 0, speed: 0, streak: 0, correct: false });
     advanceRef.current = window.setTimeout(next, 1700);
   }
 
@@ -166,17 +139,6 @@ export default function PlayPage() {
     router.replace("/results");
   }
 
-  const timePct = useMemo(
-    () => Math.max(0, Math.min(1, timeLeftMs / (QUESTION_SECONDS * 1000))),
-    [timeLeftMs]
-  );
-  const timeColor =
-    timePct > 0.5
-      ? "var(--primary)"
-      : timePct > 0.25
-      ? "var(--warning)"
-      : "var(--danger)";
-
   if (!hydrated || !q) {
     return (
       <PageShell hideNav>
@@ -206,29 +168,6 @@ export default function PlayPage() {
           flame={streak >= 2}
           divider
         />
-      </div>
-
-      {/* Timer — slim line across full width */}
-      <div className="mt-3 flex items-center gap-3">
-        <span
-          className="eyebrow"
-          style={{ color: timeColor }}
-        >
-          {(timeLeftMs / 1000).toFixed(1)}s
-        </span>
-        <div className="flex-1 h-px relative overflow-hidden bg-white/8">
-          <motion.div
-            className="absolute inset-y-0 left-0 origin-left"
-            style={{
-              width: "100%",
-              transformOrigin: "left",
-              background: `linear-gradient(90deg, ${timeColor}, transparent)`,
-            }}
-            initial={false}
-            animate={{ scaleX: timePct }}
-            transition={{ duration: 0.08, ease: "linear" }}
-          />
-        </div>
       </div>
 
       {/* Question */}
@@ -283,8 +222,6 @@ export default function PlayPage() {
                   ? "correct"
                   : isWrongChoice
                   ? "wrong"
-                  : state === "timeout" && i === q.shuffledAnswer
-                  ? "reveal"
                   : undefined;
               const letter = ["A", "B", "C", "D"][i] ?? "?";
               return (
@@ -307,11 +244,6 @@ export default function PlayPage() {
                     <CheckIcon className="text-[var(--primary)]" />
                   )}
                   {dataState === "wrong" && <XIcon className="text-[var(--danger)]" />}
-                  {dataState === "reveal" && (
-                    <span className="text-[10px] uppercase tracking-[0.22em] text-[var(--primary)] font-mono">
-                      Answer
-                    </span>
-                  )}
                 </motion.button>
               );
             })}
@@ -331,8 +263,6 @@ export default function PlayPage() {
                     <span className="text-[var(--primary)]">
                       Correct · +{lastDelta.total}
                     </span>
-                  ) : state === "timeout" ? (
-                    <span className="text-[var(--warning)]">Time&apos;s up</span>
                   ) : (
                     <span className="text-[var(--danger)]">Incorrect</span>
                   )}
