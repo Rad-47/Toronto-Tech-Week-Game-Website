@@ -35,12 +35,15 @@ export default function SignupPage() {
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [requireFanlincId, setRequireFanlincId] = useState<boolean>(true);
+  const [requireEmail, setRequireEmail] = useState<boolean>(true);
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       const settings = await getAppSettings();
-      if (!cancelled) setRequireFanlincId(settings.requireFanlincId);
+      if (cancelled) return;
+      setRequireFanlincId(settings.requireFanlincId);
+      setRequireEmail(settings.requireEmail);
     })();
     return () => {
       cancelled = true;
@@ -51,7 +54,10 @@ export default function SignupPage() {
     e.preventDefault();
     setError(null);
     if (!name.trim()) return setError("Please enter your name.");
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+    const trimmedEmail = email.trim();
+    if (requireEmail && !trimmedEmail)
+      return setError("Please enter your email.");
+    if (trimmedEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail))
       return setError("Please enter a valid email.");
     const normalizedId = normalizeFanlincId(fanlincId);
     if (requireFanlincId) {
@@ -125,7 +131,11 @@ export default function SignupPage() {
           </FieldAnim>
 
           <FieldAnim>
-            <Field index="02" label="Email" htmlFor="email">
+            <Field
+              index="02"
+              label={requireEmail ? "Email" : "Email (optional)"}
+              htmlFor="email"
+            >
               <input
                 id="email"
                 type="email"
@@ -135,7 +145,7 @@ export default function SignupPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 autoComplete="email"
-                required
+                required={requireEmail}
               />
             </Field>
           </FieldAnim>

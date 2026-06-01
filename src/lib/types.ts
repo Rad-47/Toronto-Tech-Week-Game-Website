@@ -42,10 +42,13 @@ export interface Signup {
 export interface AppSettings {
   /** When true, signup requires a FanLinc User ID to continue. */
   requireFanlincId: boolean;
+  /** When true, signup requires an email to continue. */
+  requireEmail: boolean;
 }
 
 export const DEFAULT_APP_SETTINGS: AppSettings = {
   requireFanlincId: true,
+  requireEmail: true,
 };
 
 export type Badge =

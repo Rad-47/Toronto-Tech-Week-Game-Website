@@ -281,6 +281,8 @@ export async function getAppSettings(): Promise<AppSettings> {
       for (const row of data as { key: string; value: unknown }[]) {
         if (row.key === "requireFanlincId") {
           out.requireFanlincId = Boolean(row.value);
+        } else if (row.key === "requireEmail") {
+          out.requireEmail = Boolean(row.value);
         }
       }
       // Mirror to local so a quick second read can short-circuit.

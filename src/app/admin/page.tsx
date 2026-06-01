@@ -836,12 +836,12 @@ function SettingsTab() {
     };
   }, []);
 
-  async function toggleRequireId() {
-    const next = { ...settings, requireFanlincId: !settings.requireFanlincId };
+  async function toggleSetting(key: keyof AppSettings) {
+    const next = { ...settings, [key]: !settings[key] };
     setSettings(next);
     setSaving(true);
     try {
-      await setAppSettings({ requireFanlincId: next.requireFanlincId });
+      await setAppSettings({ [key]: next[key] });
     } finally {
       setSaving(false);
     }
@@ -853,37 +853,74 @@ function SettingsTab() {
 
   return (
     <div className="space-y-3">
-      <div className="card rounded-2xl p-4 flex items-start justify-between gap-4">
-        <div className="min-w-0">
-          <div className="text-[15px] font-semibold">Require FanLinc User ID</div>
-          <div className="text-[12px] text-[var(--muted)] mt-1 leading-relaxed max-w-md">
-            When ON, players must enter a FanLinc handle (e.g.{" "}
-            <span className="font-mono text-[var(--primary)]">@Rad7438</span>) to
-            sign up. When OFF, the field is shown but optional.
-          </div>
-        </div>
-        <button
-          type="button"
-          onClick={toggleRequireId}
-          disabled={saving}
-          aria-pressed={settings.requireFanlincId}
-          className={`relative inline-flex h-7 w-12 flex-shrink-0 items-center rounded-full transition-colors cursor-pointer ${
-            settings.requireFanlincId
-              ? "bg-[var(--primary)]"
-              : "bg-white/15"
-          } disabled:opacity-60 disabled:cursor-not-allowed`}
-        >
-          <span
-            className={`inline-block h-5 w-5 transform rounded-full bg-black transition-transform ${
-              settings.requireFanlincId ? "translate-x-6" : "translate-x-1"
-            }`}
-          />
-        </button>
-      </div>
+      <SettingToggle
+        title="Require FanLinc User ID"
+        on={settings.requireFanlincId}
+        saving={saving}
+        onToggle={() => toggleSetting("requireFanlincId")}
+      >
+        When ON, players must enter a FanLinc handle (e.g.{" "}
+        <span className="font-mono text-[var(--primary)]">@Rad7438</span>) to
+        sign up. When OFF, the field is shown but optional.
+      </SettingToggle>
+
+      <SettingToggle
+        title="Require email"
+        on={settings.requireEmail}
+        saving={saving}
+        onToggle={() => toggleSetting("requireEmail")}
+      >
+        When ON, players must enter an email to join the game. When OFF, the
+        email field is still shown but optional — useful if you only want a
+        FanLinc handle.
+      </SettingToggle>
 
       <div className="text-[11px] text-[var(--muted-2)] px-1 leading-relaxed">
-        Changes apply on the next signup form load. Setting syncs across devices via Supabase when configured; otherwise it&apos;s stored locally on this device.
+        Changes apply on the next signup form load. Settings sync across
+        devices via Supabase when configured; otherwise they&apos;re stored
+        locally on this device.
       </div>
+    </div>
+  );
+}
+
+function SettingToggle({
+  title,
+  on,
+  saving,
+  onToggle,
+  children,
+}: {
+  title: string;
+  on: boolean;
+  saving: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="card rounded-2xl p-4 flex items-start justify-between gap-4">
+      <div className="min-w-0">
+        <div className="text-[15px] font-semibold">{title}</div>
+        <div className="text-[12px] text-[var(--muted)] mt-1 leading-relaxed max-w-md">
+          {children}
+        </div>
+      </div>
+      <button
+        type="button"
+        onClick={onToggle}
+        disabled={saving}
+        aria-pressed={on}
+        aria-label={title}
+        className={`relative inline-flex h-7 w-12 flex-shrink-0 items-center rounded-full transition-colors cursor-pointer ${
+          on ? "bg-[var(--primary)]" : "bg-white/15"
+        } disabled:opacity-60 disabled:cursor-not-allowed`}
+      >
+        <span
+          className={`inline-block h-5 w-5 transform rounded-full bg-black transition-transform ${
+            on ? "translate-x-6" : "translate-x-1"
+          }`}
+        />
+      </button>
     </div>
   );
 }
