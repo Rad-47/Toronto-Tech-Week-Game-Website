@@ -53,7 +53,7 @@ export interface RoundQuestion extends Question {
 
 export async function pickRound(
   categoryId: CategoryId,
-  count = 5
+  count = 10
 ): Promise<RoundQuestion[]> {
   const pool = await getAllQuestions(categoryId);
   const picked = shuffle(pool).slice(0, Math.min(count, pool.length));

@@ -810,6 +810,289 @@
         ],
         "answer": 0,
         "explain": "McCook Community College Indians — a Nebraska JUCO power that produces D1 and pro talent."
+      },
+      {
+        "id": "ba-22",
+        "type": "rules",
+        "prompt": "How many defensive players take the field for one team?",
+        "options": ["7", "8", "9", "10"],
+        "answer": 2,
+        "explain": "Nine: pitcher, catcher, four infielders, three outfielders."
+      },
+      {
+        "id": "ba-23",
+        "type": "rules",
+        "prompt": "How many balls earn a batter a walk?",
+        "options": ["3", "4", "5", "6"],
+        "answer": 1,
+        "explain": "Four balls outside the strike zone and the batter takes first base."
+      },
+      {
+        "id": "ba-24",
+        "type": "rules",
+        "prompt": "In an MLB game, how many feet apart are the bases?",
+        "options": ["60 feet", "75 feet", "90 feet", "100 feet"],
+        "answer": 2,
+        "explain": "90 feet between bases, set since the 1880s."
+      },
+      {
+        "id": "ba-25",
+        "type": "rules",
+        "prompt": "Which defensive position lines up closest to home plate?",
+        "options": ["Pitcher", "Catcher", "Shortstop", "First base"],
+        "answer": 1,
+        "explain": "The catcher crouches directly behind home plate."
+      },
+      {
+        "id": "ba-26",
+        "type": "rules",
+        "prompt": "How many innings does a standard Little League (Majors) game last?",
+        "options": ["5", "6", "7", "9"],
+        "answer": 1,
+        "explain": "Little League Majors plays six innings, not nine."
+      },
+      {
+        "id": "ba-27",
+        "type": "fan",
+        "prompt": "The Little League World Series is played every August in which U.S. town?",
+        "options": [
+          "Williamsport, Pennsylvania",
+          "Omaha, Nebraska",
+          "Cooperstown, New York",
+          "Cary, North Carolina"
+        ],
+        "answer": 0,
+        "explain": "Williamsport, PA has hosted the Little League World Series since 1947."
+      },
+      {
+        "id": "ba-28",
+        "type": "fan",
+        "prompt": "Where is the NCAA Men's College World Series held every year?",
+        "options": [
+          "Williamsport, PA",
+          "Omaha, Nebraska",
+          "Cary, North Carolina",
+          "Phoenix, Arizona"
+        ],
+        "answer": 1,
+        "explain": "Omaha has hosted the College World Series since 1950."
+      },
+      {
+        "id": "ba-29",
+        "type": "team",
+        "prompt": "Which summer wood-bat league is famous as a stepping stone from college to MLB?",
+        "options": [
+          "Cape Cod League",
+          "Frontier League",
+          "Atlantic League",
+          "Pioneer League"
+        ],
+        "answer": 0,
+        "explain": "The Cape Cod Baseball League — top college players using wood bats every summer."
+      },
+      {
+        "id": "ba-30",
+        "type": "term",
+        "prompt": "What metal are most amateur and college bats made from?",
+        "options": ["Steel", "Aluminum", "Titanium", "Bronze"],
+        "answer": 1,
+        "explain": "Aluminum (and alloy composites). MLB uses wood only."
+      },
+      {
+        "id": "ba-31",
+        "type": "term",
+        "prompt": "What's the highest level of the minor leagues, one step below MLB?",
+        "options": ["Single-A", "Double-A", "Triple-A", "Rookie ball"],
+        "answer": 2,
+        "explain": "Triple-A (AAA) is the top minor league level — final stop before the show."
+      },
+      {
+        "id": "ba-32",
+        "type": "team",
+        "prompt": "How many teams currently play in Major League Baseball?",
+        "options": ["28", "30", "32", "34"],
+        "answer": 1,
+        "explain": "30 MLB teams: 15 in the American League and 15 in the National League."
+      },
+      {
+        "id": "ba-33",
+        "type": "fan",
+        "prompt": "Which annual MLB award goes to the best pitcher in each league?",
+        "options": [
+          "MVP Award",
+          "Cy Young Award",
+          "Gold Glove",
+          "Silver Slugger"
+        ],
+        "answer": 1,
+        "explain": "The Cy Young Award honours the top pitcher in the AL and NL each season."
+      },
+      {
+        "id": "ba-34",
+        "type": "fan",
+        "prompt": "Where is the National Baseball Hall of Fame located?",
+        "options": [
+          "Cooperstown, New York",
+          "St. Louis, Missouri",
+          "Chicago, Illinois",
+          "Boston, Massachusetts"
+        ],
+        "answer": 0,
+        "explain": "Cooperstown, NY — the Hall opened there in 1939."
+      },
+      {
+        "id": "ba-35",
+        "type": "term",
+        "prompt": "What's a 'grand slam' in baseball?",
+        "options": [
+          "A no-hitter in the playoffs",
+          "A home run with the bases loaded",
+          "Four strikeouts by a single pitcher",
+          "A leadoff home run"
+        ],
+        "answer": 1,
+        "explain": "A grand slam — a home run with runners on all three bases — scores four runs."
+      },
+      {
+        "id": "ba-36",
+        "type": "term",
+        "prompt": "What symbol is used on a scorecard to mark a strikeout?",
+        "options": ["S", "K", "X", "O"],
+        "answer": 1,
+        "explain": "The letter K — a backwards K means a strikeout looking (no swing)."
+      },
+      {
+        "id": "ba-37",
+        "type": "rules",
+        "prompt": "Best-of-how-many games is the MLB World Series?",
+        "options": ["5", "7", "9", "11"],
+        "answer": 1,
+        "explain": "Best-of-seven — the first team to four wins takes the title."
+      },
+      {
+        "id": "ba-38",
+        "type": "term",
+        "prompt": "Which two leagues host MLB spring training?",
+        "options": [
+          "Sun League and Surf League",
+          "Cactus League and Grapefruit League",
+          "Desert League and Coastal League",
+          "Citrus League and Palm League"
+        ],
+        "answer": 1,
+        "explain": "Cactus League (Arizona) and Grapefruit League (Florida)."
+      },
+      {
+        "id": "ba-39",
+        "type": "term",
+        "prompt": "What does a 'closer' do in a pitching staff?",
+        "options": [
+          "Bats cleanup",
+          "Pitches the final inning to protect a lead",
+          "Coaches first base",
+          "Warms up starters"
+        ],
+        "answer": 1,
+        "explain": "The closer enters in the 9th to lock down a save in a close game."
+      },
+      {
+        "id": "ba-40",
+        "type": "term",
+        "prompt": "What's a 'double play'?",
+        "options": [
+          "Two batters up at once",
+          "Two outs recorded in one continuous defensive play",
+          "Two runs scored on one swing",
+          "Two innings in a row scoreless"
+        ],
+        "answer": 1,
+        "explain": "Two outs on one continuous play — classic 6-4-3 SS to 2B to 1B."
+      },
+      {
+        "id": "ba-41",
+        "type": "rules",
+        "prompt": "How many games does each MLB team play in the regular season?",
+        "options": ["120", "144", "162", "182"],
+        "answer": 2,
+        "explain": "162 games for every MLB team since 1962."
+      },
+      {
+        "id": "ba-42",
+        "type": "term",
+        "prompt": "What's a 'perfect game'?",
+        "options": [
+          "A 1-0 shutout win",
+          "A pitcher faces 27 batters and none reach base",
+          "Every batter records a hit",
+          "Nine innings with no errors"
+        ],
+        "answer": 1,
+        "explain": "27 up, 27 down — no hits, no walks, no errors. Rarer than a no-hitter."
+      },
+      {
+        "id": "ba-43",
+        "type": "term",
+        "prompt": "What does the stat 'OPS' add together?",
+        "options": [
+          "Outs Per Strikeout",
+          "On-base Percentage + Slugging Percentage",
+          "Offensive Power Score",
+          "Overall Pitching Stat"
+        ],
+        "answer": 1,
+        "explain": "OPS = OBP + SLG. A quick combined measure of a hitter's value."
+      },
+      {
+        "id": "ba-44",
+        "type": "team",
+        "prompt": "Vladimir Guerrero Jr.'s primary position with the Blue Jays is…",
+        "options": ["Catcher", "Shortstop", "First base", "Centre field"],
+        "answer": 2,
+        "explain": "Vladdy Jr. plays first base — and is a Gold Glove winner there."
+      },
+      {
+        "id": "ba-45",
+        "type": "rules",
+        "prompt": "Which MLB rule, made universal in 2022, lets a non-fielder bat for the pitcher?",
+        "options": [
+          "Pinch runner",
+          "Designated Hitter (DH)",
+          "Ghost runner",
+          "Sub batter"
+        ],
+        "answer": 1,
+        "explain": "The Designated Hitter rule went universal across both leagues in 2022."
+      },
+      {
+        "id": "ba-46",
+        "type": "fan",
+        "prompt": "Which trophy does MLB award to its World Series champion?",
+        "options": [
+          "The Commissioner's Trophy",
+          "The Larry O'Brien Trophy",
+          "The Vince Lombardi Trophy",
+          "The Stanley Cup"
+        ],
+        "answer": 0,
+        "explain": "The Commissioner's Trophy — gold flag pennants on a silver base."
+      },
+      {
+        "id": "ba-img-5",
+        "type": "rules",
+        "image": "https://images.unsplash.com/photo-1471295253337-3ceaaedca402?auto=format&fit=crop&w=1200&q=75",
+        "prompt": "Look at the field. What shape is the baseball infield called?",
+        "options": ["Diamond", "Triangle", "Pentagon", "Hexagon"],
+        "answer": 0,
+        "explain": "The infield's four-base layout is universally called a diamond."
+      },
+      {
+        "id": "ba-img-6",
+        "type": "player",
+        "image": "/players/player-04.jpg",
+        "prompt": "Weston Thompson — outfielder. How many outfield positions are there?",
+        "options": ["1", "2", "3", "4"],
+        "answer": 2,
+        "explain": "Three: left field, centre field, right field."
       }
     ],
     "fanlinc-mix": [

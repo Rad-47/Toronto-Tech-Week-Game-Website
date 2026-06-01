@@ -57,7 +57,7 @@ export default function CategoryPage() {
             lane, <span className="text-[var(--primary)]">{name}</span>.
           </h1>
           <p className="text-[var(--muted)] mt-4 text-[14px] max-w-sm">
-            Five random questions per round. Speed and streaks earn bonus points.
+            Ten random questions per round. Speed and streaks earn bonus points.
           </p>
         </FadeUp>
 

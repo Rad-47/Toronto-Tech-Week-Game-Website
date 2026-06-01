@@ -30,11 +30,23 @@ export interface Signup {
   id: string;
   name: string;
   email: string;
+  /** Optional FanLinc handle, always stored with a leading "@". */
+  fanlincId?: string;
   favorite: string;
   role: Role;
   consent: boolean;
   createdAt: number;
 }
+
+/** Cross-device admin-controlled flags. */
+export interface AppSettings {
+  /** When true, signup requires a FanLinc User ID to continue. */
+  requireFanlincId: boolean;
+}
+
+export const DEFAULT_APP_SETTINGS: AppSettings = {
+  requireFanlincId: true,
+};
 
 export type Badge =
   | "Rookie Fan"

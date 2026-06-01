@@ -5,18 +5,27 @@ import { PageShell } from "@/components/Shell";
 import {
   checkAdminCode,
   getAdminAuth,
+  getAppSettings,
   getLeaderboard,
   getQuestionsOverride,
   getSignups,
   resetLeaderboard,
   setAdminAuth,
+  setAppSettings,
   setQuestionsOverride,
 } from "@/lib/store";
 import { fireConfetti } from "@/components/Confetti";
 import { getAllQuestions, getDefaultQuestions, getCategories } from "@/lib/questions";
-import type { CategoryId, LeaderboardEntry, Question, Signup } from "@/lib/types";
+import type {
+  AppSettings,
+  CategoryId,
+  LeaderboardEntry,
+  Question,
+  Signup,
+} from "@/lib/types";
+import { DEFAULT_APP_SETTINGS } from "@/lib/types";
 
-type Tab = "signups" | "questions" | "leaderboard" | "winner";
+type Tab = "signups" | "questions" | "leaderboard" | "winner" | "settings";
 
 export default function AdminPage() {
   const [authed, setAuthed] = useState<boolean | null>(null);
@@ -89,7 +98,7 @@ export default function AdminPage() {
       </div>
 
       <div className="mt-4 flex flex-wrap gap-2 text-xs">
-        {(["signups", "questions", "leaderboard", "winner"] as Tab[]).map((t) => (
+        {(["signups", "questions", "leaderboard", "winner", "settings"] as Tab[]).map((t) => (
           <button
             key={t}
             onClick={() => setTab(t)}
@@ -109,6 +118,7 @@ export default function AdminPage() {
         {tab === "questions" && <QuestionsTab />}
         {tab === "leaderboard" && <LeaderboardTab />}
         {tab === "winner" && <WinnerTab />}
+        {tab === "settings" && <SettingsTab />}
       </div>
     </PageShell>
   );
@@ -130,10 +140,11 @@ function SignupsTab() {
 
   function exportCsv() {
     const rows = [
-      ["name", "email", "favorite", "role", "consent", "createdAt"],
+      ["name", "email", "fanlincId", "favorite", "role", "consent", "createdAt"],
       ...list.map((s) => [
         s.name,
         s.email,
+        s.fanlincId ?? "",
         s.favorite,
         s.role,
         String(s.consent),
@@ -170,10 +181,11 @@ function SignupsTab() {
       </div>
       <div className="card rounded-2xl overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full text-sm min-w-[640px]">
+          <table className="w-full text-sm min-w-[720px]">
             <thead>
               <tr className="text-[10px] uppercase tracking-[0.15em] text-[var(--muted)] border-b border-[var(--border)]">
                 <th className="text-left px-3 py-2">Name</th>
+                <th className="text-left px-3 py-2">FanLinc ID</th>
                 <th className="text-left px-3 py-2">Email</th>
                 <th className="text-left px-3 py-2">Favourite</th>
                 <th className="text-left px-3 py-2">Role</th>
@@ -184,6 +196,9 @@ function SignupsTab() {
               {list.map((s) => (
                 <tr key={s.id} className="border-b border-[var(--border)] last:border-0">
                   <td className="px-3 py-2 font-semibold">{s.name}</td>
+                  <td className="px-3 py-2 text-[var(--primary)] font-mono text-xs">
+                    {s.fanlincId || "—"}
+                  </td>
                   <td className="px-3 py-2 text-[var(--muted)]">{s.email}</td>
                   <td className="px-3 py-2 text-[var(--muted)]">{s.favorite || "—"}</td>
                   <td className="px-3 py-2">
@@ -196,7 +211,7 @@ function SignupsTab() {
               ))}
               {list.length === 0 && (
                 <tr>
-                  <td colSpan={5} className="px-3 py-8 text-center text-[var(--muted)]">
+                  <td colSpan={6} className="px-3 py-8 text-center text-[var(--muted)]">
                     No signups yet.
                   </td>
                 </tr>
@@ -562,17 +577,85 @@ function LeaderboardTab() {
 }
 
 /* ============ Winner Tab ============ */
+/**
+ * Spin-the-wheel rules:
+ *  - Pool = every leaderboard entry whose score equals the top score.
+ *    If 12 players are tied for first, all 12 are eligible.
+ *  - Each entry is joined back to the signup roster so we can show the
+ *    winner's FanLinc ID + email for prize hand-off.
+ *  - Only signups with consent are eligible (matches the prior rule).
+ */
+interface WinnerCandidate {
+  entryId: string;
+  signupId?: string;
+  name: string;
+  email?: string;
+  fanlincId?: string;
+  categoryName: string;
+  score: number;
+  badge: string;
+}
+
 function WinnerTab() {
-  const [pool, setPool] = useState<Signup[]>([]);
-  const [winner, setWinner] = useState<Signup | null>(null);
+  const [pool, setPool] = useState<WinnerCandidate[]>([]);
+  const [topScore, setTopScore] = useState<number | null>(null);
+  const [totalPlays, setTotalPlays] = useState(0);
+  const [winner, setWinner] = useState<WinnerCandidate | null>(null);
   const [rolling, setRolling] = useState(false);
   const [scrollName, setScrollName] = useState<string>("");
+  const [loading, setLoading] = useState(true);
+
+  async function refresh() {
+    setLoading(true);
+    const [board, signups] = await Promise.all([
+      getLeaderboard(),
+      getSignups(),
+    ]);
+    setTotalPlays(board.length);
+    if (board.length === 0) {
+      setPool([]);
+      setTopScore(null);
+      setLoading(false);
+      return;
+    }
+    const sorted = [...board].sort((a, b) => b.score - a.score);
+    const best = sorted[0].score;
+    setTopScore(best);
+    // Match leaderboard entry -> signup by name (case-insensitive). The
+    // leaderboard schema only stores the display name, so this is the
+    // best join we have without a FK.
+    const byKey = new Map<string, Signup>();
+    for (const s of signups) {
+      byKey.set(s.name.trim().toLowerCase(), s);
+    }
+    const tied: WinnerCandidate[] = sorted
+      .filter((e) => e.score === best)
+      .map((e) => {
+        const match = byKey.get(e.name.trim().toLowerCase());
+        return {
+          entryId: e.id,
+          signupId: match?.id,
+          name: e.name,
+          email: match?.email,
+          fanlincId: match?.fanlincId,
+          categoryName: e.categoryName,
+          score: e.score,
+          badge: e.badge,
+        };
+      })
+      // Honour the consent flag when we have a signup match. Entries
+      // with no signup record stay in (couldn't have signed up without
+      // consent in current flow anyway).
+      .filter((c) => !c.signupId || byKey.get(c.name.trim().toLowerCase())?.consent !== false);
+    setPool(tied);
+    setLoading(false);
+  }
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const data = await getSignups();
-      if (!cancelled) setPool(data.filter((s) => s.consent));
+      await refresh();
+      if (cancelled) return;
     })();
     return () => {
       cancelled = true;
@@ -605,32 +688,201 @@ function WinnerTab() {
   return (
     <div>
       <p className="text-sm text-[var(--muted)]">
-        Pick a random winner from signups who opted in. Only consenting attendees are eligible.
+        The wheel only spins across the <span className="text-[var(--primary)] font-semibold">top scorers</span> on
+        the leaderboard. If multiple players are tied at #1, every one of them is eligible.
       </p>
-      <div className="card rounded-3xl p-6 text-center mt-4">
-        <div className="text-[10px] uppercase tracking-[0.22em] text-[var(--muted)]">
-          {pool.length} eligible entrants
+
+      <div className="mt-4 grid grid-cols-3 border-y border-[var(--border)] text-center">
+        <Stat label="Total plays" value={String(totalPlays)} />
+        <Stat
+          label="Top score"
+          value={topScore !== null ? String(topScore) : "—"}
+          divider
+          accent
+        />
+        <Stat
+          label="Tied at top"
+          value={String(pool.length)}
+          divider
+        />
+      </div>
+
+      {pool.length > 0 && (
+        <div className="mt-4">
+          <div className="eyebrow">Eligible entrants</div>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {pool.map((c) => (
+              <span
+                key={c.entryId}
+                className="text-[11px] px-2.5 py-1 rounded-full border border-[var(--border-strong)] bg-white/[0.03]"
+              >
+                <span className="font-semibold">{c.name}</span>
+                {c.fanlincId && (
+                  <span className="text-[var(--primary)] font-mono ml-1.5">
+                    {c.fanlincId}
+                  </span>
+                )}
+              </span>
+            ))}
+          </div>
         </div>
-        <div className="mt-3 min-h-[80px] flex items-center justify-center">
+      )}
+
+      <div className="card rounded-3xl p-6 text-center mt-5">
+        <div className="text-[10px] uppercase tracking-[0.22em] text-[var(--muted)]">
+          {loading
+            ? "Loading leaderboard…"
+            : pool.length === 0
+            ? totalPlays === 0
+              ? "Leaderboard is empty — nobody to draw from yet"
+              : "No eligible top scorers"
+            : `${pool.length} ${pool.length === 1 ? "player tied" : "players tied"} at the top`}
+        </div>
+        <div className="mt-3 min-h-[100px] flex items-center justify-center">
           {rolling ? (
             <div className="text-3xl font-black animate-pulse">{scrollName || "…"}</div>
           ) : winner ? (
             <div>
               <div className="text-4xl">🏆</div>
               <div className="text-3xl font-black text-gradient mt-1">{winner.name}</div>
-              <div className="text-xs text-[var(--muted)] mt-1">{winner.email}</div>
+              {winner.fanlincId && (
+                <div className="text-sm font-mono text-[var(--primary)] mt-1">
+                  {winner.fanlincId}
+                </div>
+              )}
+              {winner.email && (
+                <div className="text-xs text-[var(--muted)] mt-1">{winner.email}</div>
+              )}
+              <div className="text-[10px] uppercase tracking-[0.22em] text-[var(--muted)] mt-2">
+                {winner.categoryName} · {winner.score} pts · {winner.badge}
+              </div>
             </div>
           ) : (
-            <div className="text-[var(--muted)]">Press Spin to draw a winner</div>
+            <div className="text-[var(--muted)]">
+              {pool.length === 0
+                ? "No top scorers to draw from yet"
+                : "Press Spin to draw a winner"}
+            </div>
           )}
         </div>
+        <div className="flex gap-2 justify-center mt-4">
+          <button
+            onClick={spin}
+            disabled={rolling || pool.length === 0}
+            className="btn-primary h-12 px-6 rounded-2xl disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            {rolling ? "Spinning…" : winner ? "Pick another" : "Spin the wheel"}
+          </button>
+          <button
+            onClick={refresh}
+            disabled={rolling}
+            className="btn-ghost h-12 px-5 rounded-2xl text-xs"
+          >
+            Refresh
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Stat({
+  label,
+  value,
+  divider,
+  accent,
+}: {
+  label: string;
+  value: string;
+  divider?: boolean;
+  accent?: boolean;
+}) {
+  return (
+    <div
+      className={`px-3 py-3 ${
+        divider ? "border-l border-[var(--border)]" : ""
+      }`}
+    >
+      <div className="text-[10px] uppercase tracking-[0.18em] text-[var(--muted)]">
+        {label}
+      </div>
+      <div
+        className={`digit mt-1.5 text-xl font-medium tracking-tight ${
+          accent ? "text-[var(--primary)]" : "text-[var(--foreground)]"
+        }`}
+      >
+        {value}
+      </div>
+    </div>
+  );
+}
+
+/* ============ Settings Tab ============ */
+function SettingsTab() {
+  const [settings, setSettings] = useState<AppSettings>(DEFAULT_APP_SETTINGS);
+  const [saving, setSaving] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const s = await getAppSettings();
+      if (cancelled) return;
+      setSettings(s);
+      setLoaded(true);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  async function toggleRequireId() {
+    const next = { ...settings, requireFanlincId: !settings.requireFanlincId };
+    setSettings(next);
+    setSaving(true);
+    try {
+      await setAppSettings({ requireFanlincId: next.requireFanlincId });
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  if (!loaded) {
+    return <div className="text-sm text-[var(--muted)]">Loading settings…</div>;
+  }
+
+  return (
+    <div className="space-y-3">
+      <div className="card rounded-2xl p-4 flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <div className="text-[15px] font-semibold">Require FanLinc User ID</div>
+          <div className="text-[12px] text-[var(--muted)] mt-1 leading-relaxed max-w-md">
+            When ON, players must enter a FanLinc handle (e.g.{" "}
+            <span className="font-mono text-[var(--primary)]">@Rad7438</span>) to
+            sign up. When OFF, the field is shown but optional.
+          </div>
+        </div>
         <button
-          onClick={spin}
-          disabled={rolling || pool.length === 0}
-          className="btn-primary h-12 px-6 rounded-2xl mt-4 disabled:opacity-40"
+          type="button"
+          onClick={toggleRequireId}
+          disabled={saving}
+          aria-pressed={settings.requireFanlincId}
+          className={`relative inline-flex h-7 w-12 flex-shrink-0 items-center rounded-full transition-colors cursor-pointer ${
+            settings.requireFanlincId
+              ? "bg-[var(--primary)]"
+              : "bg-white/15"
+          } disabled:opacity-60 disabled:cursor-not-allowed`}
         >
-          {rolling ? "Spinning…" : winner ? "Pick another" : "Spin the wheel"}
+          <span
+            className={`inline-block h-5 w-5 transform rounded-full bg-black transition-transform ${
+              settings.requireFanlincId ? "translate-x-6" : "translate-x-1"
+            }`}
+          />
         </button>
+      </div>
+
+      <div className="text-[11px] text-[var(--muted-2)] px-1 leading-relaxed">
+        Changes apply on the next signup form load. Setting syncs across devices via Supabase when configured; otherwise it&apos;s stored locally on this device.
       </div>
     </div>
   );

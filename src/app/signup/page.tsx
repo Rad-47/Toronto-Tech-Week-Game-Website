@@ -1,25 +1,51 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { PageShell } from "@/components/Shell";
 import { StepBar } from "@/components/StepBar";
 import { FadeUp } from "@/components/SplitText";
-import { saveSignup, setCurrentSignup } from "@/lib/store";
+import {
+  getAppSettings,
+  saveSignup,
+  setCurrentSignup,
+} from "@/lib/store";
 import type { Role, Signup } from "@/lib/types";
 
 const ROLES: Role[] = ["Fan", "Investor", "Founder", "Athlete", "Sponsor", "Team Rep"];
+
+/** Strip a leading @ and whitespace before validating / persisting. */
+function normalizeFanlincId(raw: string): string {
+  const trimmed = raw.trim();
+  if (!trimmed) return "";
+  return trimmed.startsWith("@") ? trimmed : `@${trimmed}`;
+}
+
+const FANLINC_ID_RE = /^@[A-Za-z0-9_]{2,20}$/;
 
 export default function SignupPage() {
   const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [fanlincId, setFanlincId] = useState("");
   const [favorite, setFavorite] = useState("");
   const [role, setRole] = useState<Role>("Fan");
   const [consent, setConsent] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [requireFanlincId, setRequireFanlincId] = useState<boolean>(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const settings = await getAppSettings();
+      if (!cancelled) setRequireFanlincId(settings.requireFanlincId);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -27,10 +53,19 @@ export default function SignupPage() {
     if (!name.trim()) return setError("Please enter your name.");
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
       return setError("Please enter a valid email.");
+    const normalizedId = normalizeFanlincId(fanlincId);
+    if (requireFanlincId) {
+      if (!normalizedId) return setError("Please enter your FanLinc User ID.");
+      if (!FANLINC_ID_RE.test(normalizedId))
+        return setError("FanLinc ID looks like @username (letters, numbers, underscore).");
+    } else if (normalizedId && !FANLINC_ID_RE.test(normalizedId)) {
+      return setError("FanLinc ID looks like @username (letters, numbers, underscore).");
+    }
     const signup: Signup = {
       id: crypto.randomUUID(),
       name: name.trim(),
       email: email.trim().toLowerCase(),
+      fanlincId: normalizedId || undefined,
       favorite: favorite.trim(),
       role,
       consent,
@@ -106,7 +141,32 @@ export default function SignupPage() {
           </FieldAnim>
 
           <FieldAnim>
-            <Field index="03" label="Favourite team or player" htmlFor="fave">
+            <Field
+              index="03"
+              label={
+                requireFanlincId
+                  ? "FanLinc User ID"
+                  : "FanLinc User ID (optional)"
+              }
+              htmlFor="fanlincId"
+              hint="Looks like @Rad7438 — find it in your FanLinc profile."
+            >
+              <input
+                id="fanlincId"
+                className="input"
+                placeholder="@yourname"
+                value={fanlincId}
+                onChange={(e) => setFanlincId(e.target.value)}
+                autoCapitalize="off"
+                autoCorrect="off"
+                spellCheck={false}
+                required={requireFanlincId}
+              />
+            </Field>
+          </FieldAnim>
+
+          <FieldAnim>
+            <Field index="04" label="Favourite team or player" htmlFor="fave">
               <input
                 id="fave"
                 className="input"
@@ -118,7 +178,7 @@ export default function SignupPage() {
           </FieldAnim>
 
           <FieldAnim>
-            <Field index="04" label="Your role at the event">
+            <Field index="05" label="Your role at the event">
               <div className="grid grid-cols-3 gap-2">
                 {ROLES.map((r) => (
                   <button
@@ -203,11 +263,13 @@ function Field({
   index,
   label,
   htmlFor,
+  hint,
   children,
 }: {
   index: string;
   label: string;
   htmlFor?: string;
+  hint?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -224,6 +286,11 @@ function Field({
         </span>
       </label>
       {children}
+      {hint && (
+        <div className="mt-1.5 text-[11px] text-[var(--muted-2)] leading-snug">
+          {hint}
+        </div>
+      )}
     </div>
   );
 }

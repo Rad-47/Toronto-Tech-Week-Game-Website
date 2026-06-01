@@ -162,7 +162,7 @@ export default function Home() {
             so the user lands on it after the reveal completes. */}
         <div className="absolute bottom-0 inset-x-0 border-t border-[var(--border)] grid grid-cols-3 text-center bg-[var(--background)]">
           <div className="px-3 py-4 border-r border-[var(--border)]">
-            <div className="display-tight text-2xl">5</div>
+            <div className="display-tight text-2xl">10</div>
             <div className="eyebrow mt-1">Questions</div>
           </div>
           <div className="px-3 py-4 border-r border-[var(--border)]">
@@ -180,8 +180,8 @@ export default function Home() {
       <section className="mt-12 sm:mt-20">
         <FadeUp>
           <p className="text-[20px] sm:text-[26px] leading-[1.25] font-light max-w-md text-balance">
-            Five questions. One sport. A chance at signed merch — drawn live
-            tonight from the leaderboard.
+            Ten questions. One sport. A chance at signed merch — drawn live
+            tonight from the top of the leaderboard.
           </p>
         </FadeUp>
         <FadeUp delay={0.1} className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -335,8 +335,8 @@ export default function Home() {
           {[
             { n: "01", t: "Sign in", c: "Name, email, role. Ten seconds." },
             { n: "02", t: "Pick a sport", c: "Basketball, OHL, baseball, mix." },
-            { n: "03", t: "Race the clock", c: "Five questions. Speed + streak bonuses." },
-            { n: "04", t: "Win signed merch", c: "Top scorers entered into tonight's draw." },
+            { n: "03", t: "Race the clock", c: "Ten questions. Speed + streak bonuses." },
+            { n: "04", t: "Win signed merch", c: "Only top scorers enter tonight's draw." },
           ].map((s) => (
             <motion.div
               key={s.n}

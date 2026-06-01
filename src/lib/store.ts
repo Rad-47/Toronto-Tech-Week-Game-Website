@@ -1,7 +1,14 @@
 "use client";
 
 import { getSupabase, isSupabaseEnabled } from "./supabase";
-import type { LeaderboardEntry, Signup, Question, CategoryId } from "./types";
+import type {
+  AppSettings,
+  LeaderboardEntry,
+  Signup,
+  Question,
+  CategoryId,
+} from "./types";
+import { DEFAULT_APP_SETTINGS } from "./types";
 
 /* ============================================================
  * Persistence layer
@@ -25,6 +32,7 @@ const KEYS = {
   category: "fanlinc.currentCategory.v1",
   lastResult: "fanlinc.lastResult.v1",
   adminAuth: "fanlinc.adminAuth.v1",
+  appSettings: "fanlinc.appSettings.v1",
 } as const;
 
 const isBrowser = () => typeof window !== "undefined";
@@ -60,6 +68,7 @@ interface SignupRow {
   id: string;
   name: string;
   email: string;
+  fanlinc_id?: string | null;
   favorite: string | null;
   role: string;
   consent: boolean;
@@ -71,6 +80,7 @@ function rowToSignup(r: SignupRow): Signup {
     id: r.id,
     name: r.name,
     email: r.email,
+    fanlincId: r.fanlinc_id ?? undefined,
     favorite: r.favorite ?? "",
     role: r.role as Signup["role"],
     consent: r.consent,
@@ -94,14 +104,23 @@ export async function getSignups(): Promise<Signup[]> {
 export async function saveSignup(s: Signup): Promise<void> {
   const sb = getSupabase();
   if (sb) {
-    const { error } = await sb.from("signups").insert({
+    // Try with fanlinc_id first; if the column doesn't exist yet on the
+    // remote DB, retry without it so older schemas keep working.
+    const payload = {
       id: s.id,
       name: s.name,
       email: s.email,
+      fanlinc_id: s.fanlincId ?? null,
       favorite: s.favorite || null,
       role: s.role,
       consent: s.consent,
-    });
+    };
+    let { error } = await sb.from("signups").insert(payload);
+    if (error && /fanlinc_id/i.test(error.message)) {
+      const { fanlinc_id, ...legacy } = payload;
+      void fanlinc_id;
+      ({ error } = await sb.from("signups").insert(legacy));
+    }
     if (error) {
       console.warn("[signups] insert failed, falling back", error);
     } else {
@@ -240,6 +259,53 @@ export async function setQuestionsOverride(o: QuestionOverride): Promise<void> {
     }
   }
   write(KEYS.questionsOverride, o);
+}
+
+/* ============ SHARED — APP SETTINGS ============ */
+
+/**
+ * Cross-device admin flags. Persisted in a tiny key/value table
+ * (`app_settings(key text primary key, value jsonb)`) when Supabase
+ * is configured, with a localStorage fallback so the demo still works
+ * (and so the admin's last-known choice still applies on this device
+ * if the network call hiccups).
+ */
+export async function getAppSettings(): Promise<AppSettings> {
+  const sb = getSupabase();
+  if (sb) {
+    const { data, error } = await sb
+      .from("app_settings")
+      .select("key, value");
+    if (!error && data) {
+      const out: AppSettings = { ...DEFAULT_APP_SETTINGS };
+      for (const row of data as { key: string; value: unknown }[]) {
+        if (row.key === "requireFanlincId") {
+          out.requireFanlincId = Boolean(row.value);
+        }
+      }
+      // Mirror to local so a quick second read can short-circuit.
+      write(KEYS.appSettings, out);
+      return out;
+    }
+    if (error) console.warn("[settings] fetch failed, falling back", error);
+  }
+  return read<AppSettings>(KEYS.appSettings, DEFAULT_APP_SETTINGS);
+}
+
+export async function setAppSettings(patch: Partial<AppSettings>): Promise<void> {
+  const current = await getAppSettings();
+  const next: AppSettings = { ...current, ...patch };
+  write(KEYS.appSettings, next);
+  const sb = getSupabase();
+  if (!sb) return;
+  const rows = (Object.entries(patch) as [keyof AppSettings, unknown][]).map(
+    ([key, value]) => ({ key: String(key), value })
+  );
+  if (rows.length === 0) return;
+  const { error } = await sb
+    .from("app_settings")
+    .upsert(rows, { onConflict: "key" });
+  if (error) console.warn("[settings] upsert failed, kept locally", error);
 }
 
 /* ============ PER-DEVICE — UI STATE (always local) ============ */

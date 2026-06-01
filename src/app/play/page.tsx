@@ -54,7 +54,7 @@ export default function PlayPage() {
     }
     let cancelled = false;
     (async () => {
-      const round = await pickRound(cat, 5);
+      const round = await pickRound(cat, 10);
       if (cancelled) return;
       if (round.length === 0) {
         router.replace("/category");
