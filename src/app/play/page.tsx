@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { PageShell } from "@/components/Shell";
 import { StepBar } from "@/components/StepBar";
+import { TimerRing } from "@/components/TimerRing";
 import {
   addLeaderboardEntry,
   getCurrentCategory,
@@ -35,8 +36,11 @@ export default function PlayPage() {
     correct: boolean;
   } | null>(null);
   const [floater, setFloater] = useState<string | null>(null);
+  const [timeLeftMs, setTimeLeftMs] = useState<number>(QUESTION_SECONDS * 1000);
   const roundStartRef = useRef<number>(Date.now());
   const advanceRef = useRef<number | null>(null);
+  const tickRef = useRef<number | null>(null);
+  const questionStartRef = useRef<number>(Date.now());
 
   const total = questions.length;
   const q = questions[idx];
@@ -74,17 +78,39 @@ export default function PlayPage() {
     setState("idle");
     setLastDelta(null);
     setFloater(null);
+    setTimeLeftMs(QUESTION_SECONDS * 1000);
+    questionStartRef.current = Date.now();
+
+    if (tickRef.current) window.clearInterval(tickRef.current);
+    tickRef.current = window.setInterval(() => {
+      const remaining = Math.max(
+        0,
+        QUESTION_SECONDS * 1000 - (Date.now() - questionStartRef.current)
+      );
+      setTimeLeftMs(remaining);
+      if (remaining <= 0) {
+        if (tickRef.current) window.clearInterval(tickRef.current);
+        handleTimeout();
+      }
+    }, 100);
 
     return () => {
       if (advanceRef.current) window.clearTimeout(advanceRef.current);
+      if (tickRef.current) window.clearInterval(tickRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx, hydrated]);
 
   function handleChoose(i: number) {
     if (state !== "idle" || !q) return;
+    if (tickRef.current) window.clearInterval(tickRef.current);
+    const remaining = Math.max(
+      0,
+      QUESTION_SECONDS * 1000 - (Date.now() - questionStartRef.current)
+    );
+    setTimeLeftMs(remaining);
     const isCorrect = i === q.shuffledAnswer;
-    const result = scoreAnswer(isCorrect, QUESTION_SECONDS * 1000, streak);
+    const result = scoreAnswer(isCorrect, remaining, streak);
     setChosen(i);
     setState("answered");
     setScore((s) => s + result.total);
@@ -99,6 +125,16 @@ export default function PlayPage() {
       streak: result.streakBonus,
       correct: isCorrect,
     });
+    advanceRef.current = window.setTimeout(next, 1700);
+  }
+
+  function handleTimeout() {
+    if (state !== "idle" || !q) return;
+    setChosen(null);
+    setState("answered");
+    setTimeLeftMs(0);
+    setStreak(0);
+    setLastDelta({ total: 0, speed: 0, streak: 0, correct: false });
     advanceRef.current = window.setTimeout(next, 1700);
   }
 
@@ -180,11 +216,18 @@ export default function PlayPage() {
           transition={{ duration: 0.45, ease: [0.2, 0.7, 0.3, 1] }}
           className="mt-10"
         >
-          <div className="eyebrow">
-            <span className="digit text-[var(--primary)] mr-2">
-              {String(idx + 1).padStart(2, "0")}
-            </span>
-            {q.type}
+          <div className="flex items-center justify-between gap-4">
+            <div className="eyebrow">
+              <span className="digit text-[var(--primary)] mr-2">
+                {String(idx + 1).padStart(2, "0")}
+              </span>
+              {q.type}
+            </div>
+            <TimerRing
+              pct={timeLeftMs / (QUESTION_SECONDS * 1000)}
+              seconds={timeLeftMs / 1000}
+              size={64}
+            />
           </div>
           {q.image && (
             <div className="relative w-full aspect-[4/5] sm:aspect-[4/3] mt-4 overflow-hidden border border-[var(--border)] rounded-lg">
@@ -263,6 +306,8 @@ export default function PlayPage() {
                     <span className="text-[var(--primary)]">
                       Correct · +{lastDelta.total}
                     </span>
+                  ) : chosen === null ? (
+                    <span className="text-[var(--danger)]">Time&apos;s up</span>
                   ) : (
                     <span className="text-[var(--danger)]">Incorrect</span>
                   )}

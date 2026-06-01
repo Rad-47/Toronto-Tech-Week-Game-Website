@@ -1,6 +1,6 @@
 import type { Badge } from "./types";
 
-export const QUESTION_SECONDS = 15;
+export const QUESTION_SECONDS = 45;
 export const BASE_POINTS = 100;
 export const MAX_SPEED_BONUS = 100;
 export const STREAK_STEP = 25;
