@@ -226,7 +226,7 @@ export default function PlayPage() {
             <TimerRing
               pct={timeLeftMs / (QUESTION_SECONDS * 1000)}
               seconds={timeLeftMs / 1000}
-              size={64}
+              size={84}
             />
           </div>
           {q.image && (
