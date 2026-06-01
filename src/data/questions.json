@@ -31,7 +31,12 @@
         "id": "bb-1",
         "type": "trivia",
         "prompt": "How many players from one team are on the court at once in a standard basketball game?",
-        "options": ["4", "5", "6", "7"],
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
         "answer": 1,
         "explain": "Five players per team take the court at any one time."
       },
@@ -39,7 +44,12 @@
         "id": "bb-2",
         "type": "player",
         "prompt": "Which player is widely nicknamed 'The Greek Freak'?",
-        "options": ["Luka Doncic", "Giannis Antetokounmpo", "Joel Embiid", "Nikola Jokic"],
+        "options": [
+          "Luka Doncic",
+          "Giannis Antetokounmpo",
+          "Joel Embiid",
+          "Nikola Jokic"
+        ],
         "answer": 1,
         "explain": "Giannis Antetokounmpo earned the nickname for his Greek heritage and freakish athleticism."
       },
@@ -47,7 +57,12 @@
         "id": "bb-3",
         "type": "team",
         "prompt": "The Toronto Raptors won their first NBA Championship in which year?",
-        "options": ["2017", "2018", "2019", "2020"],
+        "options": [
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ],
         "answer": 2,
         "explain": "The Raptors beat the Warriors 4-2 in 2019."
       },
@@ -55,7 +70,12 @@
         "id": "bb-4",
         "type": "rules",
         "prompt": "What is the shot clock length in the NBA?",
-        "options": ["20 seconds", "24 seconds", "30 seconds", "35 seconds"],
+        "options": [
+          "20 seconds",
+          "24 seconds",
+          "30 seconds",
+          "35 seconds"
+        ],
         "answer": 1,
         "explain": "NBA shot clock is 24 seconds."
       },
@@ -76,7 +96,12 @@
         "id": "bb-6",
         "type": "player",
         "prompt": "Who holds the NBA all-time scoring record?",
-        "options": ["Kareem Abdul-Jabbar", "LeBron James", "Michael Jordan", "Karl Malone"],
+        "options": [
+          "Kareem Abdul-Jabbar",
+          "LeBron James",
+          "Michael Jordan",
+          "Karl Malone"
+        ],
         "answer": 1,
         "explain": "LeBron James surpassed Kareem Abdul-Jabbar in 2023."
       },
@@ -84,7 +109,12 @@
         "id": "bb-7",
         "type": "team",
         "prompt": "Which Canadian city is home to the Raptors 905 G League team?",
-        "options": ["Toronto", "Mississauga", "Hamilton", "Vaughan"],
+        "options": [
+          "Toronto",
+          "Mississauga",
+          "Hamilton",
+          "Vaughan"
+        ],
         "answer": 1,
         "explain": "Raptors 905 play out of Mississauga's Paramount Fine Foods Centre."
       },
@@ -92,7 +122,12 @@
         "id": "bb-8",
         "type": "trivia",
         "prompt": "How many points is a free throw worth?",
-        "options": ["1", "2", "3", "It varies"],
+        "options": [
+          "1",
+          "2",
+          "3",
+          "It varies"
+        ],
         "answer": 0,
         "explain": "Free throws are always one point."
       },
@@ -113,7 +148,12 @@
         "id": "bb-10",
         "type": "player",
         "prompt": "Which player is known as 'Steph' and revolutionized 3-point shooting?",
-        "options": ["Stephon Marbury", "Stephen Curry", "Klay Thompson", "Damian Lillard"],
+        "options": [
+          "Stephon Marbury",
+          "Stephen Curry",
+          "Klay Thompson",
+          "Damian Lillard"
+        ],
         "answer": 1,
         "explain": "Stephen Curry of the Golden State Warriors."
       },
@@ -121,7 +161,12 @@
         "id": "bb-11",
         "type": "team",
         "prompt": "Which Canadian team plays in the NBA?",
-        "options": ["Toronto Raptors", "Montreal Mounties", "Vancouver Grizzlies", "Calgary Stampede"],
+        "options": [
+          "Toronto Raptors",
+          "Montreal Mounties",
+          "Vancouver Grizzlies",
+          "Calgary Stampede"
+        ],
         "answer": 0,
         "explain": "The Raptors are the only Canadian NBA team."
       },
@@ -129,7 +174,12 @@
         "id": "bb-12",
         "type": "rules",
         "prompt": "How long is one NBA quarter?",
-        "options": ["10 minutes", "12 minutes", "15 minutes", "20 minutes"],
+        "options": [
+          "10 minutes",
+          "12 minutes",
+          "15 minutes",
+          "20 minutes"
+        ],
         "answer": 1,
         "explain": "NBA quarters are 12 minutes; FIBA and college are different."
       },
@@ -137,7 +187,12 @@
         "id": "bb-13",
         "type": "fan",
         "prompt": "What is the name of the Raptors' mascot?",
-        "options": ["The Raptor", "Carlton", "Spinneret", "Rex"],
+        "options": [
+          "The Raptor",
+          "Carlton",
+          "Spinneret",
+          "Rex"
+        ],
         "answer": 0,
         "explain": "Simply 'The Raptor'."
       },
@@ -145,7 +200,12 @@
         "id": "bb-14",
         "type": "trivia",
         "prompt": "From how far back is an NBA 3-point shot, at the corner?",
-        "options": ["21'9\"", "22'0\"", "23'9\"", "24'0\""],
+        "options": [
+          "21'9\"",
+          "22'0\"",
+          "23'9\"",
+          "24'0\""
+        ],
         "answer": 1,
         "explain": "Corner 3 is 22 feet; the top of the arc is 23'9\"."
       },
@@ -153,7 +213,12 @@
         "id": "bb-15",
         "type": "player",
         "prompt": "Who was named the NBA MVP for the 2022-23 season?",
-        "options": ["Nikola Jokic", "Joel Embiid", "Giannis Antetokounmpo", "Jayson Tatum"],
+        "options": [
+          "Nikola Jokic",
+          "Joel Embiid",
+          "Giannis Antetokounmpo",
+          "Jayson Tatum"
+        ],
         "answer": 1,
         "explain": "Joel Embiid took home the 2022-23 MVP."
       },
@@ -161,7 +226,12 @@
         "id": "bb-16",
         "type": "fan",
         "prompt": "What's the standard nickname for a basketball net?",
-        "options": ["The Hoop", "The Twine", "The Ring", "The Cylinder"],
+        "options": [
+          "The Hoop",
+          "The Twine",
+          "The Ring",
+          "The Cylinder"
+        ],
         "answer": 1,
         "explain": "'Nothing but twine' is a common phrase for a clean swish."
       },
@@ -169,7 +239,12 @@
         "id": "bb-17",
         "type": "rules",
         "prompt": "How many personal fouls force an NBA player to foul out?",
-        "options": ["4", "5", "6", "7"],
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
         "answer": 2,
         "explain": "Six fouls and you're out in the NBA."
       },
@@ -203,7 +278,12 @@
         "id": "bb-20",
         "type": "team",
         "prompt": "The Brampton Honey Badgers won their first CEBL championship in which year?",
-        "options": ["2021", "2022", "2023", "2024"],
+        "options": [
+          "2021",
+          "2022",
+          "2023",
+          "2024"
+        ],
         "answer": 2,
         "explain": "The Honey Badgers captured the CEBL title in 2023 at Edmonton's Championship Weekend."
       },
@@ -224,7 +304,12 @@
         "id": "bb-22",
         "type": "team",
         "prompt": "How many teams compete in the Canadian Elite Basketball League (CEBL) as of the 2024 season?",
-        "options": ["6", "8", "10", "12"],
+        "options": [
+          "6",
+          "8",
+          "10",
+          "12"
+        ],
         "answer": 2,
         "explain": "Ten teams from coast-to-coast — Vancouver Bandits, Calgary Surge, Saskatchewan Rattlers, Winnipeg Sea Bears, Brampton Honey Badgers, Niagara River Lions, Scarborough Shooting Stars, Ottawa BlackJacks, Montreal Alliance, and Halifax-based MTL... (lineup evolves yearly)."
       },
@@ -253,9 +338,996 @@
         ],
         "answer": 1,
         "explain": "Target Score Time — the game clock goes off in the final media stoppage and the first team to reach a target (leading score + 9) wins. The CEBL was the first pro league to adopt it league-wide."
+      },
+      {
+        "id": "bb-25",
+        "type": "rules",
+        "prompt": "How tall is an NBA basketball hoop above the floor?",
+        "options": [
+          "8 feet",
+          "9 feet",
+          "10 feet",
+          "12 feet"
+        ],
+        "answer": 2,
+        "explain": "Ten feet — the same height as Naismith's original peach baskets in 1891."
+      },
+      {
+        "id": "bb-26",
+        "type": "rules",
+        "prompt": "How many minutes are in one quarter of an NBA game?",
+        "options": [
+          "8",
+          "10",
+          "12",
+          "15"
+        ],
+        "answer": 2,
+        "explain": "NBA quarters are 12 minutes — four quarters make a 48-minute game."
+      },
+      {
+        "id": "bb-27",
+        "type": "rules",
+        "prompt": "How many quarters are played in a standard NBA game?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2,
+        "explain": "Four quarters per regulation NBA game."
+      },
+      {
+        "id": "bb-28",
+        "type": "rules",
+        "prompt": "An NCAA men's basketball game is divided into how many halves?",
+        "options": [
+          "2 halves",
+          "3 periods",
+          "4 quarters",
+          "5 sets"
+        ],
+        "answer": 0,
+        "explain": "College men's basketball uses two 20-minute halves."
+      },
+      {
+        "id": "bb-29",
+        "type": "rules",
+        "prompt": "How many personal fouls before a player fouls out of an NBA game?",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "answer": 2,
+        "explain": "Six personal fouls and you're done in the NBA."
+      },
+      {
+        "id": "bb-30",
+        "type": "rules",
+        "prompt": "How many personal fouls before a player fouls out in NCAA basketball?",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "answer": 1,
+        "explain": "Five fouls in college — one fewer than the NBA."
+      },
+      {
+        "id": "bb-31",
+        "type": "fan",
+        "prompt": "Who invented the game of basketball?",
+        "options": [
+          "Dr. Naismith",
+          "James Naismith",
+          "Both A and B",
+          "Walter Camp"
+        ],
+        "answer": 2,
+        "explain": "Dr. James Naismith — invented basketball in 1891."
+      },
+      {
+        "id": "bb-32",
+        "type": "trivia",
+        "prompt": "In what year was basketball invented?",
+        "options": [
+          "1875",
+          "1891",
+          "1905",
+          "1923"
+        ],
+        "answer": 1,
+        "explain": "James Naismith invented it in December 1891."
+      },
+      {
+        "id": "bb-33",
+        "type": "trivia",
+        "prompt": "Basketball was invented in which country?",
+        "options": [
+          "Canada",
+          "United States",
+          "United Kingdom",
+          "Germany"
+        ],
+        "answer": 1,
+        "explain": "Springfield, Massachusetts — though Naismith himself was Canadian."
+      },
+      {
+        "id": "bb-34",
+        "type": "trivia",
+        "prompt": "What was used as the very first basketball 'hoops'?",
+        "options": [
+          "Wooden rings",
+          "Peach baskets",
+          "Iron buckets",
+          "Wicker bins"
+        ],
+        "answer": 1,
+        "explain": "Two peach baskets nailed to a balcony — true story."
+      },
+      {
+        "id": "bb-35",
+        "type": "rules",
+        "prompt": "How many points is a made free throw worth?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": 0,
+        "explain": "One point per free throw."
+      },
+      {
+        "id": "bb-36",
+        "type": "rules",
+        "prompt": "How many points is a normal field goal inside the arc?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": 1,
+        "explain": "Two points for any made shot inside the three-point line."
+      },
+      {
+        "id": "bb-37",
+        "type": "rules",
+        "prompt": "How many points is a shot made from beyond the three-point line?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": 2,
+        "explain": "Three points — the arc is why it's called the three-point line."
+      },
+      {
+        "id": "bb-38",
+        "type": "term",
+        "prompt": "What does 'NBA' stand for?",
+        "options": [
+          "National Basketball Alliance",
+          "National Basketball Association",
+          "North American Basketball Association",
+          "National Ballers Association"
+        ],
+        "answer": 1,
+        "explain": "National Basketball Association — founded in 1946."
+      },
+      {
+        "id": "bb-39",
+        "type": "term",
+        "prompt": "What does 'WNBA' stand for?",
+        "options": [
+          "Women's National Basketball Association",
+          "World National Basketball Alliance",
+          "Women's National Ballers Association",
+          "World Net Basketball Association"
+        ],
+        "answer": 0,
+        "explain": "Women's National Basketball Association — founded in 1996."
+      },
+      {
+        "id": "bb-40",
+        "type": "fan",
+        "prompt": "'March Madness' is the nickname for which tournament?",
+        "options": [
+          "NBA Playoffs",
+          "NCAA Division I Basketball Tournament",
+          "EuroLeague Final Four",
+          "FIBA World Cup"
+        ],
+        "answer": 1,
+        "explain": "The NCAA Division I men's (and women's) basketball tournament every March."
+      },
+      {
+        "id": "bb-41",
+        "type": "rules",
+        "prompt": "How many teams compete in the main NCAA men's tournament bracket?",
+        "options": [
+          "32",
+          "48",
+          "64",
+          "68"
+        ],
+        "answer": 2,
+        "explain": "64 teams in the main bracket (68 including the First Four play-in)."
+      },
+      {
+        "id": "bb-42",
+        "type": "fan",
+        "prompt": "What are the semifinals of the NCAA basketball tournament called?",
+        "options": [
+          "Sweet Sixteen",
+          "Elite Eight",
+          "Final Four",
+          "Last Four"
+        ],
+        "answer": 2,
+        "explain": "The Final Four — the four teams that survive the regionals."
+      },
+      {
+        "id": "bb-43",
+        "type": "player",
+        "prompt": "Which player wore #23 for the Chicago Bulls and won 6 NBA titles?",
+        "options": [
+          "Scottie Pippen",
+          "Dennis Rodman",
+          "Michael Jordan",
+          "Derrick Rose"
+        ],
+        "answer": 2,
+        "explain": "Michael Jordan — six titles in two three-peats with the Bulls."
+      },
+      {
+        "id": "bb-44",
+        "type": "player",
+        "prompt": "Michael Jordan won all of his NBA championships with which team?",
+        "options": [
+          "Washington Wizards",
+          "Chicago Bulls",
+          "Charlotte Hornets",
+          "Brooklyn Nets"
+        ],
+        "answer": 1,
+        "explain": "All six rings with the Chicago Bulls."
+      },
+      {
+        "id": "bb-45",
+        "type": "fan",
+        "prompt": "What is the NBA Championship trophy called?",
+        "options": [
+          "Larry O'Brien Trophy",
+          "Bill Russell Trophy",
+          "Naismith Cup",
+          "Commissioner's Trophy"
+        ],
+        "answer": 0,
+        "explain": "The Larry O'Brien Championship Trophy — solid sterling silver, gold-plated."
+      },
+      {
+        "id": "bb-46",
+        "type": "fan",
+        "prompt": "The NBA Finals MVP trophy is named after which legend?",
+        "options": [
+          "Wilt Chamberlain",
+          "Bill Russell",
+          "Magic Johnson",
+          "Larry Bird"
+        ],
+        "answer": 1,
+        "explain": "Bill Russell — 11-time NBA champion with the Celtics."
+      },
+      {
+        "id": "bb-47",
+        "type": "trivia",
+        "prompt": "Who holds the NBA record for most points scored in a single game (100)?",
+        "options": [
+          "Kobe Bryant",
+          "Wilt Chamberlain",
+          "Michael Jordan",
+          "LeBron James"
+        ],
+        "answer": 1,
+        "explain": "Wilt Chamberlain dropped 100 on March 2, 1962."
+      },
+      {
+        "id": "bb-48",
+        "type": "trivia",
+        "prompt": "In what year was Wilt Chamberlain's 100-point game?",
+        "options": [
+          "1956",
+          "1962",
+          "1968",
+          "1972"
+        ],
+        "answer": 1,
+        "explain": "March 2, 1962 — Philadelphia Warriors vs. New York Knicks in Hershey, PA."
+      },
+      {
+        "id": "bb-49",
+        "type": "trivia",
+        "prompt": "What nationality was basketball's inventor, James Naismith?",
+        "options": [
+          "American",
+          "Canadian",
+          "British",
+          "Australian"
+        ],
+        "answer": 1,
+        "explain": "Naismith was Canadian — born in Almonte, Ontario."
+      },
+      {
+        "id": "bb-50",
+        "type": "rules",
+        "prompt": "How many players from one team are on the court playing both offense and defense?",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "answer": 1,
+        "explain": "Five players at a time per team."
+      },
+      {
+        "id": "bb-51",
+        "type": "term",
+        "prompt": "What is the painted rectangle in front of the hoop commonly called?",
+        "options": [
+          "The arc",
+          "The key (or paint)",
+          "The fairway",
+          "The square"
+        ],
+        "answer": 1,
+        "explain": "The key, the paint, or the lane — same area."
+      },
+      {
+        "id": "bb-52",
+        "type": "term",
+        "prompt": "What's a 'triple-double'?",
+        "options": [
+          "3 dunks in 1 game",
+          "Reaching 10+ in three statistical categories in a game",
+          "3 made threes in a row",
+          "3 technical fouls"
+        ],
+        "answer": 1,
+        "explain": "10+ points / rebounds / assists / steals / blocks across any three categories."
+      },
+      {
+        "id": "bb-53",
+        "type": "term",
+        "prompt": "What's a 'double-double'?",
+        "options": [
+          "Two consecutive 20-point games",
+          "10+ in two statistical categories in a single game",
+          "Two double-dribbles",
+          "Two and-ones in a row"
+        ],
+        "answer": 1,
+        "explain": "10+ in two of: points, rebounds, assists, steals, blocks."
+      },
+      {
+        "id": "bb-54",
+        "type": "term",
+        "prompt": "What's an 'alley-oop'?",
+        "options": [
+          "A behind-the-back pass",
+          "A pass caught and finished in mid-air",
+          "A foul shot ritual",
+          "A spin move"
+        ],
+        "answer": 1,
+        "explain": "A teammate throws it near the rim; another catches it mid-air to dunk or lay it in."
+      },
+      {
+        "id": "bb-55",
+        "type": "term",
+        "prompt": "What's a 'buzzer beater'?",
+        "options": [
+          "A foul as time expires",
+          "A shot that goes in just as time runs out",
+          "An end-of-quarter timeout",
+          "A failed last-second shot"
+        ],
+        "answer": 1,
+        "explain": "A made shot released before the buzzer that drops through the net."
+      },
+      {
+        "id": "bb-56",
+        "type": "term",
+        "prompt": "What does 'and-one' mean in basketball?",
+        "options": [
+          "A made basket while being fouled",
+          "An extra free throw",
+          "A one-on-one matchup",
+          "A bonus possession"
+        ],
+        "answer": 0,
+        "explain": "You score AND draw the foul — earning one bonus free throw."
+      },
+      {
+        "id": "bb-57",
+        "type": "rules",
+        "prompt": "How long is an NBA overtime period?",
+        "options": [
+          "3 minutes",
+          "5 minutes",
+          "7 minutes",
+          "10 minutes"
+        ],
+        "answer": 1,
+        "explain": "Five minutes per OT period until someone leads after a full period."
+      },
+      {
+        "id": "bb-58",
+        "type": "rules",
+        "prompt": "How long is a WNBA regulation game?",
+        "options": [
+          "32 minutes",
+          "40 minutes",
+          "44 minutes",
+          "48 minutes"
+        ],
+        "answer": 1,
+        "explain": "Four 10-minute quarters = 40 minutes."
+      },
+      {
+        "id": "bb-59",
+        "type": "trivia",
+        "prompt": "In what year did the WNBA play its first season?",
+        "options": [
+          "1992",
+          "1996",
+          "1997",
+          "2000"
+        ],
+        "answer": 2,
+        "explain": "The WNBA was founded in 1996 and began play in 1997."
+      },
+      {
+        "id": "bb-60",
+        "type": "team",
+        "prompt": "Which team won the first four WNBA championships in a row?",
+        "options": [
+          "Los Angeles Sparks",
+          "Houston Comets",
+          "Minnesota Lynx",
+          "Seattle Storm"
+        ],
+        "answer": 1,
+        "explain": "The Houston Comets — 1997, 1998, 1999, 2000."
+      },
+      {
+        "id": "bb-61",
+        "type": "player",
+        "prompt": "Caitlin Clark played college basketball for which university?",
+        "options": [
+          "Connecticut",
+          "South Carolina",
+          "Iowa",
+          "Stanford"
+        ],
+        "answer": 2,
+        "explain": "Iowa Hawkeyes — where she broke the NCAA all-time scoring record."
+      },
+      {
+        "id": "bb-62",
+        "type": "team",
+        "prompt": "Which Canadian city has an NBA team?",
+        "options": [
+          "Vancouver",
+          "Montreal",
+          "Toronto",
+          "Calgary"
+        ],
+        "answer": 2,
+        "explain": "Toronto — home of the Raptors since 1995."
+      },
+      {
+        "id": "bb-63",
+        "type": "team",
+        "prompt": "The Toronto Raptors won their first NBA Championship in which year?",
+        "options": [
+          "2017",
+          "2018",
+          "2019",
+          "2020"
+        ],
+        "answer": 2,
+        "explain": "2019, defeating the Golden State Warriors 4-2."
+      },
+      {
+        "id": "bb-64",
+        "type": "player",
+        "prompt": "Who was named NBA Finals MVP when the Raptors won in 2019?",
+        "options": [
+          "Kyle Lowry",
+          "Pascal Siakam",
+          "Kawhi Leonard",
+          "Marc Gasol"
+        ],
+        "answer": 2,
+        "explain": "Kawhi Leonard — his second Finals MVP."
+      },
+      {
+        "id": "bb-65",
+        "type": "team",
+        "prompt": "Where do the Toronto Raptors play their home games?",
+        "options": [
+          "Rogers Centre",
+          "Scotiabank Arena",
+          "Maple Leaf Gardens",
+          "BMO Field"
+        ],
+        "answer": 1,
+        "explain": "Scotiabank Arena (formerly Air Canada Centre)."
+      },
+      {
+        "id": "bb-66",
+        "type": "player",
+        "prompt": "Who are the 'Splash Brothers'?",
+        "options": [
+          "LeBron James & Anthony Davis",
+          "Stephen Curry & Klay Thompson",
+          "James Harden & Russell Westbrook",
+          "Jayson Tatum & Jaylen Brown"
+        ],
+        "answer": 1,
+        "explain": "Stephen Curry and Klay Thompson — Golden State's three-point sniper duo."
+      },
+      {
+        "id": "bb-67",
+        "type": "player",
+        "prompt": "Stephen Curry has won all of his NBA titles with which team?",
+        "options": [
+          "Charlotte Hornets",
+          "Golden State Warriors",
+          "Los Angeles Lakers",
+          "Sacramento Kings"
+        ],
+        "answer": 1,
+        "explain": "Golden State Warriors — four championships and counting."
+      },
+      {
+        "id": "bb-68",
+        "type": "player",
+        "prompt": "LeBron James started his NBA career with which team?",
+        "options": [
+          "Miami Heat",
+          "Cleveland Cavaliers",
+          "Los Angeles Lakers",
+          "Toronto Raptors"
+        ],
+        "answer": 1,
+        "explain": "Cleveland Cavaliers — drafted #1 overall in 2003."
+      },
+      {
+        "id": "bb-69",
+        "type": "player",
+        "prompt": "Kobe Bryant played his entire 20-season NBA career with which team?",
+        "options": [
+          "Philadelphia 76ers",
+          "Los Angeles Lakers",
+          "Charlotte Hornets",
+          "Boston Celtics"
+        ],
+        "answer": 1,
+        "explain": "Los Angeles Lakers — 1996 to 2016, five championships."
+      },
+      {
+        "id": "bb-70",
+        "type": "player",
+        "prompt": "Which two jersey numbers did Kobe Bryant wear with the Lakers?",
+        "options": [
+          "8 and 24",
+          "23 and 33",
+          "6 and 23",
+          "8 and 23"
+        ],
+        "answer": 0,
+        "explain": "Both #8 and #24 are retired by the Lakers."
+      },
+      {
+        "id": "bb-71",
+        "type": "player",
+        "prompt": "Larry Bird played his entire NBA career with which franchise?",
+        "options": [
+          "Boston Celtics",
+          "Indiana Pacers",
+          "Detroit Pistons",
+          "Philadelphia 76ers"
+        ],
+        "answer": 0,
+        "explain": "Boston Celtics — three championships, three MVPs."
+      },
+      {
+        "id": "bb-72",
+        "type": "player",
+        "prompt": "Magic Johnson played his entire NBA career with which franchise?",
+        "options": [
+          "Boston Celtics",
+          "Los Angeles Lakers",
+          "Detroit Pistons",
+          "Chicago Bulls"
+        ],
+        "answer": 1,
+        "explain": "Los Angeles Lakers — five championships, three MVPs."
+      },
+      {
+        "id": "bb-73",
+        "type": "player",
+        "prompt": "Hakeem Olajuwon's famous nickname is…",
+        "options": [
+          "The Mailman",
+          "The Dream",
+          "The Big Fundamental",
+          "Sir Charles"
+        ],
+        "answer": 1,
+        "explain": "Hakeem 'The Dream' Olajuwon — back-to-back titles in 1994-95 with Houston."
+      },
+      {
+        "id": "bb-74",
+        "type": "player",
+        "prompt": "Shaquille O'Neal is most commonly known by which short nickname?",
+        "options": [
+          "Diesel",
+          "Shaq",
+          "Big Aristotle",
+          "Superman"
+        ],
+        "answer": 1,
+        "explain": "Shaq — though he answered to several including Diesel and Superman."
+      },
+      {
+        "id": "bb-75",
+        "type": "player",
+        "prompt": "Andrew Wiggins, NBA champion, is from which country?",
+        "options": [
+          "United States",
+          "Canada",
+          "Jamaica",
+          "Bahamas"
+        ],
+        "answer": 1,
+        "explain": "Canadian — born in Toronto, NBA champion with the Warriors in 2022."
+      },
+      {
+        "id": "bb-76",
+        "type": "player",
+        "prompt": "Steve Nash played college basketball at which school?",
+        "options": [
+          "UCLA",
+          "Santa Clara",
+          "Gonzaga",
+          "Arizona"
+        ],
+        "answer": 1,
+        "explain": "Santa Clara — a small school that produced a two-time NBA MVP."
+      },
+      {
+        "id": "bb-77",
+        "type": "player",
+        "prompt": "Dirk Nowitzki is from which country?",
+        "options": [
+          "Spain",
+          "Germany",
+          "Lithuania",
+          "Slovenia"
+        ],
+        "answer": 1,
+        "explain": "Germany — drafted in 1998, NBA champion with Dallas in 2011."
+      },
+      {
+        "id": "bb-78",
+        "type": "player",
+        "prompt": "Yao Ming is from which country?",
+        "options": [
+          "Japan",
+          "South Korea",
+          "China",
+          "Taiwan"
+        ],
+        "answer": 2,
+        "explain": "China — Houston Rockets star, 8-time NBA All-Star."
+      },
+      {
+        "id": "bb-79",
+        "type": "player",
+        "prompt": "Manu Ginobili is from which country?",
+        "options": [
+          "Brazil",
+          "Argentina",
+          "Spain",
+          "Uruguay"
+        ],
+        "answer": 1,
+        "explain": "Argentina — four NBA titles with the Spurs."
+      },
+      {
+        "id": "bb-80",
+        "type": "player",
+        "prompt": "Tony Parker is from which country?",
+        "options": [
+          "Belgium",
+          "France",
+          "Switzerland",
+          "Cameroon"
+        ],
+        "answer": 1,
+        "explain": "France — Spurs legend, 2007 Finals MVP."
+      },
+      {
+        "id": "bb-81",
+        "type": "player",
+        "prompt": "Pau Gasol is from which country?",
+        "options": [
+          "Spain",
+          "Portugal",
+          "Argentina",
+          "Italy"
+        ],
+        "answer": 0,
+        "explain": "Spain — two-time NBA champion with the Lakers."
+      },
+      {
+        "id": "bb-82",
+        "type": "player",
+        "prompt": "Giannis Antetokounmpo plays for which NBA team?",
+        "options": [
+          "Milwaukee Bucks",
+          "Atlanta Hawks",
+          "Phoenix Suns",
+          "Boston Celtics"
+        ],
+        "answer": 0,
+        "explain": "The Milwaukee Bucks — 2021 NBA champion and Finals MVP."
+      },
+      {
+        "id": "bb-83",
+        "type": "player",
+        "prompt": "Nikola Jokic plays for which NBA team?",
+        "options": [
+          "Sacramento Kings",
+          "Denver Nuggets",
+          "Utah Jazz",
+          "Memphis Grizzlies"
+        ],
+        "answer": 1,
+        "explain": "Denver Nuggets — 2023 NBA champion and Finals MVP."
+      },
+      {
+        "id": "bb-84",
+        "type": "player",
+        "prompt": "Joel Embiid plays for which NBA team?",
+        "options": [
+          "Brooklyn Nets",
+          "Philadelphia 76ers",
+          "Charlotte Hornets",
+          "Washington Wizards"
+        ],
+        "answer": 1,
+        "explain": "Philadelphia 76ers — 2023 NBA MVP."
+      },
+      {
+        "id": "bb-85",
+        "type": "player",
+        "prompt": "Kawhi Leonard has won NBA Finals MVP with which two franchises?",
+        "options": [
+          "Lakers and Heat",
+          "Spurs and Raptors",
+          "Bucks and Warriors",
+          "Clippers and Suns"
+        ],
+        "answer": 1,
+        "explain": "San Antonio Spurs (2014) and Toronto Raptors (2019)."
+      },
+      {
+        "id": "bb-86",
+        "type": "team",
+        "prompt": "Which league do the Brampton Honey Badgers play in?",
+        "options": [
+          "NBA G League",
+          "Canadian Elite Basketball League (CEBL)",
+          "Basketball Africa League",
+          "NBL"
+        ],
+        "answer": 1,
+        "explain": "The CEBL — Canada's top pro league, with a summer season."
+      },
+      {
+        "id": "bb-87",
+        "type": "team",
+        "prompt": "When does the Canadian Elite Basketball League (CEBL) season run?",
+        "options": [
+          "Winter",
+          "Spring",
+          "Summer",
+          "Fall"
+        ],
+        "answer": 2,
+        "explain": "Summer — May through August, filling the gap before NBA tip-off."
+      },
+      {
+        "id": "bb-88",
+        "type": "team",
+        "prompt": "How many teams play in the NBA today?",
+        "options": [
+          "28",
+          "30",
+          "32",
+          "34"
+        ],
+        "answer": 1,
+        "explain": "30 teams — 15 in the Eastern Conference, 15 in the Western."
+      },
+      {
+        "id": "bb-89",
+        "type": "player",
+        "prompt": "Who became the NBA's all-time leading scorer in February 2023?",
+        "options": [
+          "LeBron James",
+          "Kevin Durant",
+          "Stephen Curry",
+          "Kareem Abdul-Jabbar"
+        ],
+        "answer": 0,
+        "explain": "LeBron James passed Kareem Abdul-Jabbar's 38,387 career points."
+      },
+      {
+        "id": "bb-90",
+        "type": "player",
+        "prompt": "Before LeBron, who held the NBA all-time scoring record for nearly 40 years?",
+        "options": [
+          "Wilt Chamberlain",
+          "Karl Malone",
+          "Kareem Abdul-Jabbar",
+          "Michael Jordan"
+        ],
+        "answer": 2,
+        "explain": "Kareem Abdul-Jabbar held the record from 1984 until 2023."
+      },
+      {
+        "id": "bb-91",
+        "type": "player",
+        "prompt": "What was Kareem Abdul-Jabbar's signature unblockable shot?",
+        "options": [
+          "Fadeaway",
+          "Skyhook",
+          "Step-back jumper",
+          "Eurostep"
+        ],
+        "answer": 1,
+        "explain": "The Skyhook — a one-handed hook shot taken at full extension."
+      },
+      {
+        "id": "bb-92",
+        "type": "trivia",
+        "prompt": "When was the three-point line introduced to the NBA?",
+        "options": [
+          "1968-69 season",
+          "1979-80 season",
+          "1985-86 season",
+          "1991-92 season"
+        ],
+        "answer": 1,
+        "explain": "1979-80 — adopted from the ABA."
+      },
+      {
+        "id": "bb-93",
+        "type": "rules",
+        "prompt": "How far is the NBA free-throw line from the basket?",
+        "options": [
+          "12 feet",
+          "15 feet",
+          "18 feet",
+          "21 feet"
+        ],
+        "answer": 1,
+        "explain": "15 feet from the backboard, the same in college and high school."
+      },
+      {
+        "id": "bb-94",
+        "type": "rules",
+        "prompt": "How many officials are on the court for a regular NBA game?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "answer": 2,
+        "explain": "Three referees — the crew chief plus two others."
+      },
+      {
+        "id": "bb-95",
+        "type": "term",
+        "prompt": "A 'pick and roll' involves which two players?",
+        "options": [
+          "Two guards swapping spots",
+          "A screener who then cuts to the basket and a ball-handler",
+          "A passer and a cutter on the baseline",
+          "Two big men switching post positions"
+        ],
+        "answer": 1,
+        "explain": "One player sets a screen (pick), then 'rolls' to the basket for a pass."
+      },
+      {
+        "id": "bb-96",
+        "type": "term",
+        "prompt": "What does 'brick' mean in basketball slang?",
+        "options": [
+          "A defensive block",
+          "A really badly missed shot",
+          "A flagrant foul",
+          "A successful three-pointer"
+        ],
+        "answer": 1,
+        "explain": "A clanger — usually off the rim or backboard."
+      },
+      {
+        "id": "bb-97",
+        "type": "team",
+        "prompt": "Which two franchises are tied for the most NBA championships in history?",
+        "options": [
+          "Lakers and Bulls",
+          "Celtics and Lakers",
+          "Spurs and Warriors",
+          "Bulls and Heat"
+        ],
+        "answer": 1,
+        "explain": "Boston Celtics and Los Angeles Lakers each have 18+ titles."
+      },
+      {
+        "id": "bb-98",
+        "type": "fan",
+        "prompt": "What does the 'M' in MVP stand for?",
+        "options": [
+          "Master",
+          "Most",
+          "Major",
+          "Maximum"
+        ],
+        "answer": 1,
+        "explain": "Most Valuable Player."
+      },
+      {
+        "id": "bb-99",
+        "type": "team",
+        "prompt": "Which four ABA teams merged into the NBA in 1976?",
+        "options": [
+          "Lakers, Bulls, Celtics, 76ers",
+          "Nets, Pacers, Spurs, Nuggets",
+          "Bucks, Suns, Kings, Hawks",
+          "Heat, Magic, Hornets, Wolves"
+        ],
+        "answer": 1,
+        "explain": "Nets, Pacers, Spurs, and Nuggets — the four ABA survivors."
+      },
+      {
+        "id": "bb-100",
+        "type": "fan",
+        "prompt": "What's the most common shape of an NBA basketball logo silhouette of a player?",
+        "options": [
+          "A driving layup",
+          "A jump shot",
+          "A dribbling guard",
+          "A reverse dunk"
+        ],
+        "answer": 2,
+        "explain": "Jerry West dribbling — the iconic 'Logoman' silhouette."
       }
     ],
-
     "ohl-hockey": [
       {
         "id": "ohl-img-1",
@@ -303,7 +1375,12 @@
         "id": "ohl-1",
         "type": "team",
         "prompt": "The OHL is one of three major junior leagues that make up which Canadian organization?",
-        "options": ["NHL", "AHL", "CHL", "ECHL"],
+        "options": [
+          "NHL",
+          "AHL",
+          "CHL",
+          "ECHL"
+        ],
         "answer": 2,
         "explain": "The CHL (Canadian Hockey League) includes the OHL, WHL, and QMJHL."
       },
@@ -311,7 +1388,12 @@
         "id": "ohl-2",
         "type": "trivia",
         "prompt": "Which trophy is awarded to the OHL playoff champion?",
-        "options": ["Stanley Cup", "J. Ross Robertson Cup", "Memorial Cup", "President's Cup"],
+        "options": [
+          "Stanley Cup",
+          "J. Ross Robertson Cup",
+          "Memorial Cup",
+          "President's Cup"
+        ],
         "answer": 1,
         "explain": "The J. Ross Robertson Cup is the OHL playoff championship trophy."
       },
@@ -332,7 +1414,12 @@
         "id": "ohl-4",
         "type": "team",
         "prompt": "The Brantford Bulldogs play home games in which city?",
-        "options": ["Hamilton", "Brantford", "Kitchener", "Guelph"],
+        "options": [
+          "Hamilton",
+          "Brantford",
+          "Kitchener",
+          "Guelph"
+        ],
         "answer": 1,
         "explain": "The franchise relocated to Brantford ahead of the 2023-24 season."
       },
@@ -340,7 +1427,12 @@
         "id": "ohl-5",
         "type": "rules",
         "prompt": "How long is a standard OHL regular-season game (regulation)?",
-        "options": ["50 minutes", "60 minutes", "65 minutes", "75 minutes"],
+        "options": [
+          "50 minutes",
+          "60 minutes",
+          "65 minutes",
+          "75 minutes"
+        ],
         "answer": 1,
         "explain": "Three 20-minute periods, just like the NHL."
       },
@@ -348,7 +1440,12 @@
         "id": "ohl-6",
         "type": "player",
         "prompt": "Who is widely regarded as the greatest junior player of all time, having played in the OHL for the Sault Ste. Marie Greyhounds?",
-        "options": ["Mario Lemieux", "Wayne Gretzky", "Sidney Crosby", "Connor McDavid"],
+        "options": [
+          "Mario Lemieux",
+          "Wayne Gretzky",
+          "Sidney Crosby",
+          "Connor McDavid"
+        ],
         "answer": 1,
         "explain": "Wayne Gretzky played his junior season with the Soo Greyhounds (1977-78)."
       },
@@ -395,7 +1492,12 @@
         "id": "ohl-10",
         "type": "team",
         "prompt": "How many teams are in the Ontario Hockey League?",
-        "options": ["16", "18", "20", "22"],
+        "options": [
+          "16",
+          "18",
+          "20",
+          "22"
+        ],
         "answer": 2,
         "explain": "The OHL currently has 20 franchises."
       },
@@ -403,7 +1505,12 @@
         "id": "ohl-11",
         "type": "player",
         "prompt": "Which OHL alum was drafted #1 overall by the Edmonton Oilers in 2015?",
-        "options": ["Auston Matthews", "Connor McDavid", "Jack Eichel", "Mitch Marner"],
+        "options": [
+          "Auston Matthews",
+          "Connor McDavid",
+          "Jack Eichel",
+          "Mitch Marner"
+        ],
         "answer": 1,
         "explain": "McDavid went #1 overall after his run with the Erie Otters."
       },
@@ -411,7 +1518,12 @@
         "id": "ohl-12",
         "type": "rules",
         "prompt": "What's the standard penalty time for a 'minor' infraction?",
-        "options": ["1 minute", "2 minutes", "4 minutes", "5 minutes"],
+        "options": [
+          "1 minute",
+          "2 minutes",
+          "4 minutes",
+          "5 minutes"
+        ],
         "answer": 1,
         "explain": "A minor penalty is two minutes in the box."
       },
@@ -419,7 +1531,12 @@
         "id": "ohl-13",
         "type": "team",
         "prompt": "The London Knights, Kitchener Rangers, and Windsor Spitfires play in which OHL conference?",
-        "options": ["Eastern", "Western", "Central", "Atlantic"],
+        "options": [
+          "Eastern",
+          "Western",
+          "Central",
+          "Atlantic"
+        ],
         "answer": 1,
         "explain": "All three are in the OHL's Western Conference."
       },
@@ -453,7 +1570,12 @@
         "id": "ohl-16",
         "type": "player",
         "prompt": "Bobby Orr played his junior career with which OHL/OHA team?",
-        "options": ["Oshawa Generals", "Peterborough Petes", "Niagara Falls Flyers", "Sudbury Wolves"],
+        "options": [
+          "Oshawa Generals",
+          "Peterborough Petes",
+          "Niagara Falls Flyers",
+          "Sudbury Wolves"
+        ],
         "answer": 0,
         "explain": "Bobby Orr starred for the Oshawa Generals in the 1960s."
       },
@@ -534,6 +1656,981 @@
         ],
         "answer": 1,
         "explain": "Ottawa 67's — named for the city's 1967 centennial."
+      },
+      {
+        "id": "ohl-23",
+        "type": "term",
+        "prompt": "What does 'OHL' stand for?",
+        "options": [
+          "Olympic Hockey League",
+          "Ontario Hockey League",
+          "Original Hockey League",
+          "Ottawa Hockey League"
+        ],
+        "answer": 1,
+        "explain": "Ontario Hockey League — the major-junior loop in Ontario."
+      },
+      {
+        "id": "ohl-24",
+        "type": "team",
+        "prompt": "The OHL is one of three leagues in which umbrella organization?",
+        "options": [
+          "NHL",
+          "Canadian Hockey League (CHL)",
+          "Hockey Canada",
+          "IIHF"
+        ],
+        "answer": 1,
+        "explain": "The CHL — Canada's top major-junior umbrella."
+      },
+      {
+        "id": "ohl-25",
+        "type": "team",
+        "prompt": "Besides the OHL, which two leagues make up the CHL?",
+        "options": [
+          "WHL and QMJHL",
+          "AHL and ECHL",
+          "USHL and NAHL",
+          "BCHL and AJHL"
+        ],
+        "answer": 0,
+        "explain": "The Western Hockey League and the Quebec Maritimes Junior Hockey League."
+      },
+      {
+        "id": "ohl-26",
+        "type": "term",
+        "prompt": "What does 'WHL' stand for?",
+        "options": [
+          "Winnipeg Hockey League",
+          "Western Hockey League",
+          "World Hockey League",
+          "Winter Hockey League"
+        ],
+        "answer": 1,
+        "explain": "Western Hockey League — covering western Canada and the U.S. Pacific Northwest."
+      },
+      {
+        "id": "ohl-27",
+        "type": "team",
+        "prompt": "The OHL champion plays for which trophy?",
+        "options": [
+          "Memorial Cup",
+          "J. Ross Robertson Cup",
+          "Calder Cup",
+          "President's Trophy"
+        ],
+        "answer": 1,
+        "explain": "The J. Ross Robertson Cup goes to the OHL playoff champion."
+      },
+      {
+        "id": "ohl-28",
+        "type": "team",
+        "prompt": "The Memorial Cup is awarded to the champion of which competition?",
+        "options": [
+          "The NHL",
+          "The CHL national championship",
+          "The IIHF World Juniors",
+          "The OHL regular season"
+        ],
+        "answer": 1,
+        "explain": "The Memorial Cup — the annual CHL national tournament every May."
+      },
+      {
+        "id": "ohl-29",
+        "type": "rules",
+        "prompt": "What's the standard age range for OHL players?",
+        "options": [
+          "14-18",
+          "16-20",
+          "18-22",
+          "20-24"
+        ],
+        "answer": 1,
+        "explain": "16 to 20 years old — major junior's prime development window."
+      },
+      {
+        "id": "ohl-30",
+        "type": "rules",
+        "prompt": "How many regulation periods are in a hockey game?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 1,
+        "explain": "Three periods — same in OHL, NHL, and IIHF play."
+      },
+      {
+        "id": "ohl-31",
+        "type": "rules",
+        "prompt": "How long is each period in an OHL or NHL game?",
+        "options": [
+          "15 minutes",
+          "18 minutes",
+          "20 minutes",
+          "25 minutes"
+        ],
+        "answer": 2,
+        "explain": "20 minutes per period — 60 minutes of regulation in total."
+      },
+      {
+        "id": "ohl-32",
+        "type": "rules",
+        "prompt": "How long is regular-season overtime in the NHL?",
+        "options": [
+          "3 minutes",
+          "5 minutes",
+          "10 minutes",
+          "Sudden death — no clock"
+        ],
+        "answer": 1,
+        "explain": "5-minute 3-on-3 sudden-death overtime."
+      },
+      {
+        "id": "ohl-33",
+        "type": "rules",
+        "prompt": "How many skaters per team are on the ice at full strength (not counting goalies)?",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "answer": 1,
+        "explain": "Five skaters plus the goaltender per team."
+      },
+      {
+        "id": "ohl-34",
+        "type": "term",
+        "prompt": "What is a 'power play'?",
+        "options": [
+          "A scoring drill",
+          "When one team has more skaters because the other is in the box",
+          "A penalty shot",
+          "Pulling the goalie for an extra attacker"
+        ],
+        "answer": 1,
+        "explain": "Your team has the numbers because the opponent took a penalty."
+      },
+      {
+        "id": "ohl-35",
+        "type": "term",
+        "prompt": "What is a 'penalty kill'?",
+        "options": [
+          "Killing the clock to end the game",
+          "Defending while shorthanded after a penalty",
+          "Stopping a penalty shot",
+          "Killing the puck in the offensive zone"
+        ],
+        "answer": 1,
+        "explain": "Skating shorthanded and trying not to give up a goal until the penalty expires."
+      },
+      {
+        "id": "ohl-36",
+        "type": "rules",
+        "prompt": "How long is a minor penalty in hockey?",
+        "options": [
+          "1 minute",
+          "2 minutes",
+          "5 minutes",
+          "10 minutes"
+        ],
+        "answer": 1,
+        "explain": "Two minutes in the box for most infractions."
+      },
+      {
+        "id": "ohl-37",
+        "type": "rules",
+        "prompt": "How long is a major penalty in hockey?",
+        "options": [
+          "3 minutes",
+          "5 minutes",
+          "8 minutes",
+          "10 minutes"
+        ],
+        "answer": 1,
+        "explain": "Five minutes — and the team has to kill the whole thing even if scored on."
+      },
+      {
+        "id": "ohl-38",
+        "type": "term",
+        "prompt": "What is a 'hat trick' in hockey?",
+        "options": [
+          "Three goals in one game by one player",
+          "Three assists in one game",
+          "Three penalties in a row",
+          "Three saves in one shift"
+        ],
+        "answer": 0,
+        "explain": "Three goals in a single game — fans throw hats onto the ice."
+      },
+      {
+        "id": "ohl-39",
+        "type": "term",
+        "prompt": "What is a 'natural hat trick'?",
+        "options": [
+          "Three goals on three shots",
+          "Three goals scored on the road",
+          "Three consecutive goals by the same player without anyone else scoring in between",
+          "Three goals in three different periods"
+        ],
+        "answer": 2,
+        "explain": "Three consecutive goals by the same player with no goals in between."
+      },
+      {
+        "id": "ohl-40",
+        "type": "team",
+        "prompt": "How many teams play in the NHL today?",
+        "options": [
+          "28",
+          "30",
+          "32",
+          "34"
+        ],
+        "answer": 2,
+        "explain": "32 teams — Seattle Kraken joined as the 32nd in 2021-22."
+      },
+      {
+        "id": "ohl-41",
+        "type": "team",
+        "prompt": "Which OHL franchise plays in Brampton, Ontario?",
+        "options": [
+          "Brampton Battalion",
+          "Brampton Steelheads",
+          "Brampton Beast",
+          "Brampton Bulls"
+        ],
+        "answer": 1,
+        "explain": "Brampton Steelheads — rebranded from the Mississauga Steelheads in 2024."
+      },
+      {
+        "id": "ohl-42",
+        "type": "team",
+        "prompt": "The Brampton Steelheads play their home games at which arena?",
+        "options": [
+          "Scotiabank Arena",
+          "Paramount Fine Foods Centre",
+          "CAA Centre",
+          "FirstOntario Centre"
+        ],
+        "answer": 2,
+        "explain": "CAA Centre — shared with the CEBL's Honey Badgers."
+      },
+      {
+        "id": "ohl-43",
+        "type": "player",
+        "prompt": "Connor McDavid played his major junior hockey for which OHL team?",
+        "options": [
+          "London Knights",
+          "Erie Otters",
+          "Oshawa Generals",
+          "Windsor Spitfires"
+        ],
+        "answer": 1,
+        "explain": "Erie Otters — granted exceptional status to play in the OHL at 15."
+      },
+      {
+        "id": "ohl-44",
+        "type": "player",
+        "prompt": "Connor McDavid plays for which NHL team?",
+        "options": [
+          "Toronto Maple Leafs",
+          "Edmonton Oilers",
+          "Vancouver Canucks",
+          "Calgary Flames"
+        ],
+        "answer": 1,
+        "explain": "Edmonton Oilers — drafted 1st overall in 2015."
+      },
+      {
+        "id": "ohl-45",
+        "type": "player",
+        "prompt": "Sidney Crosby plays for which NHL team?",
+        "options": [
+          "Boston Bruins",
+          "Pittsburgh Penguins",
+          "Washington Capitals",
+          "Philadelphia Flyers"
+        ],
+        "answer": 1,
+        "explain": "Pittsburgh Penguins — three-time Stanley Cup champion."
+      },
+      {
+        "id": "ohl-46",
+        "type": "player",
+        "prompt": "Which major-junior league did Sidney Crosby play in before turning pro?",
+        "options": [
+          "OHL",
+          "WHL",
+          "QMJHL",
+          "USHL"
+        ],
+        "answer": 2,
+        "explain": "QMJHL — Rimouski Océanic from 2003-2005."
+      },
+      {
+        "id": "ohl-47",
+        "type": "player",
+        "prompt": "What's Wayne Gretzky's famous nickname?",
+        "options": [
+          "The Great One",
+          "The Flash",
+          "The Magnificent",
+          "Mr. Hockey"
+        ],
+        "answer": 0,
+        "explain": "The Great One — 'Mr. Hockey' was Gordie Howe's nickname."
+      },
+      {
+        "id": "ohl-48",
+        "type": "player",
+        "prompt": "Which jersey number is retired across the entire NHL in honour of Wayne Gretzky?",
+        "options": [
+          "9",
+          "66",
+          "87",
+          "99"
+        ],
+        "answer": 3,
+        "explain": "Number 99 — the only number ever retired league-wide."
+      },
+      {
+        "id": "ohl-49",
+        "type": "player",
+        "prompt": "Wayne Gretzky won all four of his Stanley Cups with which team?",
+        "options": [
+          "Los Angeles Kings",
+          "Edmonton Oilers",
+          "St. Louis Blues",
+          "New York Rangers"
+        ],
+        "answer": 1,
+        "explain": "Edmonton Oilers — 1984, 1985, 1987, 1988."
+      },
+      {
+        "id": "ohl-50",
+        "type": "trivia",
+        "prompt": "Who scored Canada's 'Golden Goal' at the 2010 Vancouver Olympics?",
+        "options": [
+          "Jonathan Toews",
+          "Sidney Crosby",
+          "Ryan Getzlaf",
+          "Patrice Bergeron"
+        ],
+        "answer": 1,
+        "explain": "Sidney Crosby — overtime winner against the USA on home ice."
+      },
+      {
+        "id": "ohl-51",
+        "type": "team",
+        "prompt": "Which six teams are the 'Original Six' of the NHL?",
+        "options": [
+          "Maple Leafs, Canadiens, Bruins, Red Wings, Blackhawks, Rangers",
+          "Maple Leafs, Canadiens, Senators, Jets, Rangers, Bruins",
+          "Maple Leafs, Canadiens, Flames, Oilers, Rangers, Bruins",
+          "Maple Leafs, Canadiens, Penguins, Bruins, Red Wings, Rangers"
+        ],
+        "answer": 0,
+        "explain": "Toronto, Montreal, Boston, Detroit, Chicago, New York Rangers."
+      },
+      {
+        "id": "ohl-52",
+        "type": "team",
+        "prompt": "When did the Toronto Maple Leafs most recently win the Stanley Cup?",
+        "options": [
+          "1962",
+          "1965",
+          "1967",
+          "1972"
+        ],
+        "answer": 2,
+        "explain": "1967 — the longest active Cup drought in the NHL."
+      },
+      {
+        "id": "ohl-53",
+        "type": "fan",
+        "prompt": "What is the Hart Trophy awarded for in the NHL?",
+        "options": [
+          "Best goalie",
+          "League MVP",
+          "Best defenseman",
+          "Rookie of the year"
+        ],
+        "answer": 1,
+        "explain": "The Hart Memorial Trophy — the NHL's regular-season MVP."
+      },
+      {
+        "id": "ohl-54",
+        "type": "fan",
+        "prompt": "Which NHL trophy is given to the league's best goaltender?",
+        "options": [
+          "Norris Trophy",
+          "Vezina Trophy",
+          "Calder Trophy",
+          "Selke Trophy"
+        ],
+        "answer": 1,
+        "explain": "The Vezina Trophy — voted by the league's general managers."
+      },
+      {
+        "id": "ohl-55",
+        "type": "fan",
+        "prompt": "Which NHL trophy goes to the best defenseman?",
+        "options": [
+          "Norris Trophy",
+          "Vezina Trophy",
+          "Calder Trophy",
+          "Selke Trophy"
+        ],
+        "answer": 0,
+        "explain": "The James Norris Memorial Trophy."
+      },
+      {
+        "id": "ohl-56",
+        "type": "fan",
+        "prompt": "Which NHL trophy is awarded to the rookie of the year?",
+        "options": [
+          "Hart",
+          "Calder",
+          "Selke",
+          "Lady Byng"
+        ],
+        "answer": 1,
+        "explain": "The Calder Memorial Trophy."
+      },
+      {
+        "id": "ohl-57",
+        "type": "fan",
+        "prompt": "Which NHL trophy goes to the regular-season scoring leader?",
+        "options": [
+          "Hart",
+          "Art Ross",
+          "Ted Lindsay",
+          "Maurice Richard"
+        ],
+        "answer": 1,
+        "explain": "The Art Ross Trophy — most points in the regular season."
+      },
+      {
+        "id": "ohl-58",
+        "type": "term",
+        "prompt": "What is 'icing' in hockey?",
+        "options": [
+          "Shooting the puck the length of the ice past the opposing goal line untouched",
+          "Freezing the puck against the boards",
+          "An illegal stick check",
+          "Spraying the goalie with snow"
+        ],
+        "answer": 0,
+        "explain": "Shooting from your own side past the opponent's goal line untouched — whistle, faceoff in your zone."
+      },
+      {
+        "id": "ohl-59",
+        "type": "term",
+        "prompt": "What is 'offside' in hockey?",
+        "options": [
+          "A goalie outside the crease",
+          "An attacking player entering the offensive zone before the puck",
+          "A bench too close to the ice",
+          "A two-line pass"
+        ],
+        "answer": 1,
+        "explain": "You can't precede the puck across the blue line into the attacking zone."
+      },
+      {
+        "id": "ohl-60",
+        "type": "rules",
+        "prompt": "How wide is a standard NHL hockey rink?",
+        "options": [
+          "75 feet",
+          "85 feet",
+          "95 feet",
+          "100 feet"
+        ],
+        "answer": 1,
+        "explain": "85 feet wide — the NHL standard."
+      },
+      {
+        "id": "ohl-61",
+        "type": "rules",
+        "prompt": "How long is a standard NHL hockey rink?",
+        "options": [
+          "180 feet",
+          "200 feet",
+          "220 feet",
+          "250 feet"
+        ],
+        "answer": 1,
+        "explain": "200 feet long, 85 feet wide."
+      },
+      {
+        "id": "ohl-62",
+        "type": "rules",
+        "prompt": "How many on-ice officials work an NHL game?",
+        "options": [
+          "2 (referees only)",
+          "3 (2 refs, 1 linesman)",
+          "4 (2 refs, 2 linesmen)",
+          "5"
+        ],
+        "answer": 2,
+        "explain": "Two referees and two linesmen — four officials on the ice."
+      },
+      {
+        "id": "ohl-63",
+        "type": "term",
+        "prompt": "What's a 'Gordie Howe hat trick'?",
+        "options": [
+          "Three goals in a period",
+          "A goal, an assist, and a fight in the same game",
+          "Three goals in three games",
+          "A natural hat trick on the road"
+        ],
+        "answer": 1,
+        "explain": "A goal, an assist, and a fight — old-school toughness in a single night."
+      },
+      {
+        "id": "ohl-64",
+        "type": "term",
+        "prompt": "What material is an NHL hockey puck made of?",
+        "options": [
+          "Hard plastic",
+          "Vulcanized rubber",
+          "Steel",
+          "Carbon fibre"
+        ],
+        "answer": 1,
+        "explain": "Vulcanized rubber — and it's frozen before games to reduce bounce."
+      },
+      {
+        "id": "ohl-65",
+        "type": "term",
+        "prompt": "What does 'NHL' stand for?",
+        "options": [
+          "North Hockey League",
+          "National Hockey League",
+          "Northern Hockey League",
+          "National Hockey Loop"
+        ],
+        "answer": 1,
+        "explain": "National Hockey League — founded in Montreal."
+      },
+      {
+        "id": "ohl-66",
+        "type": "trivia",
+        "prompt": "In what year was the NHL founded?",
+        "options": [
+          "1893",
+          "1917",
+          "1926",
+          "1942"
+        ],
+        "answer": 1,
+        "explain": "1917 in Montreal — born out of the National Hockey Association."
+      },
+      {
+        "id": "ohl-67",
+        "type": "fan",
+        "prompt": "The World Junior Hockey Championship is contested by players under what age?",
+        "options": [
+          "U17",
+          "U18",
+          "U20",
+          "U23"
+        ],
+        "answer": 2,
+        "explain": "U20 — also called the IIHF World Junior Championship."
+      },
+      {
+        "id": "ohl-68",
+        "type": "rules",
+        "prompt": "An NHL playoff series is best of how many games?",
+        "options": [
+          "3",
+          "5",
+          "7",
+          "9"
+        ],
+        "answer": 2,
+        "explain": "Best of seven — first to four wins advances."
+      },
+      {
+        "id": "ohl-69",
+        "type": "rules",
+        "prompt": "How many teams qualify for the NHL Stanley Cup Playoffs?",
+        "options": [
+          "8",
+          "12",
+          "16",
+          "20"
+        ],
+        "answer": 2,
+        "explain": "16 teams — eight from each conference."
+      },
+      {
+        "id": "ohl-70",
+        "type": "team",
+        "prompt": "Hockey is widely accepted to have originated in which country?",
+        "options": [
+          "United States",
+          "Russia",
+          "Canada",
+          "Sweden"
+        ],
+        "answer": 2,
+        "explain": "Canada — the first organized indoor game was played in Montreal in 1875."
+      },
+      {
+        "id": "ohl-71",
+        "type": "player",
+        "prompt": "Bobby Orr made his NHL legend with which team?",
+        "options": [
+          "Boston Bruins",
+          "Chicago Blackhawks",
+          "Detroit Red Wings",
+          "Toronto Maple Leafs"
+        ],
+        "answer": 0,
+        "explain": "Boston Bruins — two Stanley Cups and eight straight Norris Trophies."
+      },
+      {
+        "id": "ohl-72",
+        "type": "player",
+        "prompt": "Mario Lemieux spent his entire NHL career with which team?",
+        "options": [
+          "Quebec Nordiques",
+          "Pittsburgh Penguins",
+          "Montreal Canadiens",
+          "Buffalo Sabres"
+        ],
+        "answer": 1,
+        "explain": "Pittsburgh Penguins — also their long-time owner."
+      },
+      {
+        "id": "ohl-73",
+        "type": "trivia",
+        "prompt": "Who is the NHL's all-time leader in career goals (894)?",
+        "options": [
+          "Gordie Howe",
+          "Alex Ovechkin",
+          "Wayne Gretzky",
+          "Brett Hull"
+        ],
+        "answer": 2,
+        "explain": "Wayne Gretzky — 894 career goals (Ovechkin chasing)."
+      },
+      {
+        "id": "ohl-74",
+        "type": "fan",
+        "prompt": "Which hockey tradition involves engraving the winning team's players' names every year?",
+        "options": [
+          "The Hart Trophy",
+          "The Stanley Cup",
+          "The Vezina Trophy",
+          "The Calder Cup"
+        ],
+        "answer": 1,
+        "explain": "The Stanley Cup — names get added to its bands every year."
+      },
+      {
+        "id": "ohl-75",
+        "type": "fan",
+        "prompt": "What's the Stanley Cup tradition for each player on the winning team?",
+        "options": [
+          "A custom ring",
+          "One day with the Cup in the offseason",
+          "A retired sweater",
+          "A bronze statue"
+        ],
+        "answer": 1,
+        "explain": "Each player gets the Cup for one day to take wherever they want."
+      },
+      {
+        "id": "ohl-76",
+        "type": "team",
+        "prompt": "Where do the Toronto Maple Leafs play their home games?",
+        "options": [
+          "Maple Leaf Gardens",
+          "Rogers Centre",
+          "Scotiabank Arena",
+          "BMO Field"
+        ],
+        "answer": 2,
+        "explain": "Scotiabank Arena — they moved from Maple Leaf Gardens in 1999."
+      },
+      {
+        "id": "ohl-77",
+        "type": "rules",
+        "prompt": "How many overage (20-year-old) players can each OHL team carry?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "Unlimited"
+        ],
+        "answer": 2,
+        "explain": "Three 20-year-old overage players per OHL roster."
+      },
+      {
+        "id": "ohl-78",
+        "type": "trivia",
+        "prompt": "Where is the IIHF World Junior Championship held every winter?",
+        "options": [
+          "Always in Switzerland",
+          "Always in Canada",
+          "Rotating between IIHF host countries",
+          "Always in the U.S."
+        ],
+        "answer": 2,
+        "explain": "The host country rotates — Canada hosts often but not exclusively."
+      },
+      {
+        "id": "ohl-79",
+        "type": "term",
+        "prompt": "What is 'pulling the goalie'?",
+        "options": [
+          "Sending the goalie back to the bench for a substitute",
+          "Replacing the goalie with an extra attacker in the final minutes",
+          "A coach signaling a timeout",
+          "A type of save"
+        ],
+        "answer": 1,
+        "explain": "Trailing late, teams pull the goalie for a sixth attacker to chase the equalizer."
+      },
+      {
+        "id": "ohl-80",
+        "type": "term",
+        "prompt": "What is a 'shutout'?",
+        "options": [
+          "Winning by 5+ goals",
+          "A goaltender allowing zero goals in a game",
+          "A power-play goal in OT",
+          "A penalty shot save"
+        ],
+        "answer": 1,
+        "explain": "A goalie finishes the game with zero goals against."
+      },
+      {
+        "id": "ohl-81",
+        "type": "team",
+        "prompt": "How many teams play in the OHL today?",
+        "options": [
+          "16",
+          "18",
+          "20",
+          "22"
+        ],
+        "answer": 2,
+        "explain": "Twenty teams — split across East, Central, and West divisions."
+      },
+      {
+        "id": "ohl-82",
+        "type": "trivia",
+        "prompt": "What's the highest level of pro hockey directly below the NHL?",
+        "options": [
+          "ECHL",
+          "AHL",
+          "OHL",
+          "IIHF"
+        ],
+        "answer": 1,
+        "explain": "The American Hockey League (AHL) — the NHL's main feeder league."
+      },
+      {
+        "id": "ohl-83",
+        "type": "fan",
+        "prompt": "Who is the 'Mr. Hockey' of NHL legend?",
+        "options": [
+          "Wayne Gretzky",
+          "Gordie Howe",
+          "Bobby Orr",
+          "Maurice Richard"
+        ],
+        "answer": 1,
+        "explain": "Gordie Howe — played in five different decades."
+      },
+      {
+        "id": "ohl-84",
+        "type": "fan",
+        "prompt": "Which NHL player is known as 'The Rocket'?",
+        "options": [
+          "Maurice Richard",
+          "Mario Lemieux",
+          "Bobby Hull",
+          "Patrick Roy"
+        ],
+        "answer": 0,
+        "explain": "Maurice 'Rocket' Richard — first to score 50 goals in 50 games (1944-45)."
+      },
+      {
+        "id": "ohl-85",
+        "type": "rules",
+        "prompt": "What's a 'breakaway' in hockey?",
+        "options": [
+          "A line change on the fly",
+          "An offensive rush with the puck-carrier alone against the goalie",
+          "An icing call",
+          "A power-play formation"
+        ],
+        "answer": 1,
+        "explain": "One skater alone against the goalie — pure scoring chance."
+      },
+      {
+        "id": "ohl-86",
+        "type": "term",
+        "prompt": "What's a 'one-timer' in hockey?",
+        "options": [
+          "A first-ever NHL game",
+          "A shot taken directly off a pass without controlling the puck",
+          "A one-period suspension",
+          "An empty-net goal"
+        ],
+        "answer": 1,
+        "explain": "Shooting the puck as it arrives on a pass — Ovechkin's signature."
+      },
+      {
+        "id": "ohl-87",
+        "type": "team",
+        "prompt": "Which NHL franchise has the most Stanley Cup championships?",
+        "options": [
+          "Toronto Maple Leafs",
+          "Montreal Canadiens",
+          "Detroit Red Wings",
+          "Edmonton Oilers"
+        ],
+        "answer": 1,
+        "explain": "Montreal Canadiens — 24 Stanley Cups."
+      },
+      {
+        "id": "ohl-88",
+        "type": "team",
+        "prompt": "Which OHL team did Steven Stamkos play for before turning pro?",
+        "options": [
+          "Oshawa Generals",
+          "Sarnia Sting",
+          "Belleville Bulls",
+          "Ottawa 67's"
+        ],
+        "answer": 1,
+        "explain": "Sarnia Sting — drafted 1st overall by Tampa Bay in 2008."
+      },
+      {
+        "id": "ohl-89",
+        "type": "team",
+        "prompt": "The London Knights play in which Ontario city?",
+        "options": [
+          "London",
+          "Kitchener",
+          "Guelph",
+          "Owen Sound"
+        ],
+        "answer": 0,
+        "explain": "London, Ontario — one of the OHL's most successful franchises."
+      },
+      {
+        "id": "ohl-90",
+        "type": "team",
+        "prompt": "Which OHL team is based in Erie, Pennsylvania?",
+        "options": [
+          "Erie Express",
+          "Erie Otters",
+          "Erie Eagles",
+          "Erie Storm"
+        ],
+        "answer": 1,
+        "explain": "The Erie Otters — one of three U.S.-based OHL teams."
+      },
+      {
+        "id": "ohl-91",
+        "type": "rules",
+        "prompt": "What's a 'two-line pass'?",
+        "options": [
+          "An old rule banning passes that crossed both blue lines from a team's own zone",
+          "A current penalty for passing over two lines",
+          "A faceoff at center ice",
+          "An offsides exception"
+        ],
+        "answer": 0,
+        "explain": "Old NHL rule abolished in 2005 — long stretch passes are now legal."
+      },
+      {
+        "id": "ohl-92",
+        "type": "fan",
+        "prompt": "What's the lowest level of professional hockey directly below the AHL?",
+        "options": [
+          "OHL",
+          "ECHL",
+          "USHL",
+          "QMJHL"
+        ],
+        "answer": 1,
+        "explain": "The ECHL — AA-level pro hockey across North America."
+      },
+      {
+        "id": "ohl-93",
+        "type": "trivia",
+        "prompt": "In what year did the Vegas Golden Knights join the NHL?",
+        "options": [
+          "2010",
+          "2015",
+          "2017",
+          "2021"
+        ],
+        "answer": 2,
+        "explain": "2017 — and they won the Cup in their sixth season (2023)."
+      },
+      {
+        "id": "ohl-94",
+        "type": "trivia",
+        "prompt": "How long is an Olympic-sized hockey rink?",
+        "options": [
+          "180 feet",
+          "200 feet",
+          "210 feet",
+          "230 feet"
+        ],
+        "answer": 2,
+        "explain": "210 feet long and 100 feet wide — wider than the NHL."
+      },
+      {
+        "id": "ohl-95",
+        "type": "team",
+        "prompt": "Which OHL team plays at the Aud (The Aud)?",
+        "options": [
+          "Kitchener Rangers",
+          "London Knights",
+          "Saginaw Spirit",
+          "Niagara IconBacks"
+        ],
+        "answer": 0,
+        "explain": "The Kitchener Rangers — they call The Kitchener Memorial Auditorium home."
+      },
+      {
+        "id": "ohl-96",
+        "type": "team",
+        "prompt": "Which trophy goes to the NHL Stanley Cup playoff MVP?",
+        "options": [
+          "Hart Trophy",
+          "Conn Smythe Trophy",
+          "Vezina Trophy",
+          "Art Ross Trophy"
+        ],
+        "answer": 1,
+        "explain": "The Conn Smythe Trophy — voted by the Pro Hockey Writers' Association."
+      },
+      {
+        "id": "ohl-97",
+        "type": "team",
+        "prompt": "The Ottawa 67's are named after what?",
+        "options": [
+          "Their founding year 1967",
+          "Their highway location (Hwy 67)",
+          "A player's jersey number",
+          "A local 67-foot tree"
+        ],
+        "answer": 0,
+        "explain": "The franchise launched in 1967 — Canada's centennial year."
       }
     ],
     "baseball": [
@@ -542,7 +2639,12 @@
         "type": "player",
         "image": "/players/player-03.jpg",
         "prompt": "Read the jersey. Which college program is Kieran Cutler batting for?",
-        "options": ["Iowa Western", "McCook", "Northern Iowa", "Cisco College"],
+        "options": [
+          "Iowa Western",
+          "McCook",
+          "Northern Iowa",
+          "Cisco College"
+        ],
         "answer": 1,
         "explain": "Kieran Cutler — McCook (Nebraska community college power), wearing #14."
       },
@@ -592,7 +2694,12 @@
         "id": "ba-1",
         "type": "rules",
         "prompt": "How many strikes make an out in baseball?",
-        "options": ["2", "3", "4", "5"],
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
         "answer": 1,
         "explain": "Three strikes and you're out."
       },
@@ -600,7 +2707,12 @@
         "id": "ba-2",
         "type": "team",
         "prompt": "Which Canadian city is home to MLB's only current Canadian franchise?",
-        "options": ["Montreal", "Vancouver", "Toronto", "Calgary"],
+        "options": [
+          "Montreal",
+          "Vancouver",
+          "Toronto",
+          "Calgary"
+        ],
         "answer": 2,
         "explain": "The Toronto Blue Jays are MLB's only Canadian team since the Expos left in 2004."
       },
@@ -608,7 +2720,12 @@
         "id": "ba-3",
         "type": "player",
         "prompt": "Who hit the famous walk-off home run that won the 1993 World Series for the Toronto Blue Jays?",
-        "options": ["Joe Carter", "Roberto Alomar", "Paul Molitor", "John Olerud"],
+        "options": [
+          "Joe Carter",
+          "Roberto Alomar",
+          "Paul Molitor",
+          "John Olerud"
+        ],
         "answer": 0,
         "explain": "'Touch 'em all, Joe!' — Joe Carter's walk-off in Game 6 vs. Philadelphia."
       },
@@ -629,7 +2746,12 @@
         "id": "ba-5",
         "type": "rules",
         "prompt": "How many innings are in a standard MLB game?",
-        "options": ["7", "8", "9", "10"],
+        "options": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
         "answer": 2,
         "explain": "Nine innings, unless tied (extras) or shortened by weather."
       },
@@ -637,7 +2759,12 @@
         "id": "ba-6",
         "type": "player",
         "prompt": "Which two-way superstar plays for the Los Angeles Dodgers as of 2024?",
-        "options": ["Mike Trout", "Shohei Ohtani", "Ronald Acuna Jr.", "Aaron Judge"],
+        "options": [
+          "Mike Trout",
+          "Shohei Ohtani",
+          "Ronald Acuna Jr.",
+          "Aaron Judge"
+        ],
         "answer": 1,
         "explain": "Shohei Ohtani signed a record contract with the Dodgers in December 2023."
       },
@@ -645,7 +2772,12 @@
         "id": "ba-7",
         "type": "team",
         "prompt": "What is the name of the Blue Jays' home ballpark?",
-        "options": ["SkyDome", "Rogers Centre", "Centre Field", "Maple Park"],
+        "options": [
+          "SkyDome",
+          "Rogers Centre",
+          "Centre Field",
+          "Maple Park"
+        ],
         "answer": 1,
         "explain": "Officially Rogers Centre since 2005 (the venue was originally SkyDome)."
       },
@@ -666,7 +2798,12 @@
         "id": "ba-9",
         "type": "rules",
         "prompt": "How many bases must a runner touch to score a run?",
-        "options": ["2", "3", "4", "5"],
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
         "answer": 2,
         "explain": "First, second, third, and home — four bases total."
       },
@@ -713,7 +2850,12 @@
         "id": "ba-13",
         "type": "trivia",
         "prompt": "Which player holds MLB's single-season home run record (since 2001)?",
-        "options": ["Barry Bonds", "Aaron Judge", "Mark McGwire", "Sammy Sosa"],
+        "options": [
+          "Barry Bonds",
+          "Aaron Judge",
+          "Mark McGwire",
+          "Sammy Sosa"
+        ],
         "answer": 0,
         "explain": "Barry Bonds hit 73 home runs in 2001."
       },
@@ -734,7 +2876,12 @@
         "id": "ba-15",
         "type": "player",
         "prompt": "Who broke MLB's color barrier in 1947?",
-        "options": ["Jackie Robinson", "Hank Aaron", "Willie Mays", "Larry Doby"],
+        "options": [
+          "Jackie Robinson",
+          "Hank Aaron",
+          "Willie Mays",
+          "Larry Doby"
+        ],
         "answer": 0,
         "explain": "Jackie Robinson debuted with the Brooklyn Dodgers on April 15, 1947."
       },
@@ -742,7 +2889,12 @@
         "id": "ba-16",
         "type": "fan",
         "prompt": "What's the most common reason a batter is awarded first base without swinging?",
-        "options": ["A balk", "Catcher's interference", "Hit by pitch or walk", "An infield error"],
+        "options": [
+          "A balk",
+          "Catcher's interference",
+          "Hit by pitch or walk",
+          "An infield error"
+        ],
         "answer": 2,
         "explain": "Four balls (a walk) or being hit by a pitch sends the batter to first."
       },
@@ -815,7 +2967,12 @@
         "id": "ba-22",
         "type": "rules",
         "prompt": "How many defensive players take the field for one team?",
-        "options": ["7", "8", "9", "10"],
+        "options": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
         "answer": 2,
         "explain": "Nine: pitcher, catcher, four infielders, three outfielders."
       },
@@ -823,7 +2980,12 @@
         "id": "ba-23",
         "type": "rules",
         "prompt": "How many balls earn a batter a walk?",
-        "options": ["3", "4", "5", "6"],
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
         "answer": 1,
         "explain": "Four balls outside the strike zone and the batter takes first base."
       },
@@ -831,7 +2993,12 @@
         "id": "ba-24",
         "type": "rules",
         "prompt": "In an MLB game, how many feet apart are the bases?",
-        "options": ["60 feet", "75 feet", "90 feet", "100 feet"],
+        "options": [
+          "60 feet",
+          "75 feet",
+          "90 feet",
+          "100 feet"
+        ],
         "answer": 2,
         "explain": "90 feet between bases, set since the 1880s."
       },
@@ -839,7 +3006,12 @@
         "id": "ba-25",
         "type": "rules",
         "prompt": "Which defensive position lines up closest to home plate?",
-        "options": ["Pitcher", "Catcher", "Shortstop", "First base"],
+        "options": [
+          "Pitcher",
+          "Catcher",
+          "Shortstop",
+          "First base"
+        ],
         "answer": 1,
         "explain": "The catcher crouches directly behind home plate."
       },
@@ -847,7 +3019,12 @@
         "id": "ba-26",
         "type": "rules",
         "prompt": "How many innings does a standard Little League (Majors) game last?",
-        "options": ["5", "6", "7", "9"],
+        "options": [
+          "5",
+          "6",
+          "7",
+          "9"
+        ],
         "answer": 1,
         "explain": "Little League Majors plays six innings, not nine."
       },
@@ -894,7 +3071,12 @@
         "id": "ba-30",
         "type": "term",
         "prompt": "What metal are most amateur and college bats made from?",
-        "options": ["Steel", "Aluminum", "Titanium", "Bronze"],
+        "options": [
+          "Steel",
+          "Aluminum",
+          "Titanium",
+          "Bronze"
+        ],
         "answer": 1,
         "explain": "Aluminum (and alloy composites). MLB uses wood only."
       },
@@ -902,7 +3084,12 @@
         "id": "ba-31",
         "type": "term",
         "prompt": "What's the highest level of the minor leagues, one step below MLB?",
-        "options": ["Single-A", "Double-A", "Triple-A", "Rookie ball"],
+        "options": [
+          "Single-A",
+          "Double-A",
+          "Triple-A",
+          "Rookie ball"
+        ],
         "answer": 2,
         "explain": "Triple-A (AAA) is the top minor league level — final stop before the show."
       },
@@ -910,7 +3097,12 @@
         "id": "ba-32",
         "type": "team",
         "prompt": "How many teams currently play in Major League Baseball?",
-        "options": ["28", "30", "32", "34"],
+        "options": [
+          "28",
+          "30",
+          "32",
+          "34"
+        ],
         "answer": 1,
         "explain": "30 MLB teams: 15 in the American League and 15 in the National League."
       },
@@ -957,7 +3149,12 @@
         "id": "ba-36",
         "type": "term",
         "prompt": "What symbol is used on a scorecard to mark a strikeout?",
-        "options": ["S", "K", "X", "O"],
+        "options": [
+          "S",
+          "K",
+          "X",
+          "O"
+        ],
         "answer": 1,
         "explain": "The letter K — a backwards K means a strikeout looking (no swing)."
       },
@@ -965,7 +3162,12 @@
         "id": "ba-37",
         "type": "rules",
         "prompt": "Best-of-how-many games is the MLB World Series?",
-        "options": ["5", "7", "9", "11"],
+        "options": [
+          "5",
+          "7",
+          "9",
+          "11"
+        ],
         "answer": 1,
         "explain": "Best-of-seven — the first team to four wins takes the title."
       },
@@ -1012,7 +3214,12 @@
         "id": "ba-41",
         "type": "rules",
         "prompt": "How many games does each MLB team play in the regular season?",
-        "options": ["120", "144", "162", "182"],
+        "options": [
+          "120",
+          "144",
+          "162",
+          "182"
+        ],
         "answer": 2,
         "explain": "162 games for every MLB team since 1962."
       },
@@ -1046,7 +3253,12 @@
         "id": "ba-44",
         "type": "team",
         "prompt": "Vladimir Guerrero Jr.'s primary position with the Blue Jays is…",
-        "options": ["Catcher", "Shortstop", "First base", "Centre field"],
+        "options": [
+          "Catcher",
+          "Shortstop",
+          "First base",
+          "Centre field"
+        ],
         "answer": 2,
         "explain": "Vladdy Jr. plays first base — and is a Gold Glove winner there."
       },
@@ -1081,7 +3293,12 @@
         "type": "rules",
         "image": "https://images.unsplash.com/photo-1471295253337-3ceaaedca402?auto=format&fit=crop&w=1200&q=75",
         "prompt": "Look at the field. What shape is the baseball infield called?",
-        "options": ["Diamond", "Triangle", "Pentagon", "Hexagon"],
+        "options": [
+          "Diamond",
+          "Triangle",
+          "Pentagon",
+          "Hexagon"
+        ],
         "answer": 0,
         "explain": "The infield's four-base layout is universally called a diamond."
       },
@@ -1090,9 +3307,638 @@
         "type": "player",
         "image": "/players/player-04.jpg",
         "prompt": "Weston Thompson — outfielder. How many outfield positions are there?",
-        "options": ["1", "2", "3", "4"],
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
         "answer": 2,
         "explain": "Three: left field, centre field, right field."
+      },
+      {
+        "id": "ba-47",
+        "type": "rules",
+        "prompt": "How many official defensive positions are on a baseball field?",
+        "options": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "answer": 2,
+        "explain": "Nine positions — pitcher, catcher, four infielders, three outfielders."
+      },
+      {
+        "id": "ba-48",
+        "type": "term",
+        "prompt": "In baseball scoring, position #1 is which position?",
+        "options": [
+          "Catcher",
+          "Pitcher",
+          "Shortstop",
+          "First baseman"
+        ],
+        "answer": 1,
+        "explain": "Pitcher is always #1 on the scoresheet."
+      },
+      {
+        "id": "ba-49",
+        "type": "term",
+        "prompt": "In baseball scoring, position #2 is which position?",
+        "options": [
+          "Catcher",
+          "Pitcher",
+          "Second baseman",
+          "Left fielder"
+        ],
+        "answer": 0,
+        "explain": "Catcher — the second number in the scorebook."
+      },
+      {
+        "id": "ba-50",
+        "type": "term",
+        "prompt": "In baseball scoring, position #6 is which position?",
+        "options": [
+          "Second baseman",
+          "Third baseman",
+          "Shortstop",
+          "Centre fielder"
+        ],
+        "answer": 2,
+        "explain": "Shortstop is #6 — between second and third."
+      },
+      {
+        "id": "ba-51",
+        "type": "term",
+        "prompt": "In baseball scoring, position #8 is which position?",
+        "options": [
+          "Left fielder",
+          "Centre fielder",
+          "Right fielder",
+          "Shortstop"
+        ],
+        "answer": 1,
+        "explain": "Centre fielder is #8 — patrol the deepest gap."
+      },
+      {
+        "id": "ba-52",
+        "type": "rules",
+        "prompt": "How far is the pitcher's mound from home plate in MLB?",
+        "options": [
+          "50 feet",
+          "55 feet",
+          "60 feet 6 inches",
+          "66 feet"
+        ],
+        "answer": 2,
+        "explain": "60 feet 6 inches — the famous distance unchanged since 1893."
+      },
+      {
+        "id": "ba-53",
+        "type": "rules",
+        "prompt": "How many bases must a runner touch to score?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2,
+        "explain": "First, second, third, and home — four total bases."
+      },
+      {
+        "id": "ba-54",
+        "type": "term",
+        "prompt": "What's a 'double' in baseball?",
+        "options": [
+          "A 2-out hit",
+          "A hit on which the batter reaches second base",
+          "Two RBIs in one swing",
+          "A two-pitch at-bat"
+        ],
+        "answer": 1,
+        "explain": "A hit that gets the batter to second base on the play."
+      },
+      {
+        "id": "ba-55",
+        "type": "term",
+        "prompt": "What's a 'triple' in baseball?",
+        "options": [
+          "A hit on which the batter reaches third base",
+          "Three pitches in a row for strikes",
+          "Three errors in one inning",
+          "Three runs in one inning"
+        ],
+        "answer": 0,
+        "explain": "A hit that gets the batter all the way to third — the rarest of standard hits."
+      },
+      {
+        "id": "ba-56",
+        "type": "rules",
+        "prompt": "How many outs end a half-inning?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 1,
+        "explain": "Three outs and the other team comes up to bat."
+      },
+      {
+        "id": "ba-57",
+        "type": "term",
+        "prompt": "What is a 'shutout' for a pitcher?",
+        "options": [
+          "Striking out the side",
+          "Throwing a complete game with zero runs allowed",
+          "Pitching nine innings",
+          "An intentional walk-free game"
+        ],
+        "answer": 1,
+        "explain": "A shutout is a complete game with no runs allowed."
+      },
+      {
+        "id": "ba-58",
+        "type": "term",
+        "prompt": "What does 'MLB' stand for?",
+        "options": [
+          "Major League Baseball",
+          "Modern League of Baseball",
+          "Most Loved Ballgame",
+          "Master League Baseball"
+        ],
+        "answer": 0,
+        "explain": "Major League Baseball — North America's top pro baseball league."
+      },
+      {
+        "id": "ba-59",
+        "type": "team",
+        "prompt": "What are MLB's two main leagues called?",
+        "options": [
+          "Eastern and Western",
+          "American and National",
+          "Continental and Pacific",
+          "Atlantic and Pacific"
+        ],
+        "answer": 1,
+        "explain": "American League (AL) and National League (NL) — 15 teams each."
+      },
+      {
+        "id": "ba-60",
+        "type": "fan",
+        "prompt": "Babe Ruth is most famously associated with which MLB team?",
+        "options": [
+          "Boston Red Sox",
+          "New York Yankees",
+          "Chicago Cubs",
+          "Cleveland Indians"
+        ],
+        "answer": 1,
+        "explain": "New York Yankees — won four World Series with them after coming from Boston."
+      },
+      {
+        "id": "ba-61",
+        "type": "fan",
+        "prompt": "Babe Ruth's career started with which MLB team?",
+        "options": [
+          "Detroit Tigers",
+          "Boston Red Sox",
+          "Chicago White Sox",
+          "Brooklyn Dodgers"
+        ],
+        "answer": 1,
+        "explain": "Boston Red Sox (1914-1919) — sold to the Yankees in 1920."
+      },
+      {
+        "id": "ba-62",
+        "type": "fan",
+        "prompt": "The 'Curse of the Bambino' ended in which year?",
+        "options": [
+          "2001",
+          "2003",
+          "2004",
+          "2007"
+        ],
+        "answer": 2,
+        "explain": "2004 — the Red Sox won their first World Series since 1918."
+      },
+      {
+        "id": "ba-63",
+        "type": "player",
+        "prompt": "How many career home runs did Hank Aaron hit?",
+        "options": [
+          "714",
+          "755",
+          "762",
+          "800"
+        ],
+        "answer": 1,
+        "explain": "755 career home runs — broke Babe Ruth's 714 record in 1974."
+      },
+      {
+        "id": "ba-64",
+        "type": "player",
+        "prompt": "Hank Aaron's home run record broke whose all-time mark?",
+        "options": [
+          "Lou Gehrig",
+          "Babe Ruth",
+          "Willie Mays",
+          "Mickey Mantle"
+        ],
+        "answer": 1,
+        "explain": "Babe Ruth — Aaron broke Ruth's 714 in April 1974."
+      },
+      {
+        "id": "ba-65",
+        "type": "player",
+        "prompt": "Lou Gehrig's lasting nickname is…",
+        "options": [
+          "The Sultan of Swat",
+          "The Iron Horse",
+          "The Splendid Splinter",
+          "Mr. October"
+        ],
+        "answer": 1,
+        "explain": "'The Iron Horse' — for his then-record 2,130 consecutive games played."
+      },
+      {
+        "id": "ba-66",
+        "type": "player",
+        "prompt": "Who is famous for setting MLB's consecutive games played streak of 2,632?",
+        "options": [
+          "Lou Gehrig",
+          "Cal Ripken Jr.",
+          "Pete Rose",
+          "Derek Jeter"
+        ],
+        "answer": 1,
+        "explain": "Cal Ripken Jr. broke Gehrig's record in 1995 and pushed it to 2,632."
+      },
+      {
+        "id": "ba-67",
+        "type": "player",
+        "prompt": "Who holds MLB's all-time hits record (4,256)?",
+        "options": [
+          "Ty Cobb",
+          "Pete Rose",
+          "Ichiro Suzuki",
+          "Hank Aaron"
+        ],
+        "answer": 1,
+        "explain": "Pete Rose — 4,256 hits, the most in MLB history."
+      },
+      {
+        "id": "ba-68",
+        "type": "player",
+        "prompt": "Pete Rose's nickname was…",
+        "options": [
+          "Charlie Hustle",
+          "The Iron Horse",
+          "Mr. October",
+          "The Big Hurt"
+        ],
+        "answer": 0,
+        "explain": "Charlie Hustle — for his all-out playing style."
+      },
+      {
+        "id": "ba-69",
+        "type": "player",
+        "prompt": "Nolan Ryan holds MLB's career strikeout record with over how many?",
+        "options": [
+          "3,500",
+          "4,500",
+          "5,700",
+          "6,500"
+        ],
+        "answer": 2,
+        "explain": "5,714 career strikeouts — a record likely to stand a long time."
+      },
+      {
+        "id": "ba-70",
+        "type": "team",
+        "prompt": "Which MLB franchise has the most World Series titles?",
+        "options": [
+          "Boston Red Sox",
+          "New York Yankees",
+          "St. Louis Cardinals",
+          "Los Angeles Dodgers"
+        ],
+        "answer": 1,
+        "explain": "New York Yankees — 27 World Series championships."
+      },
+      {
+        "id": "ba-71",
+        "type": "trivia",
+        "prompt": "The 1994 MLB season ended early because of what?",
+        "options": [
+          "A war",
+          "A players' strike",
+          "A hurricane season",
+          "An umpire walkout"
+        ],
+        "answer": 1,
+        "explain": "The players' strike — wiped out the World Series for the first time since 1904."
+      },
+      {
+        "id": "ba-72",
+        "type": "team",
+        "prompt": "The Toronto Blue Jays won back-to-back World Series in which years?",
+        "options": [
+          "1985 and 1986",
+          "1989 and 1990",
+          "1992 and 1993",
+          "1995 and 1996"
+        ],
+        "answer": 2,
+        "explain": "1992 and 1993 — both wins over National League opponents."
+      },
+      {
+        "id": "ba-73",
+        "type": "team",
+        "prompt": "What was Canada's other MLB franchise before they relocated?",
+        "options": [
+          "Vancouver Mounties",
+          "Montreal Expos",
+          "Calgary Cannons",
+          "Ottawa Athletics"
+        ],
+        "answer": 1,
+        "explain": "Montreal Expos — moved to Washington and became the Nationals after 2004."
+      },
+      {
+        "id": "ba-74",
+        "type": "team",
+        "prompt": "When did the Montreal Expos relocate and rebrand as the Washington Nationals?",
+        "options": [
+          "1998",
+          "2002",
+          "After 2004",
+          "2008"
+        ],
+        "answer": 2,
+        "explain": "The 2005 season — the franchise became the Washington Nationals."
+      },
+      {
+        "id": "ba-75",
+        "type": "fan",
+        "prompt": "Japan's top professional baseball league is known as…",
+        "options": [
+          "JPL",
+          "NPB",
+          "JBL",
+          "MLB Asia"
+        ],
+        "answer": 1,
+        "explain": "Nippon Professional Baseball — Japan's top league with the Central and Pacific leagues."
+      },
+      {
+        "id": "ba-76",
+        "type": "fan",
+        "prompt": "Which top-level pro baseball league is based in South Korea?",
+        "options": [
+          "KBL",
+          "KBO",
+          "KSO",
+          "KPL"
+        ],
+        "answer": 1,
+        "explain": "Korea Baseball Organization (KBO) — South Korea's top league."
+      },
+      {
+        "id": "ba-77",
+        "type": "term",
+        "prompt": "What's a 'pinch hitter'?",
+        "options": [
+          "A player who bats in the leadoff spot",
+          "A substitute brought in to bat for another player",
+          "A relief pitcher",
+          "A designated runner"
+        ],
+        "answer": 1,
+        "explain": "A substitute batter — once used, the original player is out of the game."
+      },
+      {
+        "id": "ba-78",
+        "type": "term",
+        "prompt": "What's a 'pinch runner'?",
+        "options": [
+          "A faster substitute baserunner brought in for another player",
+          "A coach's signal to steal",
+          "A backup hitter",
+          "An extra-innings volunteer"
+        ],
+        "answer": 0,
+        "explain": "A substitute baserunner — usually swapped in for speed."
+      },
+      {
+        "id": "ba-79",
+        "type": "term",
+        "prompt": "What's the 'bullpen' in baseball?",
+        "options": [
+          "Where bats are stored",
+          "Where relief pitchers warm up",
+          "The clubhouse manager's office",
+          "Behind the centre field wall"
+        ],
+        "answer": 1,
+        "explain": "The pen — where relievers warm up before entering the game."
+      },
+      {
+        "id": "ba-80",
+        "type": "term",
+        "prompt": "A 'cleanup hitter' is the team's how-many-th batter in the lineup?",
+        "options": [
+          "1st",
+          "2nd",
+          "3rd",
+          "4th"
+        ],
+        "answer": 3,
+        "explain": "4th — typically the team's most powerful hitter, set up to 'clean up' the bases."
+      },
+      {
+        "id": "ba-81",
+        "type": "term",
+        "prompt": "What's a 'sacrifice fly'?",
+        "options": [
+          "A foul ball caught for an out",
+          "A fly ball caught for an out that allows a runner to score from third",
+          "A bunt that advances a runner",
+          "An intentional walk"
+        ],
+        "answer": 1,
+        "explain": "Less than 2 outs, the batter is out on a caught fly ball, and a runner tags up and scores."
+      },
+      {
+        "id": "ba-82",
+        "type": "rules",
+        "prompt": "How many games does each MLB team play in the regular season?",
+        "options": [
+          "120",
+          "144",
+          "162",
+          "182"
+        ],
+        "answer": 2,
+        "explain": "162 games each — same since 1962."
+      },
+      {
+        "id": "ba-83",
+        "type": "rules",
+        "prompt": "How many balls does it take to walk a batter?",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 1,
+        "explain": "Four balls and the batter takes first."
+      },
+      {
+        "id": "ba-84",
+        "type": "rules",
+        "prompt": "MLB game-on-the-line standard: how many bases are between home plate and first?",
+        "options": [
+          "75 feet",
+          "90 feet",
+          "100 feet",
+          "120 feet"
+        ],
+        "answer": 1,
+        "explain": "90 feet between the bases — basics."
+      },
+      {
+        "id": "ba-85",
+        "type": "player",
+        "prompt": "Which pitcher has the most career Cy Young Awards in MLB history?",
+        "options": [
+          "Greg Maddux",
+          "Randy Johnson",
+          "Roger Clemens",
+          "Steve Carlton"
+        ],
+        "answer": 2,
+        "explain": "Roger Clemens — seven Cy Young Awards."
+      },
+      {
+        "id": "ba-86",
+        "type": "player",
+        "prompt": "Which legend played his entire career with the Boston Red Sox and was last to hit .400?",
+        "options": [
+          "Carl Yastrzemski",
+          "Ted Williams",
+          "Wade Boggs",
+          "David Ortiz"
+        ],
+        "answer": 1,
+        "explain": "Ted Williams hit .406 in 1941 — no one since has cracked .400 in a full season."
+      },
+      {
+        "id": "ba-87",
+        "type": "team",
+        "prompt": "Which MLB franchise has won the most World Series titles in NL history?",
+        "options": [
+          "Chicago Cubs",
+          "St. Louis Cardinals",
+          "Los Angeles Dodgers",
+          "New York Giants"
+        ],
+        "answer": 1,
+        "explain": "St. Louis Cardinals — 11 World Series, most of any NL team."
+      },
+      {
+        "id": "ba-88",
+        "type": "term",
+        "prompt": "What does 'WAR' stand for in baseball analytics?",
+        "options": [
+          "Wins Above Replacement",
+          "Walks And Runs",
+          "Weighted Average Runs",
+          "Winning Athletic Rating"
+        ],
+        "answer": 0,
+        "explain": "Wins Above Replacement — a catch-all stat measuring a player's total value."
+      },
+      {
+        "id": "ba-89",
+        "type": "trivia",
+        "prompt": "The Baseball Hall of Fame is in which town?",
+        "options": [
+          "Cooperstown, NY",
+          "Williamsport, PA",
+          "Springfield, MA",
+          "Cleveland, OH"
+        ],
+        "answer": 0,
+        "explain": "Cooperstown, NY — the Hall opened in 1939."
+      },
+      {
+        "id": "ba-90",
+        "type": "rules",
+        "prompt": "When did MLB make the Designated Hitter rule universal across both leagues?",
+        "options": [
+          "1973",
+          "1995",
+          "2020",
+          "2022"
+        ],
+        "answer": 3,
+        "explain": "2022 — the National League adopted the DH permanently."
+      },
+      {
+        "id": "ba-91",
+        "type": "fan",
+        "prompt": "Which two MLB leagues play their spring training?",
+        "options": [
+          "Cactus League and Grapefruit League",
+          "Sun League and Coast League",
+          "Pacific League and Atlantic League",
+          "Desert League and Citrus League"
+        ],
+        "answer": 0,
+        "explain": "Cactus League in Arizona and Grapefruit League in Florida."
+      },
+      {
+        "id": "ba-92",
+        "type": "fan",
+        "prompt": "Where is the College World Series played every year?",
+        "options": [
+          "Williamsport, PA",
+          "Omaha, Nebraska",
+          "Cary, North Carolina",
+          "Phoenix, Arizona"
+        ],
+        "answer": 1,
+        "explain": "Omaha, Nebraska — host since 1950."
+      },
+      {
+        "id": "ba-93",
+        "type": "team",
+        "prompt": "Joe Carter's 1993 walk-off World Series HR was against which team?",
+        "options": [
+          "Atlanta Braves",
+          "Philadelphia Phillies",
+          "Cincinnati Reds",
+          "St. Louis Cardinals"
+        ],
+        "answer": 1,
+        "explain": "Philadelphia Phillies — 'Touch 'em all, Joe!'"
+      },
+      {
+        "id": "ba-94",
+        "type": "team",
+        "prompt": "Toronto Blue Jays' primary home ballpark is currently officially called…",
+        "options": [
+          "SkyDome",
+          "Rogers Centre",
+          "Toronto Field",
+          "Maple Park"
+        ],
+        "answer": 1,
+        "explain": "Rogers Centre — originally SkyDome from 1989, renamed in 2005."
       }
     ],
     "fanlinc-mix": [
@@ -1101,7 +3947,12 @@
         "type": "player",
         "image": "/players/player-01.jpg",
         "prompt": "FanLinc roster spotlight — Conor Walton suits up in which sport?",
-        "options": ["Hockey", "Lacrosse", "Baseball", "Basketball"],
+        "options": [
+          "Hockey",
+          "Lacrosse",
+          "Baseball",
+          "Basketball"
+        ],
         "answer": 0,
         "explain": "Conor Walton — Hockey. OHL forward with the Windsor Spitfires."
       },
@@ -1110,7 +3961,12 @@
         "type": "player",
         "image": "/players/player-03.jpg",
         "prompt": "FanLinc roster spotlight — what sport does Kieran Cutler compete in?",
-        "options": ["Cricket", "Softball", "Baseball", "Football"],
+        "options": [
+          "Cricket",
+          "Softball",
+          "Baseball",
+          "Football"
+        ],
         "answer": 2,
         "explain": "Kieran Cutler — Baseball. McCook #14, on the FanLinc roster."
       },
@@ -1145,7 +4001,12 @@
         "id": "mx-2",
         "type": "trivia",
         "prompt": "Which city is hosting the FIFA World Cup matches in Canada in 2026?",
-        "options": ["Vancouver and Toronto", "Montreal and Toronto", "Vancouver only", "Toronto only"],
+        "options": [
+          "Vancouver and Toronto",
+          "Montreal and Toronto",
+          "Vancouver only",
+          "Toronto only"
+        ],
         "answer": 0,
         "explain": "Vancouver and Toronto are Canada's 2026 World Cup host cities."
       },
@@ -1166,7 +4027,12 @@
         "id": "mx-4",
         "type": "team",
         "prompt": "The Brampton Honey Badgers play in which league?",
-        "options": ["NBA G League", "Canadian Elite Basketball League (CEBL)", "Basketball Africa League", "Big3"],
+        "options": [
+          "NBA G League",
+          "Canadian Elite Basketball League (CEBL)",
+          "Basketball Africa League",
+          "Big3"
+        ],
         "answer": 1,
         "explain": "The Honey Badgers are a CEBL franchise — and the reason we're all here tonight."
       },
@@ -1174,7 +4040,12 @@
         "id": "mx-5",
         "type": "trivia",
         "prompt": "Which Canadian sprinter won 100m Olympic gold at the 1996 Atlanta Games?",
-        "options": ["Andre De Grasse", "Donovan Bailey", "Bruny Surin", "Damian Warner"],
+        "options": [
+          "Andre De Grasse",
+          "Donovan Bailey",
+          "Bruny Surin",
+          "Damian Warner"
+        ],
         "answer": 1,
         "explain": "Donovan Bailey won 100m gold in 1996, then led Canada's 4x100m relay to gold."
       },
@@ -1182,7 +4053,12 @@
         "id": "mx-6",
         "type": "fan",
         "prompt": "What's the most common shape of a sports championship trophy?",
-        "options": ["Cube", "Cup / chalice", "Star", "Plate"],
+        "options": [
+          "Cube",
+          "Cup / chalice",
+          "Star",
+          "Plate"
+        ],
         "answer": 1,
         "explain": "From the Stanley Cup to the NBA Finals trophy, the cup shape is iconic."
       },
@@ -1242,7 +4118,12 @@
         "id": "mx-11",
         "type": "team",
         "prompt": "Which league did the Toronto Argonauts play in to win the 2022 Grey Cup?",
-        "options": ["NFL", "CFL", "XFL", "USFL"],
+        "options": [
+          "NFL",
+          "CFL",
+          "XFL",
+          "USFL"
+        ],
         "answer": 1,
         "explain": "The Argos are a CFL (Canadian Football League) team — won the Grey Cup in 2022."
       },
@@ -1250,7 +4131,12 @@
         "id": "mx-12",
         "type": "rules",
         "prompt": "Which sport features 'sudden death' as a tiebreaker concept across multiple leagues?",
-        "options": ["Cricket", "Hockey, soccer, golf, NFL playoffs — many sports", "Only golf", "Only hockey"],
+        "options": [
+          "Cricket",
+          "Hockey, soccer, golf, NFL playoffs — many sports",
+          "Only golf",
+          "Only hockey"
+        ],
         "answer": 1,
         "explain": "Sudden death is used in many sports to break ties — first score wins."
       },
@@ -1258,7 +4144,12 @@
         "id": "mx-13",
         "type": "fan",
         "prompt": "What's the term for a fan watching every game of their favourite team?",
-        "options": ["Day-one fan", "Diehard / superfan", "Casual", "Bandwagoner"],
+        "options": [
+          "Day-one fan",
+          "Diehard / superfan",
+          "Casual",
+          "Bandwagoner"
+        ],
         "answer": 1,
         "explain": "Diehard or superfan — and FanLinc has a badge for that."
       },
@@ -1266,7 +4157,12 @@
         "id": "mx-14",
         "type": "trivia",
         "prompt": "The Toronto Maple Leafs have won how many Stanley Cups in franchise history?",
-        "options": ["7", "9", "11", "13"],
+        "options": [
+          "7",
+          "9",
+          "11",
+          "13"
+        ],
         "answer": 3,
         "explain": "Thirteen Cups (most recently in 1967)."
       },
@@ -1274,7 +4170,12 @@
         "id": "mx-15",
         "type": "player",
         "prompt": "Which Canadian-raised NBA superstar was a back-to-back NBA MVP (2005 and 2006)?",
-        "options": ["Jamal Murray", "Tristan Thompson", "Andrew Wiggins", "Steve Nash"],
+        "options": [
+          "Jamal Murray",
+          "Tristan Thompson",
+          "Andrew Wiggins",
+          "Steve Nash"
+        ],
         "answer": 3,
         "explain": "Steve Nash — raised in Victoria, BC — won MVP in 2005 and 2006."
       },
@@ -1321,9 +4222,1028 @@
         "id": "mx-19",
         "type": "team",
         "prompt": "Across the FanLinc roster tonight, players come from how many different sports?",
-        "options": ["1", "2", "3", "4"],
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
         "answer": 1,
         "explain": "Two — hockey (Conor + Kieron Walton) and baseball (Kieran Cutler + Weston Thompson)."
+      },
+      {
+        "id": "mx-20",
+        "type": "fan",
+        "prompt": "What is the most-watched sport in the world by global audience?",
+        "options": [
+          "Basketball",
+          "Cricket",
+          "Soccer (football)",
+          "American football"
+        ],
+        "answer": 2,
+        "explain": "Association football — billions of fans across every continent."
+      },
+      {
+        "id": "mx-21",
+        "type": "term",
+        "prompt": "FIFA, soccer's governing body, stands for…",
+        "options": [
+          "Federation of International Football Associations",
+          "Fédération Internationale de Football Association",
+          "Federal International Football Authority",
+          "Football International Federation Authority"
+        ],
+        "answer": 1,
+        "explain": "Fédération Internationale de Football Association — French, founded 1904."
+      },
+      {
+        "id": "mx-22",
+        "type": "rules",
+        "prompt": "How often is the FIFA World Cup held?",
+        "options": [
+          "Every year",
+          "Every 2 years",
+          "Every 3 years",
+          "Every 4 years"
+        ],
+        "answer": 3,
+        "explain": "Every four years — alternating with the European Championship."
+      },
+      {
+        "id": "mx-23",
+        "type": "team",
+        "prompt": "Which country has won the most FIFA Men's World Cups?",
+        "options": [
+          "Germany",
+          "Argentina",
+          "Brazil",
+          "Italy"
+        ],
+        "answer": 2,
+        "explain": "Brazil — 5 titles (1958, 1962, 1970, 1994, 2002)."
+      },
+      {
+        "id": "mx-24",
+        "type": "team",
+        "prompt": "Who won the 2022 FIFA World Cup in Qatar?",
+        "options": [
+          "France",
+          "Argentina",
+          "Brazil",
+          "Germany"
+        ],
+        "answer": 1,
+        "explain": "Argentina — Messi's first World Cup, won on penalties vs France."
+      },
+      {
+        "id": "mx-25",
+        "type": "player",
+        "prompt": "Pele played international football for which country?",
+        "options": [
+          "Argentina",
+          "Brazil",
+          "Portugal",
+          "Italy"
+        ],
+        "answer": 1,
+        "explain": "Brazil — three-time World Cup winner."
+      },
+      {
+        "id": "mx-26",
+        "type": "player",
+        "prompt": "Lionel Messi plays internationally for which country?",
+        "options": [
+          "Brazil",
+          "Argentina",
+          "Uruguay",
+          "Spain"
+        ],
+        "answer": 1,
+        "explain": "Argentina — 2022 World Cup champion."
+      },
+      {
+        "id": "mx-27",
+        "type": "player",
+        "prompt": "Cristiano Ronaldo plays internationally for which country?",
+        "options": [
+          "Brazil",
+          "Spain",
+          "Portugal",
+          "France"
+        ],
+        "answer": 2,
+        "explain": "Portugal — five Ballon d'Or wins."
+      },
+      {
+        "id": "mx-28",
+        "type": "term",
+        "prompt": "NFL stands for…",
+        "options": [
+          "National Football League",
+          "National Football Loop",
+          "North American Football League",
+          "National Field League"
+        ],
+        "answer": 0,
+        "explain": "National Football League — America's top pro football league."
+      },
+      {
+        "id": "mx-29",
+        "type": "fan",
+        "prompt": "The championship game of the NFL is called…",
+        "options": [
+          "The Super Bowl",
+          "The Grand Final",
+          "The NFL Championship Game",
+          "The Vince Bowl"
+        ],
+        "answer": 0,
+        "explain": "The Super Bowl — played the first Sunday of February."
+      },
+      {
+        "id": "mx-30",
+        "type": "fan",
+        "prompt": "The NFL Super Bowl champion is awarded which trophy?",
+        "options": [
+          "The Lombardi Trophy",
+          "The Commissioner's Cup",
+          "The O'Brien Trophy",
+          "The Halas Trophy"
+        ],
+        "answer": 0,
+        "explain": "The Vince Lombardi Trophy — named after the legendary Packers coach."
+      },
+      {
+        "id": "mx-31",
+        "type": "rules",
+        "prompt": "How many quarters are played in an NFL game?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2,
+        "explain": "Four quarters of 15 minutes each."
+      },
+      {
+        "id": "mx-32",
+        "type": "rules",
+        "prompt": "How many players from each team are on the field for an NFL play?",
+        "options": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "answer": 2,
+        "explain": "11 players from each side."
+      },
+      {
+        "id": "mx-33",
+        "type": "trivia",
+        "prompt": "Tom Brady won how many Super Bowls in his career?",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "answer": 2,
+        "explain": "Seven Super Bowl championships — most by any player."
+      },
+      {
+        "id": "mx-34",
+        "type": "team",
+        "prompt": "How many teams are in the NFL?",
+        "options": [
+          "28",
+          "30",
+          "32",
+          "34"
+        ],
+        "answer": 2,
+        "explain": "32 teams — split into AFC and NFC, 16 each."
+      },
+      {
+        "id": "mx-35",
+        "type": "trivia",
+        "prompt": "The Pro Football Hall of Fame is located in…",
+        "options": [
+          "Canton, Ohio",
+          "Green Bay, Wisconsin",
+          "Springfield, MA",
+          "Pittsburgh, PA"
+        ],
+        "answer": 0,
+        "explain": "Canton, Ohio — opened in 1963."
+      },
+      {
+        "id": "mx-36",
+        "type": "fan",
+        "prompt": "How many Grand Slam tennis tournaments are there per year?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2,
+        "explain": "Four: Australian Open, French Open, Wimbledon, US Open."
+      },
+      {
+        "id": "mx-37",
+        "type": "term",
+        "prompt": "Wimbledon is played on which court surface?",
+        "options": [
+          "Hard court",
+          "Clay",
+          "Grass",
+          "Carpet"
+        ],
+        "answer": 2,
+        "explain": "Grass — Wimbledon is the only Grand Slam played on grass."
+      },
+      {
+        "id": "mx-38",
+        "type": "term",
+        "prompt": "The French Open is played on which court surface?",
+        "options": [
+          "Hard court",
+          "Grass",
+          "Clay",
+          "Carpet"
+        ],
+        "answer": 2,
+        "explain": "Red clay at Roland-Garros."
+      },
+      {
+        "id": "mx-39",
+        "type": "term",
+        "prompt": "The US Open and Australian Open are both played on what surface?",
+        "options": [
+          "Clay",
+          "Grass",
+          "Hard court",
+          "Carpet"
+        ],
+        "answer": 2,
+        "explain": "Hard court — different specific surfaces but both hard."
+      },
+      {
+        "id": "mx-40",
+        "type": "player",
+        "prompt": "Which men's player has won the most Wimbledon singles titles in the Open Era (8)?",
+        "options": [
+          "Rafael Nadal",
+          "Roger Federer",
+          "Novak Djokovic",
+          "Pete Sampras"
+        ],
+        "answer": 1,
+        "explain": "Roger Federer — 8 Wimbledon singles titles."
+      },
+      {
+        "id": "mx-41",
+        "type": "player",
+        "prompt": "Serena Williams won how many Grand Slam singles titles?",
+        "options": [
+          "18",
+          "21",
+          "23",
+          "25"
+        ],
+        "answer": 2,
+        "explain": "23 Grand Slam singles titles — Open Era record for women."
+      },
+      {
+        "id": "mx-42",
+        "type": "term",
+        "prompt": "In tennis scoring, 'love' means…",
+        "options": [
+          "0 (zero)",
+          "Tied at deuce",
+          "Match point",
+          "Set point"
+        ],
+        "answer": 0,
+        "explain": "Zero points — origin debated, possibly from the French 'l'oeuf' (the egg)."
+      },
+      {
+        "id": "mx-43",
+        "type": "term",
+        "prompt": "In tennis, 'deuce' means…",
+        "options": [
+          "Match point",
+          "Score is tied at 40-40",
+          "First serve in",
+          "A let serve"
+        ],
+        "answer": 1,
+        "explain": "Tied at 40-40 — a player needs two consecutive points to win the game."
+      },
+      {
+        "id": "mx-44",
+        "type": "fan",
+        "prompt": "How many major championships are there in men's professional golf each year?",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 1,
+        "explain": "Four: The Masters, PGA Championship, US Open, The Open Championship."
+      },
+      {
+        "id": "mx-45",
+        "type": "fan",
+        "prompt": "The Masters is played every April at which course?",
+        "options": [
+          "Augusta National",
+          "Pebble Beach",
+          "St Andrews",
+          "TPC Sawgrass"
+        ],
+        "answer": 0,
+        "explain": "Augusta National Golf Club, in Augusta, Georgia."
+      },
+      {
+        "id": "mx-46",
+        "type": "fan",
+        "prompt": "The Masters champion is famously awarded what?",
+        "options": [
+          "A green jacket",
+          "A claret jug",
+          "A gold medal",
+          "A silver bowl"
+        ],
+        "answer": 0,
+        "explain": "The Green Jacket — a Masters tradition since 1949."
+      },
+      {
+        "id": "mx-47",
+        "type": "player",
+        "prompt": "Tiger Woods has won how many men's major championships?",
+        "options": [
+          "12",
+          "14",
+          "15",
+          "17"
+        ],
+        "answer": 2,
+        "explain": "15 majors — second-most all time behind Jack Nicklaus."
+      },
+      {
+        "id": "mx-48",
+        "type": "player",
+        "prompt": "Who holds the all-time record for men's major championships (18)?",
+        "options": [
+          "Tiger Woods",
+          "Jack Nicklaus",
+          "Arnold Palmer",
+          "Gary Player"
+        ],
+        "answer": 1,
+        "explain": "Jack Nicklaus — 18 men's majors."
+      },
+      {
+        "id": "mx-49",
+        "type": "term",
+        "prompt": "F1 stands for…",
+        "options": [
+          "Formula One",
+          "First Class",
+          "Fastest One",
+          "Fuel One"
+        ],
+        "answer": 0,
+        "explain": "Formula One — the top single-seater open-wheel motorsport."
+      },
+      {
+        "id": "mx-50",
+        "type": "player",
+        "prompt": "Which two drivers are tied for the most F1 World Championships (7)?",
+        "options": [
+          "Senna and Schumacher",
+          "Hamilton and Vettel",
+          "Schumacher and Hamilton",
+          "Prost and Schumacher"
+        ],
+        "answer": 2,
+        "explain": "Michael Schumacher and Lewis Hamilton — both with 7 titles."
+      },
+      {
+        "id": "mx-51",
+        "type": "rules",
+        "prompt": "How many laps make up the Indianapolis 500?",
+        "options": [
+          "100",
+          "150",
+          "200",
+          "250"
+        ],
+        "answer": 2,
+        "explain": "200 laps of a 2.5-mile oval = 500 miles."
+      },
+      {
+        "id": "mx-52",
+        "type": "team",
+        "prompt": "Where did cricket originate?",
+        "options": [
+          "India",
+          "Australia",
+          "England",
+          "South Africa"
+        ],
+        "answer": 2,
+        "explain": "England — earliest references go back to the 16th century."
+      },
+      {
+        "id": "mx-53",
+        "type": "team",
+        "prompt": "Which country has won the most Cricket World Cups?",
+        "options": [
+          "India",
+          "Australia",
+          "England",
+          "West Indies"
+        ],
+        "answer": 1,
+        "explain": "Australia — six Men's Cricket World Cup titles."
+      },
+      {
+        "id": "mx-54",
+        "type": "term",
+        "prompt": "In cricket, hitting the ball over the boundary on the full is worth how many runs?",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 3,
+        "explain": "Six runs — over the boundary on the full."
+      },
+      {
+        "id": "mx-55",
+        "type": "term",
+        "prompt": "In cricket, a ball that reaches the boundary on the ground is worth how many runs?",
+        "options": [
+          "1",
+          "2",
+          "4",
+          "6"
+        ],
+        "answer": 2,
+        "explain": "Four runs — across the boundary along the ground."
+      },
+      {
+        "id": "mx-56",
+        "type": "rules",
+        "prompt": "How many players are on the field per side in rugby union?",
+        "options": [
+          "11",
+          "13",
+          "15",
+          "17"
+        ],
+        "answer": 2,
+        "explain": "15 a side in rugby union — 8 forwards and 7 backs."
+      },
+      {
+        "id": "mx-57",
+        "type": "rules",
+        "prompt": "How many players per side in rugby league?",
+        "options": [
+          "11",
+          "13",
+          "15",
+          "17"
+        ],
+        "answer": 1,
+        "explain": "13 a side in rugby league — a smaller format than union."
+      },
+      {
+        "id": "mx-58",
+        "type": "fan",
+        "prompt": "How often are the modern Olympic Games held (summer or winter)?",
+        "options": [
+          "Every 2 years",
+          "Every 3 years",
+          "Every 4 years",
+          "Every 5 years"
+        ],
+        "answer": 2,
+        "explain": "Every four years for each — summer and winter alternate every two years."
+      },
+      {
+        "id": "mx-59",
+        "type": "player",
+        "prompt": "Who is the most decorated Olympian ever (23 gold medals)?",
+        "options": [
+          "Carl Lewis",
+          "Michael Phelps",
+          "Usain Bolt",
+          "Larisa Latynina"
+        ],
+        "answer": 1,
+        "explain": "Michael Phelps — 23 Olympic golds in swimming."
+      },
+      {
+        "id": "mx-60",
+        "type": "player",
+        "prompt": "Usain Bolt is from which country?",
+        "options": [
+          "Jamaica",
+          "Trinidad and Tobago",
+          "Bahamas",
+          "Cuba"
+        ],
+        "answer": 0,
+        "explain": "Jamaica — multiple Olympic sprint golds and world records."
+      },
+      {
+        "id": "mx-61",
+        "type": "trivia",
+        "prompt": "Where were the 2024 Summer Olympics held?",
+        "options": [
+          "Tokyo",
+          "Beijing",
+          "Paris",
+          "Rio de Janeiro"
+        ],
+        "answer": 2,
+        "explain": "Paris hosted the 2024 Summer Games."
+      },
+      {
+        "id": "mx-62",
+        "type": "trivia",
+        "prompt": "Where were the 2020 Summer Olympics held (in 2021)?",
+        "options": [
+          "Beijing",
+          "Rio de Janeiro",
+          "Tokyo",
+          "London"
+        ],
+        "answer": 2,
+        "explain": "Tokyo — delayed a year due to COVID-19."
+      },
+      {
+        "id": "mx-63",
+        "type": "trivia",
+        "prompt": "Where will the 2028 Summer Olympics be held?",
+        "options": [
+          "Los Angeles",
+          "Brisbane",
+          "Mexico City",
+          "Madrid"
+        ],
+        "answer": 0,
+        "explain": "Los Angeles — its third time hosting (1932, 1984, 2028)."
+      },
+      {
+        "id": "mx-64",
+        "type": "rules",
+        "prompt": "How long is a marathon?",
+        "options": [
+          "13.1 miles",
+          "20 miles",
+          "26.2 miles",
+          "42 miles"
+        ],
+        "answer": 2,
+        "explain": "26.2 miles (42.195 km) — distance set at the 1908 London Olympics."
+      },
+      {
+        "id": "mx-65",
+        "type": "trivia",
+        "prompt": "What's the name of the modern Olympic motto in Latin?",
+        "options": [
+          "Citius, Altius, Fortius",
+          "Veni, Vidi, Vici",
+          "E Pluribus Unum",
+          "Carpe Diem"
+        ],
+        "answer": 0,
+        "explain": "Citius, Altius, Fortius — Faster, Higher, Stronger."
+      },
+      {
+        "id": "mx-66",
+        "type": "trivia",
+        "prompt": "How many rings are on the Olympic flag?",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": 2,
+        "explain": "Five rings — representing the five inhabited continents."
+      },
+      {
+        "id": "mx-67",
+        "type": "fan",
+        "prompt": "Which boxer is universally known as 'The Greatest'?",
+        "options": [
+          "Mike Tyson",
+          "Muhammad Ali",
+          "Sugar Ray Robinson",
+          "Joe Frazier"
+        ],
+        "answer": 1,
+        "explain": "Muhammad Ali — three-time heavyweight world champion."
+      },
+      {
+        "id": "mx-68",
+        "type": "trivia",
+        "prompt": "Floyd Mayweather Jr.'s career pro boxing record finished at…",
+        "options": [
+          "48-0",
+          "50-0",
+          "52-0",
+          "45-1"
+        ],
+        "answer": 1,
+        "explain": "50-0 — retired undefeated."
+      },
+      {
+        "id": "mx-69",
+        "type": "term",
+        "prompt": "What does 'UFC' stand for?",
+        "options": [
+          "United Fighting Council",
+          "Ultimate Fighting Championship",
+          "Universal Fight Club",
+          "United Fight Club"
+        ],
+        "answer": 1,
+        "explain": "Ultimate Fighting Championship — the world's biggest MMA promotion."
+      },
+      {
+        "id": "mx-70",
+        "type": "trivia",
+        "prompt": "The UFC competition ring is what shape?",
+        "options": [
+          "Square",
+          "Hexagon",
+          "Octagon",
+          "Circle"
+        ],
+        "answer": 2,
+        "explain": "The Octagon — eight-sided cage."
+      },
+      {
+        "id": "mx-71",
+        "type": "rules",
+        "prompt": "How many holes are in a standard round of golf?",
+        "options": [
+          "9",
+          "12",
+          "18",
+          "20"
+        ],
+        "answer": 2,
+        "explain": "18 holes — par 72 on a standard course."
+      },
+      {
+        "id": "mx-72",
+        "type": "term",
+        "prompt": "How many official strokes are recognized in competitive swimming?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2,
+        "explain": "Four: freestyle, backstroke, breaststroke, butterfly."
+      },
+      {
+        "id": "mx-73",
+        "type": "rules",
+        "prompt": "How many players from each team are on the soccer field at one time?",
+        "options": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "answer": 2,
+        "explain": "11 players a side — including the goalkeeper."
+      },
+      {
+        "id": "mx-74",
+        "type": "rules",
+        "prompt": "How long is a standard soccer match (regulation)?",
+        "options": [
+          "60 minutes",
+          "80 minutes",
+          "90 minutes",
+          "100 minutes"
+        ],
+        "answer": 2,
+        "explain": "90 minutes — two halves of 45 plus stoppage time."
+      },
+      {
+        "id": "mx-75",
+        "type": "fan",
+        "prompt": "Which three countries are co-hosting the 2026 FIFA Men's World Cup?",
+        "options": [
+          "USA, Canada, Mexico",
+          "USA, England, Mexico",
+          "Canada, Mexico, Brazil",
+          "Spain, Portugal, Morocco"
+        ],
+        "answer": 0,
+        "explain": "United States, Canada, Mexico — first expanded 48-team format."
+      },
+      {
+        "id": "mx-76",
+        "type": "rules",
+        "prompt": "How many teams will play in the 2026 FIFA Men's World Cup?",
+        "options": [
+          "32",
+          "40",
+          "48",
+          "64"
+        ],
+        "answer": 2,
+        "explain": "48 teams — expanded from the previous 32-team format."
+      },
+      {
+        "id": "mx-77",
+        "type": "team",
+        "prompt": "Which club has won the most UEFA Champions League titles in history?",
+        "options": [
+          "Bayern Munich",
+          "AC Milan",
+          "Real Madrid",
+          "Liverpool"
+        ],
+        "answer": 2,
+        "explain": "Real Madrid — by far the most UCL trophies in history."
+      },
+      {
+        "id": "mx-78",
+        "type": "team",
+        "prompt": "Which Premier League club has won the most league titles?",
+        "options": [
+          "Liverpool",
+          "Manchester United",
+          "Arsenal",
+          "Chelsea"
+        ],
+        "answer": 1,
+        "explain": "Manchester United — 20 top-flight English league titles."
+      },
+      {
+        "id": "mx-79",
+        "type": "team",
+        "prompt": "Which NHL franchise has won the most Stanley Cups (24)?",
+        "options": [
+          "Toronto Maple Leafs",
+          "Montreal Canadiens",
+          "Detroit Red Wings",
+          "Boston Bruins"
+        ],
+        "answer": 1,
+        "explain": "Montreal Canadiens — 24 Stanley Cups."
+      },
+      {
+        "id": "mx-80",
+        "type": "team",
+        "prompt": "Which two NBA franchises are tied with the most titles (18)?",
+        "options": [
+          "Bulls and Lakers",
+          "Celtics and Lakers",
+          "Spurs and Celtics",
+          "Warriors and Lakers"
+        ],
+        "answer": 1,
+        "explain": "Boston Celtics and Los Angeles Lakers."
+      },
+      {
+        "id": "mx-81",
+        "type": "team",
+        "prompt": "Which MLB franchise has won the most World Series titles (27)?",
+        "options": [
+          "Los Angeles Dodgers",
+          "Boston Red Sox",
+          "New York Yankees",
+          "St. Louis Cardinals"
+        ],
+        "answer": 2,
+        "explain": "New York Yankees — 27 championships."
+      },
+      {
+        "id": "mx-82",
+        "type": "fan",
+        "prompt": "The Houston Comets won how many WNBA championships in a row to start the league?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "answer": 2,
+        "explain": "Four straight — 1997, 1998, 1999, 2000."
+      },
+      {
+        "id": "mx-83",
+        "type": "fan",
+        "prompt": "What's a 'fan' short for?",
+        "options": [
+          "A nickname",
+          "Fanatic",
+          "Fancy",
+          "Fanfare"
+        ],
+        "answer": 1,
+        "explain": "Fanatic — from the late 1800s American baseball slang."
+      },
+      {
+        "id": "mx-84",
+        "type": "rules",
+        "prompt": "How many players are on a baseball field for one team's defense?",
+        "options": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "answer": 2,
+        "explain": "Nine — same as the score positions."
+      },
+      {
+        "id": "mx-85",
+        "type": "fan",
+        "prompt": "Tennis's all-time men's Grand Slam singles record (as of 2024) is held by who?",
+        "options": [
+          "Roger Federer",
+          "Rafael Nadal",
+          "Novak Djokovic",
+          "Pete Sampras"
+        ],
+        "answer": 2,
+        "explain": "Novak Djokovic — 24 men's Grand Slam singles titles."
+      },
+      {
+        "id": "mx-86",
+        "type": "fan",
+        "prompt": "Mike Trout has played his entire career for which MLB team?",
+        "options": [
+          "New York Yankees",
+          "Los Angeles Angels",
+          "Chicago Cubs",
+          "San Diego Padres"
+        ],
+        "answer": 1,
+        "explain": "Los Angeles Angels — face of the franchise since 2011."
+      },
+      {
+        "id": "mx-87",
+        "type": "team",
+        "prompt": "Which Canadian football league has the Toronto Argonauts?",
+        "options": [
+          "NFL",
+          "CFL",
+          "XFL",
+          "USFL"
+        ],
+        "answer": 1,
+        "explain": "Canadian Football League — the Argos have won 18 Grey Cups."
+      },
+      {
+        "id": "mx-88",
+        "type": "rules",
+        "prompt": "How many points is a touchdown worth in the CFL and NFL?",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "answer": 1,
+        "explain": "Six points — before the extra-point try."
+      },
+      {
+        "id": "mx-89",
+        "type": "rules",
+        "prompt": "How many players per side in a CFL game?",
+        "options": [
+          "11",
+          "12",
+          "13",
+          "15"
+        ],
+        "answer": 1,
+        "explain": "12 a side in the CFL — one more than the NFL."
+      },
+      {
+        "id": "mx-90",
+        "type": "fan",
+        "prompt": "What's the name of the trophy awarded to the CFL champion?",
+        "options": [
+          "Stanley Cup",
+          "Vanier Cup",
+          "Grey Cup",
+          "President's Cup"
+        ],
+        "answer": 2,
+        "explain": "The Grey Cup — donated by Earl Grey in 1909."
+      },
+      {
+        "id": "mx-91",
+        "type": "fan",
+        "prompt": "Which sport awards the Stanley Cup, Larry O'Brien, Lombardi, and Commissioner's Trophies — one each?",
+        "options": [
+          "Hockey, basketball, football, baseball",
+          "Cricket, rugby, golf, tennis",
+          "Soccer, hockey, basketball, baseball",
+          "Hockey, basketball, baseball, soccer"
+        ],
+        "answer": 0,
+        "explain": "Hockey (NHL), basketball (NBA), football (NFL), and baseball (MLB)."
+      },
+      {
+        "id": "mx-92",
+        "type": "trivia",
+        "prompt": "Which Canadian city is home to the Honey Badgers AND the Steelheads?",
+        "options": [
+          "Mississauga",
+          "Brampton",
+          "Hamilton",
+          "London"
+        ],
+        "answer": 1,
+        "explain": "Brampton — both pro teams share the CAA Centre."
+      },
+      {
+        "id": "mx-93",
+        "type": "trivia",
+        "prompt": "The 2026 FIFA World Cup will be the first to use which number of teams?",
+        "options": [
+          "32",
+          "40",
+          "48",
+          "52"
+        ],
+        "answer": 2,
+        "explain": "48 teams for the first time in World Cup history."
+      },
+      {
+        "id": "mx-94",
+        "type": "team",
+        "prompt": "What does 'CFL' stand for?",
+        "options": [
+          "Canadian Football League",
+          "Continental Football League",
+          "Champions Football League",
+          "Canadian Field League"
+        ],
+        "answer": 0,
+        "explain": "Canadian Football League."
+      },
+      {
+        "id": "mx-95",
+        "type": "team",
+        "prompt": "What does 'CEBL' stand for?",
+        "options": [
+          "Canadian Eastern Basketball League",
+          "Canadian Elite Basketball League",
+          "Continental Elite Basketball League",
+          "Canadian European Basketball League"
+        ],
+        "answer": 1,
+        "explain": "Canadian Elite Basketball League — the home of the Brampton Honey Badgers."
+      },
+      {
+        "id": "mx-96",
+        "type": "fan",
+        "prompt": "Which is the only Grand Slam tournament held in the Southern Hemisphere?",
+        "options": [
+          "Australian Open",
+          "French Open",
+          "Wimbledon",
+          "US Open"
+        ],
+        "answer": 0,
+        "explain": "The Australian Open — played in Melbourne every January."
+      },
+      {
+        "id": "mx-97",
+        "type": "fan",
+        "prompt": "Which sport popularized the phrase 'love means nothing'?",
+        "options": [
+          "Cricket",
+          "Tennis",
+          "Golf",
+          "Boxing"
+        ],
+        "answer": 1,
+        "explain": "Tennis — 'love' means zero points."
       }
     ]
   }
