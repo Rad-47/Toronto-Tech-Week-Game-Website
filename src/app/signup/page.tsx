@@ -15,14 +15,10 @@ import type { Role, Signup } from "@/lib/types";
 
 const ROLES: Role[] = ["Fan", "Investor", "Founder", "Athlete", "Sponsor", "Team Rep"];
 
-/** Strip a leading @ and whitespace before validating / persisting. */
+/** Trim whitespace; accept whatever the user typed. */
 function normalizeFanlincId(raw: string): string {
-  const trimmed = raw.trim();
-  if (!trimmed) return "";
-  return trimmed.startsWith("@") ? trimmed : `@${trimmed}`;
+  return raw.trim();
 }
-
-const FANLINC_ID_RE = /^@[A-Za-z0-9_]{2,20}$/;
 
 export default function SignupPage() {
   const router = useRouter();
@@ -60,12 +56,8 @@ export default function SignupPage() {
     if (trimmedEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail))
       return setError("Please enter a valid email.");
     const normalizedId = normalizeFanlincId(fanlincId);
-    if (requireFanlincId) {
-      if (!normalizedId) return setError("Please enter your FanLinc User ID.");
-      if (!FANLINC_ID_RE.test(normalizedId))
-        return setError("FanLinc ID looks like @username (letters, numbers, underscore).");
-    } else if (normalizedId && !FANLINC_ID_RE.test(normalizedId)) {
-      return setError("FanLinc ID looks like @username (letters, numbers, underscore).");
+    if (requireFanlincId && !normalizedId) {
+      return setError("Please enter your FanLinc User ID.");
     }
     const signup: Signup = {
       id: crypto.randomUUID(),
@@ -159,7 +151,7 @@ export default function SignupPage() {
                   : "FanLinc User ID (optional)"
               }
               htmlFor="fanlincId"
-              hint="Looks like @Rad7438 — find it in your FanLinc profile."
+              hint="Find it in your FanLinc profile."
             >
               <input
                 id="fanlincId"
